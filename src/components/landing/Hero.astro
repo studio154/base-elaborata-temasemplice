@@ -1,0 +1,92 @@
+---
+const { title } = Astro.props;
+---
+
+<main class="relative overflow-hidden">
+  <div class="relative px-8 py-24 mx-auto sm:px-6 md:max-w-2xl md:px-4 lg:max-w-6xl lg:px-20">
+    <div class="grid grid-cols-1 gap-24 lg:grid-cols-2">
+      <div>
+        <a class="inline-flex items-center gap-3 font-semibold tracking-widest text-black uppercase font-logo" href="#">
+          <span>⌥ Unwrapped </span>
+        </a>
+        <h1 class="text-3xl font-medium mt-24 tracking-tight text-black font-display before:content-['—']">
+          Astro &amp; Tailwind Starter
+        </h1>
+        <div class="mt-6 space-y-6 lg:max-w-xl">
+          <p class="mt-4 text-lg lg:text-2xl text-slate-500">
+            This repo is the scaffolding we use at Unwrapped to create new
+            Tailwind based HTML templates.
+          </p>
+          <p class="mt-4 text-lg lg:text-2xl text-slate-500">
+            This scaffolding uses gulp to create workflows to make esier the
+            development. These are other of the dependencies and technologies we
+            use:
+          </p>
+        </div>
+      </div>
+    </div>
+    <ol role="list" class="relative grid grid-cols-1 mt-12 gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-2  lg:gap-16">
+      <li>
+        <div class="lg:inline-flex lg:items-center">
+          <div class="text-blue-500 w-9">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-3d-cube-sphere" width="24"
+              height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4065f9" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 17.6l-2 -1.1v-2.5" />
+              <path d="M4 10v-2.5l2 -1.1" />
+              <path d="M10 4.1l2 -1.1l2 1.1" />
+              <path d="M18 6.4l2 1.1v2.5" />
+              <path d="M20 14v2.5l-2 1.12" />
+              <path d="M14 19.9l-2 1.1l-2 -1.1" />
+              <line x1="12" y1="12" x2="14" y2="10.9" />
+              <line x1="18" y1="8.6" x2="20" y2="7.5" />
+              <line x1="12" y1="12" x2="12" y2="14.5" />
+              <line x1="12" y1="18.5" x2="12" y2="21" />
+              <path d="M12 12l-2 -1.12" />
+              <line x1="6" y1="8.6" x2="4" y2="7.5" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-xl text-black lg:ml-3 lg:mt-0 font-display">
+            Tailwind CSS
+          </h3>
+        </div>
+        <p class="mt-2 text-slate-500">A utility-first CSS framework packed with classes like flex, pt-4, text-center
+          and rotate-90 that can be composed to build any design, directly in your markup.
+
+        </p>
+      </li>
+      <li>
+        <div class="lg:inline-flex lg:items-center">
+          <div class="text-blue-500 w-9">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-3d-cube-sphere" width="24"
+              height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4065f9" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 17.6l-2 -1.1v-2.5" />
+              <path d="M4 10v-2.5l2 -1.1" />
+              <path d="M10 4.1l2 -1.1l2 1.1" />
+              <path d="M18 6.4l2 1.1v2.5" />
+              <path d="M20 14v2.5l-2 1.12" />
+              <path d="M14 19.9l-2 1.1l-2 -1.1" />
+              <line x1="12" y1="12" x2="14" y2="10.9" />
+              <line x1="18" y1="8.6" x2="20" y2="7.5" />
+              <line x1="12" y1="12" x2="12" y2="14.5" />
+              <line x1="12" y1="18.5" x2="12" y2="21" />
+              <path d="M12 12l-2 -1.12" />
+              <line x1="6" y1="8.6" x2="4" y2="7.5" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-xl text-black lg:ml-3 lg:mt-0 font-display">
+            Astro
+          </h3>
+        </div>
+        <p class="mt-2 text-slate-500">
+          Astro is a new kind of static site builder for the modern web. Powerful developer experience meets lightweight
+          output.
+        </p>
+      </li>
+
+    </ol>
+  </div>
+</main>

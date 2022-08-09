@@ -1,14 +1,11 @@
-# Astro Starter Kit: Minimal
+# Semplice
+This repo is the starter used at [Unwrapped](https://unwrapped.design) to create new Tailwind based HTML templates.
 
-```
-npm init astro -- --template minimal
-```
+- [Astro](https://astro.build/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
+## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
@@ -27,7 +24,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -40,7 +37,8 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-# astro-tailwind-starter
+
+If you have any doubt about how to use this code, you can reach use in twitter at [@Mike_Andreuzza](https://twitter.com/Mike_Andreuzza) or michael@andreuzza.com

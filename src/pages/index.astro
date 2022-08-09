@@ -1,8 +1,29 @@
 ---
-import BaseLatyout from "../layouts/BaseLatyout.astro"
+import BaseLatyout from "../layouts/BaseLatyout.astro";
+import Navigation from "../components/global/Navigation.astro";
 import Hero from "../components/landing/Hero.astro";
-const title = "testing title from fence"
+import FeatureOne from "../components/features/FeatureOne.astro";
+import AboutOne from "../components/about/AboutOne.astro";
+import FeatureTwo from "../components/features/FeatureTwo.astro";
+import TestimonialsOne from "../components/testimonials/TestimonialsOne.astro";
+import PricingOne from "../components/pricing/PricingOne.astro";
+import PricingTwo from "../components/pricing/PricingTwo.astro";
+import FaqOne from "../components/faq/FaqOne.astro";
+import CtaOne from "../components/cta/CtaOne.astro";
+import Footer from "../components/global/Footer.astro";
+const title = "Semplice - home";
 ---
+
 <BaseLatyout title={title}>
-	<Hero/>
+	<Navigation />
+	<Hero />
+	<FeatureOne />
+	<AboutOne />
+	<FeatureTwo />
+	<TestimonialsOne />
+	<PricingOne />
+	<PricingTwo />
+	<FaqOne />
+	<CtaOne />
+	<Footer />
 </BaseLatyout>

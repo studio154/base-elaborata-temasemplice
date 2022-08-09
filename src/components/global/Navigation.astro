@@ -1,0 +1,35 @@
+<div class="fixed z-50 justify-center w-full mx-auto bg-white">
+  <div x-data="{ open: false }"
+    class="flex flex-col w-full px-6 py-8 mx-auto lg:py-12 lg:items-center lg:justify-between lg:flex-row lg:px-36 lg:max-w-7xl">
+    <div class="flex flex-row items-center justify-between text-black">
+      <a class="inline-flex items-center gap-3 font-semibold tracking-widest text-black uppercase  " href="/">
+        <span>Semplice</span>
+      </a>
+      <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+        <svg class="w-8 h-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+          <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav :class="{'flex': open, 'hidden': !open}"
+      class="flex-col items-center flex-grow hidden p-4 px-5 mt-4 opacity-100 lg:px-0 md:pb-0 lg:flex lg:justify-start lg:flex-row lg:p-0 lg:mt-0">
+      <a class="px-4 py-2 text-lg transition duration-1000 ease-in-out transform text-slate-500 lg:py-4 hover:text-blue-500 focus:outline-none focus:shadow-none focus:text-black/90 md:my-0 lg:ml-auto"
+        href="/demo-pages">Demo Pages
+      </a>
+      <a class="px-4 py-2 text-lg transition duration-1000 ease-in-out transform text-slate-500 lg:py-4 hover:text-blue-500 focus:outline-none focus:shadow-none focus:text-black/90 md:my-0"
+        href="/components">Components
+      </a>
+      <a class="px-4 py-2 text-lg transition duration-1000 ease-in-out transform text-slate-500 lg:py-4 hover:text-blue-500 focus:outline-none focus:shadow-none focus:text-black/90 md:my-0"
+        href="/style-guide">Style Guide
+      </a>
+
+      <a class="px-4 py-2  text-lg text-blue-500 transition duration-1000 ease-in-out transform lg:py-4 hover:text-black focus:outline-none focus:shadow-none focus:text-black/90 md:my-0"
+        href="#" role="button">
+        <span>Buy for $99</span>
+      </a>
+    </nav>
+  </div>
+</div>

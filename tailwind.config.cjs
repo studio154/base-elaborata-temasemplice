@@ -5,11 +5,11 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-       backgroundImage: (theme) => ({
-         desktopGradient: "url('./images/desktopGradient.mp4')",
+      backgroundImage: (theme) => ({
+        desktopGradient: "url('./images/desktopGradient.mp4')",
       }),
       boxShadow: {
-        normal: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;',
+        normal: "rgba(149, 157, 165, 0.2) 0px 8px 24px;",
       },
       colors: {
         smoke: {
@@ -21,16 +21,16 @@ module.exports = {
           500: "#333333",
         },
         blue: {
-          "50": "#EBEBFF",
-      "100": "#D8D6FF",
-      "200": "#B0ADFF",
-      "300": "#8985FF",
-      "400": "#6661FF",
-      "500": "#3C37FF",
-      "600": "#0800FA",
-      "700": "#0600B8",
-      "800": "#04007A",
-      "900": "#02003D"
+          50: "#EBEBFF",
+          100: "#D8D6FF",
+          200: "#B0ADFF",
+          300: "#8985FF",
+          400: "#6661FF",
+          500: "#3C37FF",
+          600: "#0800FA",
+          700: "#0600B8",
+          800: "#04007A",
+          900: "#02003D",
         },
       },
       fontFamily: {
@@ -38,8 +38,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-     require('@tailwindcss/forms'),
-     require('@tailwindcss/line-clamp'),
-  ],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/line-clamp")],
 };

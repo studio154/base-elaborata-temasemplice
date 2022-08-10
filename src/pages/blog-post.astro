@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Navigation from "../components/global/Navigation.astro";
+import CtaSubscribe from "../components/cta/CtaSubscribe.astro";
+import BlogPost from "../components/blog/BlogPost.astro";
+const title = "Semplice - Blog"
+---
+
+<BaseLayout title={title}>
+  <Navigation />
+  <BlogPost />
+  <CtaSubscribe />
+</BaseLayout>

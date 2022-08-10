@@ -8,6 +8,9 @@ module.exports = {
        backgroundImage: (theme) => ({
          desktopGradient: "url('./images/desktopGradient.mp4')",
       }),
+      boxShadow: {
+        normal: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;',
+      },
       colors: {
         smoke: {
           50: "#ffffff",
@@ -18,16 +21,16 @@ module.exports = {
           500: "#333333",
         },
         blue: {
-          50:  '#F5FCFF',
-          100: '#D9EDFF',
-          200: '#ACCFFC',
-          300: '#85ACF4',
-          400: '#758CEC',
-          500: '#5C66D2',
-          600: '#414AA6',
-          700: '#313B84',
-          800: '#262C62',
-          900: '#152041',
+          "50": "#EBEBFF",
+      "100": "#D8D6FF",
+      "200": "#B0ADFF",
+      "300": "#8985FF",
+      "400": "#6661FF",
+      "500": "#3C37FF",
+      "600": "#0800FA",
+      "700": "#0600B8",
+      "800": "#04007A",
+      "900": "#02003D"
         },
       },
       fontFamily: {
@@ -35,5 +38,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+     require('@tailwindcss/forms'),
+     require('@tailwindcss/line-clamp'),
+  ],
 };

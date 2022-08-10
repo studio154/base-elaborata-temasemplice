@@ -1,5 +1,5 @@
 ---
-import BaseLatyout from "../layouts/BaseLatyout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Navigation from "../components/global/Navigation.astro";
 import Hero from "../components/landing/Hero.astro";
 import FeatureOne from "../components/features/FeatureOne.astro";
@@ -14,7 +14,7 @@ import Footer from "../components/global/Footer.astro";
 const title = "Semplice - home";
 ---
 
-<BaseLatyout title={title}>
+<BaseLayout title={title}>
 	<Navigation />
 	<Hero />
 	<FeatureOne />
@@ -26,4 +26,4 @@ const title = "Semplice - home";
 	<FaqOne />
 	<CtaOne />
 	<Footer />
-</BaseLatyout>
+</BaseLayout>

@@ -10,12 +10,29 @@ This repo is the starter used at [Unwrapped](https://unwrapped.design) to create
 Inside of your Astro project, you'll see the following folders and files:
 
 ```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+├── README.md
+├── astro.config.mjs
+├── package.json
+├── public
+│   ├── assets
+│   │   ├── Logos
+│   │   │   └── All logos
+│   │   ├── Screenshots
+│   │   │   └── All screenshots ( Feel free to delete them )
+│   │   └── Images
+├── src
+│   ├── components
+│   │   ├── Component folder
+│   │   │   └── Component
+│   ├── layouts
+│   │   └── All Layouts
+│   ├── pages
+│   │   ├── All pages
+│  
+└── astro.config.mjs 
+└── README.md
+└── tailwind.config
+└── tsconfig.json  
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.

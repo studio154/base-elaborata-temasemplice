@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/global/Navigation.astro";
+import HeaderThree from "../components/headers/HeaderThree.astro";
+import FeatureOne from "../components/features/FeatureOne.astro";
+import AboutOne from "../components/about/AboutOne.astro";
+import FeatureTwo from "../components/features/FeatureTwo.astro";
+import TestimonialsOne from "../components/testimonials/TestimonialsOne.astro";
+import PricingOne from "../components/pricing/PricingOne.astro";
+import PricingTwo from "../components/pricing/PricingTwo.astro";
+import FaqOne from "../components/faq/FaqOne.astro";
+import CtaOne from "../components/cta/CtaOne.astro";
+import Footer from "../components/global/Footer.astro";
+const title = "Semplice - home";
+---
+
+<BaseLayout title={title}>
+	<Navigation />
+	<HeaderThree />
+	<FeatureOne />
+	<AboutOne />
+	<FeatureTwo />
+	<TestimonialsOne />
+	<PricingOne />
+	<PricingTwo />
+	<FaqOne />
+	<CtaOne />
+	<Footer />
+</BaseLayout>

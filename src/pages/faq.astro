@@ -1,13 +1,9 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Navigation from "../components/global/Navigation.astro";
 import FaqOne from "../components/faq/FaqOne.astro";
-
-const title = "Semplice - Faq"
 ---
-
-<BaseLayout title={title}>
-    <Navigation />
-
-    <FaqOne />
+<BaseLayout>
+  <Navigation />
+  <FaqOne />
 </BaseLayout>

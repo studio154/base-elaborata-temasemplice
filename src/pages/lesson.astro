@@ -1,13 +1,9 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Navigation from "../components/global/Navigation.astro";
 import Lesson from "../components/courses/Lesson.astro";
-
-const title = "Semplice - Lesson"
 ---
-
-<BaseLayout title={title}>
-    <Navigation />
-    <Lesson />
-
+<BaseLayout>
+  <Navigation />
+  <Lesson />
 </BaseLayout>

@@ -1,8 +1,10 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/global/Navigation.astro";
 import OpenPositions from "../components/jobs/OpenPositions.astro";
-const title = "Semplice - Open Posititons"
 ---
-<BaseLayout title={title}>
-    <OpenPositions/>
+
+<BaseLayout>
+  <Navigation />
+  <OpenPositions />
 </BaseLayout>

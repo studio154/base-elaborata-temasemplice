@@ -1,13 +1,9 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Navigation from "../components/global/Navigation.astro";
 import VideoArticle from "../components/helpcenter/VideoArticle.astro";
-
-const title = "Semplice - Video article"
 ---
-
-<BaseLayout title={title}>
-    <Navigation />
-    <VideoArticle />
-
+<BaseLayout>
+  <Navigation />
+  <VideoArticle />
 </BaseLayout>

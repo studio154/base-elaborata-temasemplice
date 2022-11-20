@@ -6,6 +6,6 @@ import sitemap from "@astrojs/sitemap";
 import image from "@astrojs/image";
 // https://astro.build/config
 export default defineConfig({
-   site: 'https://supremeuikits.com',
+   site: 'https://supremeui.dev',
   integrations: [tailwind(), partytown(), astro(), sitemap(), image()]
 });

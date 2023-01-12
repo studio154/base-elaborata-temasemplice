@@ -1,38 +1,22 @@
-# Semplice
-This repo is the starter used at [Unwrapped](https://unwrapped.design) to create new Tailwind based HTML templates.
+# Astro & Tailwind CSS Starter Kit
 
-- [Astro](https://astro.build/)
-- [Tailwind CSS](https://tailwindcss.com/)
-
-
-## Project Structure
+## Template Integrations
+- @astrojs/tailwind - https://docs.astro.build/en/guides/integrations-guide/tailwind/
+- @astrojs/image - https://docs.astro.build/en/guides/integrations-guide/image/
+- @astrojs/sitemap - https://docs.astro.build/en/guides/integrations-guide/sitemap/
+- Astrolib SEO - https://github.com/onwidget/astrolib/tree/main/packages/seo
+- Astro compress - https://github.com/NikolaRHristov/astro-compress#readme
+## Template Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
 ```
-├── README.md
-├── astro.config.mjs
-├── package.json
-├── public
-│   ├── assets
-│   │   ├── Logos
-│   │   │   └── All logos
-│   │   ├── Screenshots
-│   │   │   └── All screenshots ( Feel free to delete them )
-│   │   └── Images
-├── src
-│   ├── components
-│   │   ├── Component folder
-│   │   │   └── Component
-│   ├── layouts
-│   │   └── All Layouts
-│   ├── pages
-│   │   ├── All pages
-│  
-└── astro.config.mjs 
-└── README.md
-└── tailwind.config
-└── tsconfig.json  
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
@@ -54,5 +38,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
+## Want to learn more?
 
-If you have any doubt about how to use this code, you can reach use in twitter at [@Mike_Andreuzza](https://twitter.com/Mike_Andreuzza) or michael@andreuzza.com
+Feel free to check Astroäs [documentation](https://docs.astro.build)

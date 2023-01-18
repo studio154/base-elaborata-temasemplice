@@ -1,107 +1,165 @@
 <section>
-    <div class="relative flex justify-center max-h-full overflow-hidden md:px-12 lg:px-0 ">
-        <div
-            class="relative z-10 flex flex-col flex-1 h-screen px-4 py-16 bg-white shadow-2xl  sm:justify-center md:flex-none md:px-28  ">
-            <div class="w-full max-w-md mx-auto sm:px-4 md:w-96 md:max-w-sm md:px-0 lg:h-full ">
-                <div class="flex flex-col">
-                    <div>
-                        <p class="text-sm font-medium leading-tight text-black ">
-                            Semplice
-                        </p>
-                        <h2 class="mt-6 text-xl font-medium leading-tight text-black ">
-                            Contact us
-                        </h2>
-                    </div>
+  <div
+    class="relative flex justify-center max-h-full overflow-hidden md:px-12 lg:px-0">
+    <div
+      class="relative z-10 flex flex-col flex-1 h-screen px-4 py-16 bg-white shadow-2xl sm:justify-center md:flex-none md:px-28">
+      <div
+        class="w-full max-w-md mx-auto sm:px-4 md:w-96 md:max-w-sm md:px-0 lg:h-full">
+        <div class="flex flex-col">
+          <div>
+            <p class="text-sm font-medium leading-tight text-black">Semplice</p>
+            <h2 class="mt-6 text-xl font-medium leading-tight text-black">
+              Contact us
+            </h2>
+          </div>
+        </div>
+        <form class="pt-3" action="https://submit-form.com/r4PIGvAB">
+          <input
+            autocomplete="false"
+            name="hidden"
+            type="text"
+            style="display:none;"
+          />
+          <input type="hidden" name="_redirect" value="#" />
+          <div class="space-y-6">
+            <div class="flex flex-row w-full gap-3">
+              <div class="w-full">
+                <label
+                  for="first_name"
+                  class="mb-3 block text-sm font-medium text-slate-700"
+                  >First name
+                </label>
+                <input
+                  id="first_name"
+                  type="text"
+                  name="first_name"
+                  autocomplete="given-name"
+                  required=""
+                  class="block w-full px-3 py-2 text-accent-500 border rounded-md appearance-none placeholder-slate-400 border-slate-200 bg-slate-50 focus:border-accent-500 focus:bg-white focus:outline-none focus:ring-accent-500 sm:text-sm"
+                />
+              </div>
+              <div class="w-full">
+                <label
+                  for="last_name"
+                  class="mb-3 block text-sm font-medium text-slate-700"
+                  >Last name
+                </label><input
+                  id="last_name"
+                  type="text"
+                  name="last_name"
+                  autocomplete="family-name"
+                  required=""
+                  class="block w-full px-3 py-2 text-accent-500 border rounded-md appearance-none placeholder-slate-400 border-slate-200 bg-slate-50 focus:border-accent-500 focus:bg-white focus:outline-none focus:ring-accent-500 sm:text-sm"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                name="name"
+                class="block mb-3 text-sm font-medium text-slate-600">
+                Company
+              </label>
+              <input
+                type="text"
+                placeholder="Type here..."
+                class="block w-full px-3 py-2 text-accent-500 border rounded-md appearance-none placeholder-slate-400 border-slate-200 bg-slate-50 focus:border-accent-500 focus:bg-white focus:outline-none focus:ring-accent-500 sm:text-sm"
+              />
+            </div>
+            <div class="col-span-full">
+              <label
+                name="company"
+                class="block mb-3 text-sm font-medium text-slate-600">
+                Email
+              </label>
+              <input
+                type="email"
+                class="block w-full px-3 py-2 text-accent-500 border rounded-md appearance-none placeholder-slate-400 border-slate-200 bg-slate-50 focus:border-accent-500 focus:bg-white focus:outline-none focus:ring-accent-500 sm:text-sm"
+                placeholder="Type password here..."
+              />
+            </div>
+            <div class="col-span-full">
+              <label
+                for="phone-number"
+                class="block mb-3 text-sm font-medium text-slate-600"
+                >Phone Number</label
+              >
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center">
+                  <label for="country" class="sr-only">Country</label>
+                  <select
+                    id="country"
+                    name="country"
+                    class="h-full py-0 pl-3 pr-8 border-slate-200 bg-transparent text-slate-500 focus:ring-indigo-500 focus:border-indigo-500 rounded-md text-sm">
+                    <option>US</option>
+                    <option>CA</option>
+                    <option>EU</option>
+                  </select>
                 </div>
-                <form class="pt-3" action="https://submit-form.com/r4PIGvAB">
-                    <input autocomplete="false" name="hidden" type="text" style="display:none;" />
-                    <input type="hidden" name="_redirect" value="#" />
-                    <div class="space-y-6 ">
-                        <div class="flex flex-row w-full gap-3">
-                            <div class="w-full">
-                                <label for="first_name" class="mb-3 block text-sm font-medium text-slate-700">First name
-                                </label>
-                                <input id="first_name" type="text" name="first_name" autocomplete="given-name"
-                                    required=""
-                                    class="block w-full px-3 py-2 text-blue-500 border rounded-md appearance-none placeholder-slate-400 border-slate-200 bg-slate-50 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-blue-500 sm:text-sm" />
-                            </div>
-                            <div class="w-full">
-                                <label for="last_name" class="mb-3 block text-sm font-medium text-slate-700">Last name
-                                </label><input id="last_name" type="text" name="last_name" autocomplete="family-name"
-                                    required=""
-                                    class="block w-full px-3 py-2 text-blue-500 border rounded-md appearance-none placeholder-slate-400 border-slate-200 bg-slate-50 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-blue-500 sm:text-sm" />
-                            </div>
-                        </div>
-                        <div>
-                            <label name="name" class="block mb-3 text-sm font-medium text-slate-600   ">
-                                Company
-                            </label>
-                            <input type="text" placeholder="Type here..."
-                                class="block w-full px-3 py-2 text-blue-500 border rounded-md appearance-none placeholder-slate-400 border-slate-200 bg-slate-50 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-blue-500 sm:text-sm" />
-                        </div>
-                        <div class="col-span-full">
-                            <label name="company" class="block mb-3 text-sm font-medium text-slate-600   ">
-                                Email
-                            </label>
-                            <input type="email"
-                                class="block w-full px-3 py-2 text-blue-500 border rounded-md appearance-none placeholder-slate-400 border-slate-200 bg-slate-50 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-blue-500 sm:text-sm"
-                                placeholder="Type password here..." />
-                        </div>
-                        <div class="col-span-full">
-                            <label for="phone-number" class="block mb-3 text-sm font-medium text-slate-600   ">Phone
-                                Number</label>
-                            <div class=" relative">
-                                <div class="absolute inset-y-0 left-0 flex items-center">
-                                    <label for="country" class="sr-only">Country</label>
-                                    <select id="country" name="country"
-                                        class="h-full py-0 pl-3 pr-8 border-slate-200 bg-transparent text-slate-500 focus:ring-indigo-500 focus:border-indigo-500 rounded-md text-sm">
-                                        <option>US</option>
-                                        <option>CA</option>
-                                        <option>EU</option>
-                                    </select>
-                                </div>
-                                <input type="text" name="phone-number" id="phone-number" autocomplete="tel"
-                                    class="block w-full pl-20 text-sm  px-3 py-2 text-blue-500 border rounded-md appearance-none placeholder-slate-400 border-slate-200 bg-slate-50 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-blue-500 sm:text-sm"
-                                    placeholder="+1 (555) 987-6543">
-                            </div>
-                        </div>
-                        <div class="flex ">
-                            <div class="flex items-start">
-                                <input id="remember-me" name="remember-me" type="checkbox"
-                                    class="h-4 w-4 text-blue-500 focus:ring-blue-500 border-blue-500 rounded" />
-                                <label for="remember-me"
-                                    class="ml-2 block  leading-tight text-sm font-medium  text-black ">
-                                    Creating an account means you’re okay with our
-                                    <a class="text-blue-500 hover:text-blue-400" href="/terms">Terms of Service,
-                                    </a>
-                                    <a class="text-blue-500 hover:text-blue-400" href="/privacy">Privacy Policy
-                                    </a>
-                                    , and our default.
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-span-full">
-                            <button type="submit"
-                                class="inline-flex items-center justify-center w-full px-12 py-4 text-center text-white transition duration-500 ease-in-out transform bg-blue-500 border-2 border-blue-500 rounded hover:text-blue-500    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500   hover:border-blue-500">
-                                Submit your message
-                            </button>
-                        </div>
-
-                    </div>
-                </form>
+                <input
+                  type="text"
+                  name="phone-number"
+                  id="phone-number"
+                  autocomplete="tel"
+                  class="block w-full pl-20 text-sm px-3 py-2 text-accent-500 border rounded-md appearance-none placeholder-slate-400 border-slate-200 bg-slate-50 focus:border-accent-500 focus:bg-white focus:outline-none focus:ring-accent-500 sm:text-sm"
+                  placeholder="+1 (555) 987-6543"
+                />
+              </div>
             </div>
-        </div>
-        <div class="hidden bg-white sm:contents lg:relative lg:block lg:flex-1">
-            <div width="1664" height="1866" decoding="async" data-nimg="future"
-                class="absolute inset-0 object-cover w-full h-full bg-white" loading="lazy">
-                <video autoplay="" loop="" muted=""
-                    class="absolute z-10 w-auto min-w-full min-h-full bg-white max-w-none">
-                    <source
-                        src="https://d33wubrfki0l68.cloudfront.net/c906151c5417ee08cea5c68bc4c8823316ba100c/3fe8e/images/desktopgradient.mp4"
-                        type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+            <div class="flex">
+              <div class="flex items-start">
+                <input
+                  id="remember-me"
+                  name="remember-me"
+                  type="checkbox"
+                  class="h-4 w-4 text-accent-500 focus:ring-accent-500 border-accent-500 rounded"
+                />
+                <label
+                  for="remember-me"
+                  class="ml-2 block leading-tight text-sm font-medium text-black">
+                  Creating an account means you’re okay with our
+                  <a class="text-accent-500 hover:text-accent-400" href="/terms"
+                    >Terms of Service,
+                  </a>
+                  <a
+                    class="text-accent-500 hover:text-accent-400"
+                    href="/privacy"
+                    >Privacy Policy
+                  </a>
+                  , and our default.
+                </label>
+              </div>
             </div>
-        </div>
+            <div class="col-span-full">
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center w-full px-12 py-4 text-center text-white transition duration-500 ease-in-out transform bg-accent-500 border-2 border-accent-500 rounded hover:text-accent-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-500 hover:border-accent-500">
+                Submit your message
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+    <div class="hidden bg-white sm:contents lg:relative lg:block lg:flex-1">
+      <div
+        width="1664"
+        height="1866"
+        decoding="async"
+        data-nimg="future"
+        class="absolute inset-0 object-cover w-full h-full bg-white"
+        loading="lazy">
+        <video
+          autoplay=""
+          loop=""
+          muted=""
+          class="absolute z-10 w-auto min-w-full min-h-full bg-white max-w-none">
+          <source
+            src="https://d33wubrfki0l68.cloudfront.net/c906151c5417ee08cea5c68bc4c8823316ba100c/3fe8e/images/desktopgradient.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
 </section>

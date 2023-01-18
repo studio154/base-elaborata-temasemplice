@@ -1,7 +1,8 @@
-<div class="justify-center w-full mx-auto bg-white">
+<div
+  class="justify-center w-full mx-auto bg-white/10 backdrop-blur-2xl fixed z-50">
   <div
     x-data="{ open: false }"
-    class="flex flex-col w-full px-6 py-2 mx-auto lg:items-center lg:justify-between lg:flex-row lg:px-36 lg:max-w-7xl">
+    class="flex flex-col w-full px-8 py-2 md:px-12 mx-auto lg:items-center lg:justify-between lg:flex-row lg:px-24 max-w-7xl">
     <div class="flex flex-row items-center justify-between text-black">
       <a
         class="inline-flex items-center gap-3 text-2xl tracking-tighter font-bold text-black"
@@ -49,19 +50,19 @@
       :class="{'flex': open, 'hidden': !open}"
       class="flex-col items-center flex-grow hidden p-4 px-5 opacity-100 lg:px-0 md:pb-0 lg:flex lg:justify-start lg:flex-row lg:p-0 lg:mt-0">
       <a
-        class="px-4 py-2 transition duration-1000 ease-in-out transform text-slate-500 lg:py-4 hover:text-blue-500 focus:outline-none focus:shadow-none focus:text-black/90 md:my-0 lg:ml-auto"
+        class="px-4 py-2 transition duration-1000 text-sm ease-in-out transform text-accent-600 lg:py-4 hover:text-accent-900 focus:outline-none focus:shadow-none focus:text-black/90 md:my-0 lg:ml-auto"
         href="/demo-pages"
         >Demo Pages
       </a>
 
       <a
-        class="px-4 py-2 transition duration-1000 ease-in-out transform text-slate-500 lg:py-4 hover:text-blue-500 focus:outline-none focus:shadow-none focus:text-black/90 md:my-0"
+        class="px-4 py-2 transition duration-1000 text-sm ease-in-out transform text-accent-600 lg:py-4 hover:text-accent-900 focus:outline-none focus:shadow-none focus:text-black/90 md:my-0"
         href="/style-guide"
         >Style Guide
       </a>
 
       <a
-        class="inline-flex items-center justify-center px-6 py-2 text-center text-white transition duration-500 ease-in-out transform bg-blue-500 border-2 border-blue-500 rounded-md hover:bg-white hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 hover:text-blue-500"
+        class="inline-flex items-center text-sm justify-center px-6 py-3 text-center text-white transition duration-500 ease-in-out transform bg-accent-500 border-2 border-accent-500 rounded-xl hover:bg-white hover:border-accent-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-500 hover:text-accent-500"
         href="https://lexingtonthemes.lemonsqueezy.com/checkout/buy/59105270-55f2-42b0-9728-3094f40f86f4"
         role="button">
         <span>Buy Semplice for $99</span>

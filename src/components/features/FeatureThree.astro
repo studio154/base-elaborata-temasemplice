@@ -1,56 +1,272 @@
-<section id="featureThree" aria-labelledby="FeatureThree">
-    <div class="relative px-8 py-12 mx-auto sm:px-6 md:max-w-2xl md:px-4 lg:max-w-6xl lg:px-20 lg:pt-32">
-        <div class="text-left">
-            <div class="items-center mx-auto lg:inline-flex">
-                <div class="pb-12 text-left lg:items-start lg:inline-flex">
-                    <div class="lg:pr-16">
-                        <h1 class="text-3xl font-medium tracking-tight text-black "> Let's build a
-                            better tomorrow, together. </h1>
-                    </div>
-                    <div class="mt-5 lg:mt-0">
-                        <p class="text-lg lg:text-2xl text-slate-500"> Leverage agile frameworks to
-                            provide a robust synopsis for high level overviews. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w-full mx-auto text-left">
-            <div class="flex-col items-center m-auto align-middle">
-                <div class="items-center w-full gap-12 text-left lg:inline-flex">
-                    <div class="order-first block w-full mt-12 lg:mt-0">
-                        <img class="object-cover w-full mx-auto border rounded-md object-fit lg:ml-auto shadow-normal"
-                            alt="hero"
-                            src=" https://d33wubrfki0l68.cloudfront.net/5db71d0359ae0cd03ceceb0ba318e49bb78ca3b1/1979d/images/assets/intro.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mx-auto">
-            <div class="pt-12 mx-auto lg:max-w-7xl">
-                <dl class="grid grid-cols-1 gap-6 space-y-0 lg:gap-24 lg:grid-cols-3">
-                    <div>
-                        <div>
-                            <p class="text-xl text-black"> Developer experience </p>
-                        </div>
-                        <div class="mt-2 text-sm text-slate-500"> I am so happy, my dear friend, so absorbed in the
-                            exquisite sense of mere tranquil existence, that I neglect my talents. </div>
-                    </div>
-                    <div>
-                        <div>
-                            <p class="text-xl text-black"> Designers go-to app </p>
-                        </div>
-                        <div class="mt-2 text-sm text-slate-500"> I am so happy, my dear friend, so absorbed in the
-                            exquisite sense of mere tranquil existence, that I neglect my talents. </div>
-                    </div>
-                    <div>
-                        <div>
-                            <p class="text-xl text-black"> Easy onboarding </p>
-                        </div>
-                        <div class="mt-2 text-sm text-slate-500"> I am so happy, my dear friend, so absorbed in the
-                            exquisite sense of mere tranquil existence, that I neglect my talents. </div>
-                    </div>
-                </dl>
-            </div>
-        </div>
+<section aria-labelledby="featurethree" id="featurethree">
+  <div
+    class="items-center w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
+    <div class="text-center max-w-xl mx-auto">
+      <div>
+        <span class="bg-accent-500/10 rounded-full py-1 px-4 w-auto">
+          <span class="text-xs text-accent-500 uppercase font-semibold">
+            feature 3</span
+          >
+        </span>
+        <p
+          class="text-4xl mt-8 lg:text-6xl font-extrabold tracking-tight text-black font-display">
+          Keep your sensitive information private
+        </p>
+        <p class="text-base mt-4 text-slate-500 max-w-xl lg:mx-auto">
+          With decentralization, users have more control over their data and
+          transactions, and the platform is less susceptible to malicious
+          attacks.
+        </p>
+      </div>
     </div>
+    <div class="mx-auto mt-12" x-data="" x-tabs="">
+      <div
+        class="flex flex-col -mb-px gap-12 items-stretch"
+        role="tablist"
+        aria-orientation="horizontal"
+        x-tabs:list="">
+        <div class="grid gap-12 lg:grid-cols-3">
+          <div class="relative">
+            <h3>
+              <button
+                class="inline-flex [&:not(:focus-visible)]:focus:outline-none text-slate-500 text-xs"
+                type="button"
+                :class="$tab.isSelected ? ' text-accent-500' : 'text-slate-500 '"
+                x-tabs:tab=""
+                tabindex="-1"
+                ><span class="inset-0 absolute"></span><svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-9 w-9"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M12 12v-6a2 2 0 0 1 4 0v6m0 -2a2 2 0 1 1 2 2h-6"
+                    opacity="0.5"></path>
+                  <path d="M12 12h6a2 2 0 0 1 0 4h-6m2 0a2 2 0 1 1 -2 2v-6"
+                  ></path>
+                  <path d="M12 12v6a2 2 0 0 1 -4 0v-6m0 2a2 2 0 1 1 -2 -2h6"
+                  ></path>
+                  <path
+                    d="M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6"
+                    opacity="0.5"></path>
+                </svg></button
+              >
+            </h3><p class="text-black font-medium lg:text-xl text-lg mt-4">
+              Decentralized Governance
+            </p><p class="text-slate-500 mt-2 text-base">
+              Use blockchain technology to create decentralized autonomous
+              organizations and manage them with ease.
+            </p>
+          </div><div class="relative hover:opacity-100 opacity-75">
+            <h3>
+              <button
+                class="inline-flex [&:not(:focus-visible)]:focus:outline-none text-slate-500 text-xs"
+                type="button"
+                :class="$tab.isSelected ? 'text-accent-500 ' : 'text-slate-500 '"
+                x-tabs:tab=""
+                tabindex="-1"
+                ><span class="inset-0 absolute"></span><svg
+                  aria-hidden="true"
+                  class="h-9 w-9"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"
+                  ></path>
+                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" opacity="0.5"
+                  ></line>
+                </svg></button
+              >
+            </h3><p class="text-black font-medium lg:text-xl text-lg mt-4">
+              Decentralized Exchange
+            </p><p class="text-slate-500 mt-2 text-base">
+              Trade cryptocurrencies and tokens on a decentralized exchange for
+              added security and anonymity.
+            </p>
+          </div><div class="relative hover:opacity-100 opacity-75">
+            <h3>
+              <button
+                class="inline-flex [&:not(:focus-visible)]:focus:outline-none text-slate-500 text-xs"
+                type="button"
+                :class="$tab.isSelected ? 'text-accent-500 ' : 'text-slate-500 '"
+                x-tabs:tab=""
+                tabindex="0"
+                ><span class="inset-0 absolute"></span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  class="h-9 w-9"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2"
+                    opacity="0.5">
+                  </path>
+                  <path
+                    d="M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5"
+                  ></path>
+                </svg>
+              </button>
+            </h3>
+            <p class="text-black font-medium lg:text-xl text-lg mt-4">
+              Decentralized Data Storage
+            </p><p class="text-slate-500 mt-2 text-base">
+              Store your data on a decentralized network for added security and
+              reliability.
+            </p>
+          </div>
+        </div><div
+          class="lg:bg-slate-50 lg:p-20 lg:pb-0 relative lg:rounded-3xl hidden lg:block rounded-b-md overflow-hidden"
+          x-tabs:panels="">
+          <svg
+            class="absolute opacity-50 top-5 right-0"
+            viewBox="0 0 4276 4276"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2138 4273C3317.13 4273 4273 3317.13 4273 2138C4273 958.872 3317.13 3 2138 3C958.872 3 3 958.872 3 2138C3 3317.13 958.872 4273 2138 4273Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2138 4103.09C3223.29 4103.09 4103.09 3223.29 4103.09 2138C4103.09 1052.71 3223.29 172.912 2138 172.912C1052.71 172.912 172.912 1052.71 172.912 2138C172.912 3223.29 1052.71 4103.09 2138 4103.09Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2138 3933.11C3129.41 3933.11 3933.11 3129.41 3933.11 2138C3933.11 1146.59 3129.41 342.887 2138 342.887C1146.59 342.887 342.887 1146.59 342.887 2138C342.887 3129.41 1146.59 3933.11 2138 3933.11Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2138 3763.2C3035.57 3763.2 3763.2 3035.57 3763.2 2138C3763.2 1240.43 3035.57 512.799 2138 512.799C1240.43 512.799 512.8 1240.43 512.8 2138C512.8 3035.57 1240.43 3763.2 2138 3763.2Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2138 3593.23C2941.7 3593.23 3593.23 2941.7 3593.23 2138C3593.23 1334.3 2941.7 682.773 2138 682.773C1334.3 682.773 682.775 1334.3 682.775 2138C682.775 2941.7 1334.3 3593.23 2138 3593.23Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2138 3423.31C2847.86 3423.31 3423.31 2847.86 3423.31 2138C3423.31 1428.14 2847.86 852.686 2138 852.686C1428.14 852.686 852.686 1428.14 852.686 2138C852.686 2847.86 1428.14 3423.31 2138 3423.31Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2138 3253.34C2753.99 3253.34 3253.34 2753.98 3253.34 2138C3253.34 1522.01 2753.99 1022.66 2138 1022.66C1522.02 1022.66 1022.66 1522.01 1022.66 2138C1022.66 2753.98 1522.02 3253.34 2138 3253.34Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2138 3083.43C2660.14 3083.43 3083.43 2660.15 3083.43 2138C3083.43 1615.85 2660.14 1192.57 2138 1192.57C1615.85 1192.57 1192.57 1615.85 1192.57 2138C1192.57 2660.15 1615.85 3083.43 2138 3083.43Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2138 2913.45C2566.27 2913.45 2913.45 2566.27 2913.45 2138C2913.45 1709.73 2566.27 1362.55 2138 1362.55C1709.73 1362.55 1362.55 1709.73 1362.55 2138C1362.55 2566.27 1709.73 2913.45 2138 2913.45Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2138 2743.54C2472.43 2743.54 2743.54 2472.43 2743.54 2138C2743.54 1803.57 2472.43 1532.46 2138 1532.46C1803.57 1532.46 1532.46 1803.57 1532.46 2138C1532.46 2472.43 1803.57 2743.54 2138 2743.54Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2138 2573.56C2378.56 2573.56 2573.57 2378.56 2573.57 2138C2573.57 1897.44 2378.56 1702.43 2138 1702.43C1897.44 1702.43 1702.43 1897.44 1702.43 2138C1702.43 2378.56 1897.44 2573.56 2138 2573.56Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2138 2403.65C2284.72 2403.65 2403.65 2284.72 2403.65 2138C2403.65 1991.28 2284.72 1872.35 2138 1872.35C1991.28 1872.35 1872.35 1991.28 1872.35 2138C1872.35 2284.72 1991.28 2403.65 2138 2403.65Z"
+              stroke="#4A3AFF"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+          <section
+            class="relative"
+            x-tabs:panel=""
+            tabindex="-1"
+            style="display: none;">
+            <div
+              class="[&:not(:focus-visible)]:focus:outline-none duration-500 ease-in-out px-5 transition"
+              role="tabpanel"
+              style="transform:tranzincX(0)"
+              aria-hidden="false"
+              aria-labelledby="headlessui-tabs-tab-:Rirdm:"
+              data-headlessui-state="selected"
+              id="headlessui-tabs-panel-:Rbbdm:"
+              tabindex="0">
+              <div
+                class="overflow-hidden rounded-t-3xl w-full shadow-2xl shadow-slate-900/30 border border-accent-100 border-b-0">
+                <img alt="" src="/assets/chart1.svg" class="w-full" />
+              </div>
+            </div>
+          </section><section
+            class="relative"
+            x-tabs:panel=""
+            tabindex="-1"
+            style="display: none;">
+            <div
+              class="[&:not(:focus-visible)]:focus:outline-none duration-500 ease-in-out px-5 transition"
+              role="tabpanel"
+              style="transform:tranzincX(0)"
+              aria-hidden="false"
+              aria-labelledby="headlessui-tabs-tab-:Rirdm:"
+              data-headlessui-state="selected"
+              id="headlessui-tabs-panel-:Rbbdm:"
+              tabindex="0">
+              <div
+                class="overflow-hidden rounded-t-3xl w-full shadow-2xl shadow-slate-900/30 border border-accent-100 border-b-0">
+                <img alt="" src="/assets/chart2.svg" class="w-full" />
+              </div>
+            </div>
+          </section><section class="relative" x-tabs:panel="" tabindex="0">
+            <div
+              class="[&:not(:focus-visible)]:focus:outline-none duration-500 ease-in-out px-5 transition"
+              role="tabpanel"
+              style="transform:tranzincX(0)"
+              aria-hidden="false"
+              aria-labelledby="headlessui-tabs-tab-:Rirdm:"
+              data-headlessui-state="selected"
+              id="headlessui-tabs-panel-:Rbbdm:"
+              tabindex="0">
+              <div
+                class="overflow-hidden rounded-t-3xl w-full shadow-2xl shadow-slate-900/30 border border-accent-100 border-b-0">
+                <img alt="" src="/assets/chart3.svg" class="w-full" />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

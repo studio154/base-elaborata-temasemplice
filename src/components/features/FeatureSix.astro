@@ -1,124 +1,350 @@
-<section id="featureSix" aria-labelledby="FeatureSix">
-  <div class="relative px-8 my-24 mx-auto sm:px-6 md:max-w-2xl md:px-4 lg:max-w-6xl lg:px-20 ">
-    <div class="max-w-xl lg:text-center mx-auto">
-      <p class="text-3xl font-medium tracking-tight text-black lg:text-5xl ">
-        Let's build a better tomorrow, together.
-
-      </p>
-      <p class="mt-4 text-lg lg:text-2xl text-slate-500">
-        A lot of wohooo! stuff, check it out.
+<section
+  aria-labelledby="featurethree"
+  id="featurethree"
+  class="overflow-hidden relative">
+  <div
+    class="items-center w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32 relative">
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-end">
+      <div>
+        <span class="bg-accent-500/10 rounded-full py-1 px-4 w-auto">
+          <span class="text-xs text-accent-500 uppercase font-semibold">
+            feature 6</span
+          >
+        </span>
+        <p
+          class="text-4xl mt-8 lg:text-6xl font-extrabold tracking-tight text-black font-display">
+          Decentralized Technology
+        </p>
+      </div>
+      <p
+        class="text-base text-slate-500 max-w-xl lg:mx-auto lg:text-lg mt-8 lg:mt-0">
+        Control and added security. With decentralization, users have more
+        control over their data and transactions, and the platform is less
+        susceptible to malicious attacks.
       </p>
     </div>
-    <div>
-      <div class="max-w-xl py-12 mx-auto lg:max-w-7xl">
-        <h2 class="sr-only">Feature Six.</h2>
+    <div x-data="" x-tabs="" class="">
+      <div
+        class="flex flex-col -mb-px lg:grid-cols-2 lg:gap-32 lg:grid items-start mt-24"
+        role="tablist"
+        aria-orientation="horizontal"
+        x-tabs:list="">
         <div>
-          <div class="grid grid-cols-2 gap-12 lg:grid-cols-3 lg:space-y-0 lg:text-center">
-            <div>
-              <div>
-                <div
-                  class="flex items-center justify-center w-12 h-12 text-blue-500 rounded-full bg-slate-50 lg:mx-auto">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-lock" width="24"
-                    height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+          <div class="grid lg:grid-cols-1 gap-12 items-start">
+            <div class="relative lg:gap-3">
+              <h3>
+                <button
+                  class="inline-flex [&:not(:focus-visible)]:focus:outline-none text-slate-500 text-xs"
+                  type="button"
+                  :class="$tab.isSelected ? ' text-accent-500' : 'text-slate-500 '"
+                  x-tabs:tab=""
+                  tabindex="-1">
+                  <span class="inset-0 absolute"></span>
+                  <svg
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3">
+                    <path
+                      d="M12 12v-6a2 2 0 0 1 4 0v6m0 -2a2 2 0 1 1 2 2h-6"
+                      opacity="0.5"></path>
+                    <path d="M12 12h6a2 2 0 0 1 0 4h-6m2 0a2 2 0 1 1 -2 2v-6"
+                    ></path>
+                    <path d="M12 12v6a2 2 0 0 1 -4 0v-6m0 2a2 2 0 1 1 -2 -2h6"
+                    ></path>
+                    <path
+                      d="M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6"
+                      opacity="0.5"></path>
+                  </svg>
+                </button>
+              </h3>
+              <div>
+                <p class="text-slate-500 mt-4 lg:mt-0 text-base lg:text-lg">
+                  <strong class="font-semibold text-black">
+                    Decentralized Governance</strong
+                  > — Our platform is built on blockchain technology, which allows
+                  for decentralized control and added security. With decentralization,
+                  users have more control over their data and transactions, and the
+                  platform is less susceptible to malicious attacks.
+                </p>
+              </div>
+            </div>
+            <div class="relative hover:opacity-100 opacity-75 gap-3">
+              <h3>
+                <button
+                  class="inline-flex [&:not(:focus-visible)]:focus:outline-none text-slate-500 text-xs"
+                  type="button"
+                  :class="$tab.isSelected ? 'text-fuchsia-500 ' : 'text-slate-400 '"
+                  x-tabs:tab=""
+                  tabindex="-1"
+                  ><span class="inset-0 absolute"></span><svg
+                    aria-hidden="true"
+                    class="h-8 w-8"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"
+                    ></path>
+                    <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" opacity="0.5"
+                    ></line>
+                  </svg></button
+                >
+              </h3>
+              <div>
+                <p class="text-slate-500 mt-2 text-base lg:text-lg">
+                  <strong class="font-semibold text-black">
+                    Decentralized Exchange</strong
+                  > — Our smart contract technology allows for automated, self-executing
+                  transactions without the need for intermediaries. This not only
+                  makes transactions faster and more efficient, but also helps to
+                  reduce the risk of fraud and errors.
+                </p>
+              </div>
+            </div>
+            <div class="relative hover:opacity-100 opacity-75 gap-3">
+              <h3>
+                <button
+                  class="inline-flex [&:not(:focus-visible)]:focus:outline-none text-slate-500 text-xs"
+                  type="button"
+                  :class="$tab.isSelected ? 'text-sky-500 ' : 'text-slate-400 '"
+                  x-tabs:tab=""
+                  tabindex="0"
+                  ><span class="inset-0 absolute"></span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    class="h-8 w-8"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2"
+                      opacity="0.5">
                     </path>
-                    <circle cx="12" cy="11" r="1"></circle>
-                    <line x1="12" y1="12" x2="12" y2="14.5"></line>
+                    <path
+                      d="M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5"
+                    ></path>
                   </svg>
-                </div>
-                <p class="mt-4 text-xl text-black"> Permissions </p>
-              </div>
-              <div class="mt-2 text-sm text-slate-500"> Define complex security policies to keep your users’ data
-                safe. </div>
-            </div>
-            <div>
+                </button>
+              </h3>
               <div>
-                <div
-                  class="flex items-center justify-center w-12 h-12 text-blue-500 rounded-full bg-slate-50 lg:mx-auto">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file" width="24"
-                    height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
-                  </svg>
-                </div>
-                <p class="mt-4 text-xl text-black"> File Storage </p>
+                <p class="text-slate-500 mt-2 text-base lg:text-lg">
+                  <strong class="font-semibold text-black">
+                    Decentralized Data Storage</strong
+                  > — Our platform is designed to handle thousands of transactions
+                  per second and can easily accommodate the unique needs of various
+                  industries and applications. Additionally, our platform allows
+                  for the creation.
+                </p>
               </div>
-              <div class="mt-2 text-sm text-slate-500"> Upload and manage files. </div>
-            </div>
-            <div>
-              <div>
-                <div
-                  class="flex items-center justify-center w-12 h-12 text-blue-500 rounded-full bg-slate-50 lg:mx-auto">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24"
-                    height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <line x1="15" y1="8" x2="15.01" y2="8"></line>
-                    <rect x="4" y="4" width="16" height="16" rx="3"></rect>
-                    <path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5"></path>
-                    <path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2"></path>
-                  </svg>
-                </div>
-                <p class="mt-4 text-xl text-black"> Image Transformations </p>
-              </div>
-              <div class="mt-2 text-sm text-slate-500"> Resize and optimise images on the fly. </div>
-            </div>
-            <div>
-              <div>
-                <div
-                  class="flex items-center justify-center w-12 h-12 text-blue-500 rounded-full bg-slate-50 lg:mx-auto">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-key" width="24"
-                    height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <circle cx="8" cy="15" r="4"></circle>
-                    <line x1="10.85" y1="12.15" x2="19" y2="4"></line>
-                    <line x1="18" y1="5" x2="20" y2="7"></line>
-                    <line x1="15" y1="8" x2="17" y2="10"></line>
-                  </svg>
-                </div>
-                <p class="mt-4 text-xl text-black"> Authentication </p>
-              </div>
-              <div class="mt-2 text-sm text-slate-500"> User accounts and social login. </div>
-            </div>
-            <div>
-              <div>
-                <div
-                  class="flex items-center justify-center w-12 h-12 text-blue-500 rounded-full bg-slate-50 lg:mx-auto">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud" width="24"
-                    height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-12"></path>
-                  </svg>
-                </div>
-                <p class="mt-4 text-xl text-black"> Serverless Functions </p>
-              </div>
-              <div class="mt-2 text-sm text-slate-500"> Custom backend code with logs and error handling. </div>
-            </div>
-            <div>
-              <div>
-                <div
-                  class="flex items-center justify-center w-12 h-12 text-blue-500 rounded-full bg-slate-50 lg:mx-auto">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="24"
-                    height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <rect x="3" y="5" width="18" height="14" rx="3"></rect>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                    <line x1="7" y1="15" x2="7.01" y2="15"></line>
-                    <line x1="11" y1="15" x2="13" y2="15"></line>
-                  </svg>
-                </div>
-                <p class="mt-4 text-xl text-black"> Payments </p>
-              </div>
-              <div class="mt-2 text-sm text-slate-500"> Stripe integration for all apps. </div>
             </div>
           </div>
+        </div>
+        <div
+          class="lg:bg-slate-white/50 lg:backdrop-blur-3xl relative lg:p-10 lg:rounded-[2rem] hidden lg:block overflow-hidden lg:ml-auto"
+          x-tabs:panels="">
+          <section
+            class="relative"
+            x-tabs:panel=""
+            tabindex="-1"
+            style="display: none;">
+            <svg
+              class="absolute top-0 right-0 blur-3xl opacity-"
+              width="100%"
+              height="100%"
+              viewBox="0 0 400 400"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_10_20)">
+                <g filter="url(#filter0_f_10_20)">
+                  <path
+                    d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z"
+                    fill="#5934ed"></path>
+                  <path
+                    d="M0 322.2V400H240H320L106.2 134.75L0 322.2Z"
+                    fill="#7C87F8"></path>
+                  <path
+                    d="M320 400H400V78.75L106.2 134.75L320 400Z"
+                    fill="#4C65E4"></path>
+                  <path
+                    d="M400 0H128.6L106.2 134.75L400 78.75V0Z"
+                    fill="#ecebff"></path>
+                </g>
+              </g>
+              <defs>
+                <filter
+                  id="filter0_f_10_20"
+                  x="-160.333"
+                  y="-160.333"
+                  width="720.666"
+                  height="720.666"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="80.1666"
+                    result="effect1_foregroundBlur_10_20"></feGaussianBlur>
+                </filter>
+              </defs>
+            </svg>
+            <div
+              class="[&:not(:focus-visible)]:focus:outline-none duration-500 ease-in-out px-5 transition relative"
+              role="tabpanel"
+              style="transform:tranzincX(0)"
+              aria-hidden="false"
+              aria-labelledby="headlessui-tabs-tab-:Rirdm:"
+              data-headlessui-state="selected"
+              id="headlessui-tabs-panel-:Rbbdm:"
+              tabindex="0">
+              <div class="overflow-hidden h-full drop-shadow-2xl">
+                <img alt="" src="/assets/phone1.png" class="w-full" />
+              </div>
+            </div>
+          </section>
+          <section
+            class="relative"
+            x-tabs:panel=""
+            tabindex="-1"
+            style="display: none;">
+            <svg
+              class="absolute top-0 right-0 blur-3xl opacity-"
+              width="100%"
+              height="100%"
+              viewBox="0 0 400 400"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_10_20)">
+                <g filter="url(#filter0_f_10_20)">
+                  <path
+                    d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z"
+                    fill="#E575E7"></path>
+                  <path
+                    d="M0 322.2V400H240H320L106.2 134.75L0 322.2Z"
+                    fill="#E1A1E2"></path>
+                  <path
+                    d="M320 400H400V78.75L106.2 134.75L320 400Z"
+                    fill="#CF4CE4"></path>
+                  <path
+                    d="M400 0H128.6L106.2 134.75L400 78.75V0Z"
+                    fill="#ecebff"></path>
+                </g>
+              </g>
+              <defs>
+                <filter
+                  id="filter0_f_10_20"
+                  x="-160.333"
+                  y="-160.333"
+                  width="720.666"
+                  height="720.666"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="80.1666"
+                    result="effect1_foregroundBlur_10_20"></feGaussianBlur>
+                </filter>
+              </defs>
+            </svg>
+            <div
+              class="[&:not(:focus-visible)]:focus:outline-none duration-500 ease-in-out px-5 transition relative"
+              role="tabpanel"
+              style="transform:tranzincX(0)"
+              aria-hidden="false"
+              aria-labelledby="headlessui-tabs-tab-:Rirdm:"
+              data-headlessui-state="selected"
+              id="headlessui-tabs-panel-:Rbbdm:"
+              tabindex="0">
+              <div class="overflow-hidden h-full drop-shadow-2xl">
+                <img alt="" src="/assets/phone2.png" class="w-full" />
+              </div>
+            </div>
+          </section><section class="relative" x-tabs:panel="" tabindex="0">
+            <svg
+              class="absolute top-0 right-0 blur-3xl opacity-"
+              width="100%"
+              height="100%"
+              viewBox="0 0 400 400"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_10_20)">
+                <g filter="url(#filter0_f_10_20)">
+                  <path
+                    d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z"
+                    fill="#75D9E7"></path>
+                  <path
+                    d="M0 322.2V400H240H320L106.2 134.75L0 322.2Z"
+                    fill="#A1DBE2 "></path>
+                  <path
+                    d="M320 400H400V78.75L106.2 134.75L320 400Z"
+                    fill="#14A9BD"></path>
+                  <path
+                    d="M400 0H128.6L106.2 134.75L400 78.75V0Z"
+                    fill="#ecebff"></path>
+                </g>
+              </g>
+              <defs>
+                <filter
+                  id="filter0_f_10_20"
+                  x="-160.333"
+                  y="-160.333"
+                  width="720.666"
+                  height="720.666"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="80.1666"
+                    result="effect1_foregroundBlur_10_20"></feGaussianBlur>
+                </filter>
+              </defs>
+            </svg>
+            <div
+              class="[&:not(:focus-visible)]:focus:outline-none duration-500 ease-in-out px-5 transition relative"
+              role="tabpanel"
+              style="transform:tranzincX(0)"
+              aria-hidden="false"
+              aria-labelledby="headlessui-tabs-tab-:Rirdm:"
+              data-headlessui-state="selected"
+              id="headlessui-tabs-panel-:Rbbdm:"
+              tabindex="0">
+              <div class="overflow-hidden h-full drop-shadow-2xl">
+                <img alt="" src="/assets/phone3.png" class="w-full" />
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>

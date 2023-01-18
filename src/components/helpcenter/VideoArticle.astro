@@ -1,7 +1,6 @@
 <section id="features" aria-labelledby="screencasts-title" class="bg-white">
   <div
-    class="relative px-8 py-12 mx-auto sm:px-6 md:max-w-2xl md:px-4 lg:max-w-6xl lg:px-20 lg:pt-32"
-  >
+    class="relative px-8 py-12 mx-auto sm:px-6 md:max-w-2xl md:px-4 lg:max-w-6xl lg:px-20 lg:pt-32">
     <div class="max-w-xl pb-12">
       <p class="text-3xl font-medium tracking-tight text-black lg:text-5xl">
         Video Article
@@ -22,14 +21,13 @@
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="0 0 20 20"
-              aria-hidden="true"
-            >
+              aria-hidden="true">
               <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
             </svg>
-            <div class="px-2 py-1 rounded-lg bg-blue-50 ml-3">
+            <div class="px-2 py-1 rounded-lg bg-accent-50 ml-3">
               <a
                 href="/single-topic"
-                class="text-sm font-medium text-blue-500 hover:text-slate-700"
+                class="text-sm font-medium text-accent-500 hover:text-slate-700"
                 >Single Topic
               </a>
             </div>
@@ -42,13 +40,12 @@
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="0 0 20 20"
-              aria-hidden="true"
-            >
+              aria-hidden="true">
               <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
             </svg>
             <a
               href="#"
-              class="ml-3 text-sm font-medium text-slate-500 hover:text-blue-500"
+              class="ml-3 text-sm font-medium text-slate-500 hover:text-accent-500"
               aria-current="page"
               >Video Article
             </a>
@@ -63,8 +60,7 @@
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      >
+        allowfullscreen>
       </iframe>
     </div>
     <div>
@@ -116,15 +112,13 @@
     </div>
 
     <div
-      class="shadow-normal max-w-xl mt-12 border border-slate-200 rounded-md"
-    >
+      class="shadow-normal max-w-xl mt-12 border border-slate-200 rounded-md">
       <ul class="shadow-box">
         <li class="relative border-slate-200" x-data="{selected:null}">
           <button
             type="button"
             class="w-full px-6 py-6 text-left"
-            @click="selected !== 1 ? selected = 1 : selected = null"
-          >
+            @click="selected !== 1 ? selected = 1 : selected = null">
             <div class="flex items-center justify-between">
               <span class="text-xl text-black"> Transcript</span>
               <svg
@@ -132,8 +126,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 class="inline w-5 h-5 ml-4 transition-transform duration-200 transform rotate-0"
                 viewBox="0 0 20 20"
-                fill="currentColor"
-              >
+                fill="currentColor">
                 <path
                   fill-rule="evenodd"
                   d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
@@ -145,8 +138,7 @@
             class="relative overflow-hidden transition-all max-h-0 duration-700"
             style=""
             x-ref="container1"
-            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-          >
+            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
             <div class="p-6 text-slate-500 border-t space-y-6">
               <p>
                 Promotion: homeware platform Shoppe Object is hosting a virtual
@@ -172,18 +164,17 @@
     </div>
     <div class="max-w-xl mt-12 border-t">
       <div class="py-4 rounded-md inline-flex items-center w-full">
-        <p class="text-blue-500">Was this helpful?</p>
+        <p class="text-accent-500">Was this helpful?</p>
         <p></p><div class="inline-flex items-center gap-3 ml-auto">
           <span
-            class="flex items-center justify-center w-12 h-12 text-blue-500 rounded-full bg-slate-50"
+            class="flex items-center justify-center w-12 h-12 text-accent-500 rounded-full bg-slate-50"
             >Yes
           </span>
           <span
-            class="flex items-center justify-center w-12 h-12 text-blue-500 rounded-full bg-slate-50"
+            class="flex items-center justify-center w-12 h-12 text-accent-500 rounded-full bg-slate-50"
             >No
           </span>
         </div>
-
       </div>
     </div>
   </div>

@@ -1,11 +1,42 @@
-<section>
-  <div class="flex items-center justify-center h-screen">
-    <div class="w-full max-w-md mx-auto sm:px-4 md:w-96 md:max-w-sm md:px-0">
-      <h2
-        class="mt-6 text-xl font-medium leading-tight text-black lg:text-center lg:text-4xl"
-      >
-        We are working on a new page, wi will be coming soon
-      </h2>
+<section class="relative overflow-hidden l">
+  <div
+    class="relative items-center w-full px-8 py-32 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
+    <div class="text-center">
+      <span
+        class="bg-accent-50/50 border border-white/50 backdrop-blur-2xl rounded-full py-2 px-4 w-auto">
+        <span class="text-sm text-accent-500"> Coming soon</span>
+      </span>
+      <p
+        class="text-4xl mt-8 lg:text-6xl font-extrabold tracking-tight text-black font-display">
+        We are coming soon
+      </p>
+      <p class="text-base text-slate-700 max-w-xl mx-auto mt-4 lg:text-xl">
+        Subscribe to know when we launch
+      </p>
+      <div
+        class="w-full items-center mx-auto flex flex-col lg:max-w-sm md:pt-6 mt-12 pb-12 pt-8">
+        <div class="bg-accent-600/80 blur-xl h-12 rounded-full -mb-8 w-32">
+        </div>
+        <form
+          class="w-full border bg-white lg:w-auto p-1.5 rounded-2xl shadow-normal relative">
+          <div class="w-full sm:flex sm:items-center">
+            <div class="shrink">
+              <input
+                aria-label="Email address"
+                autocomplete="email"
+                class="w-full border appearance-none bg-transparent block border-transparent focus:border-accent-500 focus:outline-none focus:ring-accent-500 p-3 placeholder:text-slate-400 rounded-xl sm:text-sm text-black"
+                placeholder="Email address"
+                required=""
+                type="email"
+              />
+            </div>
+            <button
+              class="w-full lg:w-auto active:bg-accent-600 active:text-white/80 before:transition-colors bg-accent-500 flex-none font-semibold hover:before:bg-white hover:bg-black hover:text-white inline-flex justify-center lg:ml-4 outline-2 outline-offset-2 px-3 py-2.5 relative rounded-xl text-base text-white tracking-tighter"
+              type="submit"><span>Join the waitlist!</span></button
+            >
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>

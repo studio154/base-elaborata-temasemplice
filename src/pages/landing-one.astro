@@ -1,28 +1,61 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navigation from "../components/global/Navigation.astro";
-import HeaderThree from "../components/headers/HeaderThree.astro";
-import FeatureOne from "../components/features/FeatureOne.astro";
-import AboutOne from "../components/about/AboutOne.astro";
-import FeatureTwo from "../components/features/FeatureTwo.astro";
-import TestimonialsOne from "../components/testimonials/TestimonialsOne.astro";
+import HeroOne from "../components/headers/HeroOne.astro";
+import FeatureSix from "../components/features/FeatureSix.astro";
+import FeatureThree from "../components/features/FeatureThree.astro";
+import FeatureEleven from "../components/features/FeatureEleven.astro";
+import TestimonialsThree from "../components/testimonials/TestimonialsThree.astro";
 import PricingOne from "../components/pricing/PricingOne.astro";
-import PricingTwo from "../components/pricing/PricingTwo.astro";
-import FaqOne from "../components/faq/FaqOne.astro";
+import FaqOne from "../components/infopages/FaqOne.astro";
 import CtaOne from "../components/cta/CtaOne.astro";
-import Footer from "../components/global/Footer.astro";
+import { AstroSeo } from "@astrolib/seo";
 ---
-
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
+<AstroSeo
+  title="Landing 01"
+  description="Your site description goes here"
+  canonical="https://www.lexingtonthemes.com"
+  openGraph={{
+    url: "https://www.lexingtonthemes.com",
+    title: "Open Graph Title",
+    description: "Open Graph Description",
+    images: [
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
+      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
+    ],
+    site_name: "YourSitesName",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@site",
+    cardType: "summary_large_image",
+  }}
+/>
 <BaseLayout>
   <Navigation />
-  <HeaderThree />
-  <FeatureOne />
-  <AboutOne />
-  <FeatureTwo />
-  <TestimonialsOne />
+  <HeroOne />
+  <FeatureThree />
+  <FeatureSix />
+  <FeatureEleven />
+  <TestimonialsThree />
   <PricingOne />
-  <PricingTwo />
   <FaqOne />
   <CtaOne />
-  <Footer />
 </BaseLayout>

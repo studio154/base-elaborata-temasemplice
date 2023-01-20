@@ -1,16 +1,28 @@
 <section id="features" aria-labelledby="screencasts-title" class="bg-white">
   <div
-    class="relative px-8 py-12 mx-auto sm:px-6 md:max-w-2xl md:px-4 lg:max-w-6xl lg:px-20 lg:pt-32">
-    <div class="max-w-xl pb-12">
-      <p class="text-3xl font-medium tracking-tight text-black lg:text-5xl">
-        Video Article
-      </p>
-      <p class="mt-4 text-lg lg:text-2xl text-slate-500">
-        Follow the steps from the video
-      </p>
+    class="items-center w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
+    <div class="relative items-center">
+      <div class="w-full lg:inline-flex justify-between lg:items-center">
+        <div class="max-w-xl">
+          <span
+            class="font-semibold text-accent-500 text-sm tracking-widest uppercase">
+            Video Article</span
+          >
+          <p
+            class="text-4xl mt-8 font-extrabold tracking-tight text-black font-display">
+            Follow the steps
+          </p>
+        </div>
+        <div class="mt-12 flex flex-col sm:flex-row lg:ml-auto">
+          <a
+            class="items-center text-white focus:outline-none inline-flex justify-center hover:text-accent-500 duration-200 focus-visible:outline-black focus-visible:ring-black font-medium lg:w-auto px-6 py-3 rounded-xl text-center w-full bg-accent-500 hover:bg-accent-100"
+            href="/signup">Subscribe for updates &nbsp;&nbsp; →</a
+          >
+        </div>
+      </div>
       <ol role="list" class="flex items-center lg:space-x-4 mt-12">
         <li>
-          <div class="px-2 py-1 rounded-lg bg-black hover:bg-slate-500">
+          <div class="px-6 py-1 text-xs rounded-lg bg-black hover:bg-slate-500">
             <a href="/" class="text-white"> Home</a>
           </div>
         </li>
@@ -24,10 +36,11 @@
               aria-hidden="true">
               <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
             </svg>
-            <div class="px-2 py-1 rounded-lg bg-accent-50 ml-3">
+            <div
+              class="px-6 py-1 text-xs rounded-lg bg-slate-100 hover:bg-slate-500 ml-3">
               <a
                 href="/single-topic"
-                class="text-sm font-medium text-accent-500 hover:text-slate-700"
+                class="text-xs font-medium text-accent-500 hover:text-slate-700"
                 >Single Topic
               </a>
             </div>
@@ -45,7 +58,7 @@
             </svg>
             <a
               href="#"
-              class="ml-3 text-sm font-medium text-slate-500 hover:text-accent-500"
+              class="ml-3 text-xs font-medium text-slate-500 hover:text-accent-500"
               aria-current="page"
               >Video Article
             </a>
@@ -53,7 +66,7 @@
         </li>
       </ol>
     </div>
-    <div class="py-12 border-t">
+    <div class="mt-12">
       <iframe
         class="w-full aspect-video rounded-md"
         src="https://www.youtube.com/embed/LQw2ljPHJU0"
@@ -165,16 +178,20 @@
     <div class="max-w-xl mt-12 border-t">
       <div class="py-4 rounded-md inline-flex items-center w-full">
         <p class="text-accent-500">Was this helpful?</p>
-        <p></p><div class="inline-flex items-center gap-3 ml-auto">
-          <span
-            class="flex items-center justify-center w-12 h-12 text-accent-500 rounded-full bg-slate-50"
-            >Yes
-          </span>
-          <span
-            class="flex items-center justify-center w-12 h-12 text-accent-500 rounded-full bg-slate-50"
-            >No
-          </span>
-        </div>
+        <p></p>
+        <span class="isolate inline-flex rounded-md shadow-sm ml-auto">
+          <button
+            type="button"
+            class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+            >Yes</button
+          >
+
+          <button
+            type="button"
+            class="relative -ml-px inline-flex items-center rounded-r-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+            >No</button
+          >
+        </span>
       </div>
     </div>
   </div>

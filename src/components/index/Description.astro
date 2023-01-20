@@ -4,7 +4,7 @@
     <div class="mx-auto lg:text-center max-w-2xl">
       <div>
         <span
-          class="font-semibold text-accent-500 text-sm tracking-widest uppercase via-teal-500"
+          class="font-semibold text-accent-500 text-sm tracking-widest uppercase"
           >Description</span
         >
         <p
@@ -89,7 +89,7 @@
     <div class="mx-auto py-12 lg:py-36 lg:text-center max-w-2xl">
       <div>
         <span
-          class="font-semibold text-accent-500 text-sm tracking-widest uppercase "
+          class="font-semibold text-accent-500 text-sm tracking-widest uppercase"
           >Integrations</span
         >
         <p
@@ -165,5 +165,408 @@
         </dt>
       </div>
     </dl>
+  </div>
+</section>
+<section
+  class="relative border-white/5 border-y scroll-mt-24"
+  aria-labelledby="faq"
+  id="faq-section">
+  <div
+    class="items-center w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
+    <section
+      class="grid grid-cols-1 gap-x-6 gap-y-10 items-baseline lg:grid-cols-3">
+      <div class="md:pr-12">
+        <span
+          class="font-semibold text-accent-500 text-sm tracking-widest uppercase"
+          >FAQ</span
+        ><p class="text-black font-semibold font-display mt-8 text-3xl">
+          Fully automated, fully supported
+        </p>
+      </div>
+      <div class="col-span-2">
+        <div class="w-full space-y-4 mx-auto" x-data="{ active: false }">
+          <div class="divide-white/5 divide-y space-y-3">
+            <div class="text-accent-500 font-semibold">General</div><div
+              class=""
+              x-data="{
+          id: 1,
+          get expanded() {
+              return this.active === this.id
+          },
+          set expanded(value) {
+              this.active = value ? this.id : null
+          },
+      }"
+              role="region">
+              <h2>
+                <button
+                  class="text-slate-500 text-base flex focus:text-accent-500 items-center justify-between py-3 text-left tracking-wide w-full"
+                  :aria-expanded="expanded"
+                  aria-expanded="false"
+                  x-on:click="expanded = !expanded"
+                  ><span>Can I buy only this template?</span>
+                  <span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="expanded"
+                    style="display:none"
+                    >−
+                  </span><span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="!expanded">+</span
+                  ></button
+                >
+              </h2><div style="display:none" x-collapse="" x-show="expanded">
+                <div class="text-slate-500 text-sm pt-5 text-base">
+                  Absolutely, you can purchase the template from the navigation
+                  button or <a
+                    class="hovbase:text-black text-accent-500"
+                    href="#">click here.</a
+                  >
+                </div>
+              </div>
+            </div><div
+              x-data="{
+        id: 2,
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+    }"
+              role="region">
+              <h2>
+                <button
+                  class="text-slate-500 text-base flex focus:text-accent-500 items-center justify-between py-3 text-left tracking-wide w-full"
+                  :aria-expanded="expanded"
+                  aria-expanded="false"
+                  x-on:click="expanded = !expanded"
+                  ><span>Is there a template demo available?</span>
+                  <span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="expanded"
+                    style="display:none"
+                    >−
+                  </span><span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="!expanded">+</span
+                  ></button
+                >
+              </h2><div style="display:none" x-collapse="" x-show="expanded">
+                <div class="text-slate-500 text-sm pt-5 text-base">
+                  You are previewing the whole template right now.
+                </div>
+              </div>
+            </div><div
+              x-data="{
+        id: 3,
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+    }"
+              role="region">
+              <h2>
+                <button
+                  class="text-slate-500 text-base flex focus:text-accent-500 items-center justify-between py-3 text-left tracking-wide w-full"
+                  :aria-expanded="expanded"
+                  aria-expanded="false"
+                  x-on:click="expanded = !expanded"
+                  ><span>What does "free updates" mean?</span>
+                  <span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="expanded"
+                    style="display:none"
+                    >−
+                  </span><span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="!expanded">+</span
+                  ></button
+                >
+              </h2><div style="display:none" x-collapse="" x-show="expanded">
+                <div class="text-slate-500 text-sm pt-5 text-base">
+                  When you purchase any Lexington product, any improvements to
+                  that product will always be free for anyone who owns that
+                  product.
+                </div><div class="text-slate-500 text-sm pt-5 text-base">
+                  <strong>Individual templates:</strong> When you buy an individual
+                  template, any improvements we make to that template will be available
+                  to you as part of your original purchase.
+                </div><div class="text-slate-500 text-sm pt-5 text-base">
+                  So if a bug gets fixed or upgrade the template to use the
+                  latest version of Astro, Alpinejs or Tailwind CSS you can
+                  download an updated version of the template free of charge.
+                </div><div class="text-slate-500 text-sm pt-5 text-base">
+                  Any new templates released are considered separate products,
+                  and can be purchased separately or you can also buy the <a
+                    class="hovbase:text-black text-accent-500"
+                    href="#">Bundle.</a
+                  > whic includes all templates.
+                </div><div class="text-slate-500 text-sm pt-5 text-base">
+                  <strong>Lexington bundle:</strong> When you purchase the Lexington
+                  Bunlde license, you get access to every site template available
+                  today, plus any new templates or component packages released in
+                  the future at no additional cost.
+                </div><div class="text-slate-500 text-sm pt-5 text-base">
+                  This means that if a brand new social media website template
+                  or new component package is added to Lexington Bundle ( all
+                  templates are inclued in the Bundle ), access to those
+                  products are included in your original purchase, with no
+                  upgrade cost.
+                </div>
+              </div>
+            </div><div class="text-accent-500 font-semibold pt-12">
+              Compatibility
+            </div><div
+              x-data="{
+        id: 4,
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+    }"
+              role="region">
+              <h2>
+                <button
+                  class="text-slate-500 text-base flex focus:text-accent-500 items-center justify-between py-3 text-left tracking-wide w-full"
+                  :aria-expanded="expanded"
+                  aria-expanded="false"
+                  x-on:click="expanded = !expanded"
+                  ><span>Are design files included?</span>
+                  <span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="expanded"
+                    style="display:none"
+                    >−
+                  </span><span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="!expanded">+</span
+                  ></button
+                >
+              </h2><div style="display:none" x-collapse="" x-show="expanded">
+                <div class="text-slate-500 text-sm pt-5 text-base">
+                  No, design assets for tools like Figma, Sketch, Penpot or
+                  Adobe XD are not included.
+                </div><div class="text-slate-500 text-sm pt-5 text-base">
+                  I do not offer or produce design files as part of my own
+                  design and development process, so building these extra
+                  resources means I can't spend as much time creating new
+                  templates in code which is where I believes I can provide the
+                  most value.
+                </div>
+              </div>
+            </div><div
+              x-data="{
+        id: 5,
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+    }"
+              role="region">
+              <h2>
+                <button
+                  class="text-slate-500 text-base flex focus:text-accent-500 items-center justify-between py-3 text-left tracking-wide w-full"
+                  :aria-expanded="expanded"
+                  aria-expanded="false"
+                  x-on:click="expanded = !expanded"
+                  ><span>What JS framework is used?</span>
+                  <span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="expanded"
+                    style="display:none"
+                    >−
+                  </span><span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="!expanded">+</span
+                  ></button
+                >
+              </h2><div style="display:none" x-collapse="" x-show="expanded">
+                <div class="text-slate-500 text-sm pt-5 text-base">
+                  I am not using any Framework, all the templates are built
+                  using Astro.Build but some of the components are built using
+                  Alpine.js. I am using Alpinejs on toggles, tabs, sliders,
+                  pricing table toggles, hamburguer menus,...
+                </div><div class="text-slate-500 text-sm pt-5 text-base">
+                  I belive that to make the templates less opinionated, I would
+                  leave the customer to choose the stack they want now that you
+                  can add any framework on Astro anytime.
+                </div>
+              </div>
+            </div><div
+              x-data="{
+        id: 6,
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+    }"
+              role="region">
+              <h2>
+                <button
+                  class="text-slate-500 text-base flex focus:text-accent-500 items-center justify-between py-3 text-left tracking-wide w-full"
+                  :aria-expanded="expanded"
+                  aria-expanded="false"
+                  x-on:click="expanded = !expanded"
+                  ><span>What version of the techs are you using?</span>
+                  <span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="expanded"
+                    style="display:none"
+                    >−
+                  </span><span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="!expanded">+</span
+                  ></button
+                >
+              </h2><div style="display:none" x-collapse="" x-show="expanded">
+                <div class="text-slate-500 text-sm pt-5 text-base">
+                  The templates are always going to be updated to the last
+                  versions available if this ones have breaking changes.
+                </div>
+              </div>
+            </div><div
+              x-data="{
+        id: 7,
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+    }"
+              role="region">
+              <h2>
+                <button
+                  class="text-slate-500 text-base flex focus:text-accent-500 items-center justify-between py-3 text-left tracking-wide w-full"
+                  :aria-expanded="expanded"
+                  aria-expanded="false"
+                  x-on:click="expanded = !expanded"
+                  ><span>What browsers are supported?</span>
+                  <span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="expanded"
+                    style="display:none"
+                    >−
+                  </span><span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="!expanded">+</span
+                  ></button
+                >
+              </h2><div style="display:none" x-collapse="" x-show="expanded">
+                <div class="text-slate-500 text-sm pt-5 text-base">
+                  The templates in Lexington are designed to work in the latest,
+                  stable releases of all major browsers, including Chrome,
+                  Firefox, Safari, Arc and Edge.
+                </div>
+              </div>
+            </div><div class="text-accent-500 font-semibold pt-12">
+              Licensing
+            </div><div
+              x-data="{
+        id: 8,
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+    }"
+              role="region">
+              <h2>
+                <button
+                  class="text-slate-500 text-base flex focus:text-accent-500 items-center justify-between py-3 text-left tracking-wide w-full"
+                  :aria-expanded="expanded"
+                  aria-expanded="false"
+                  x-on:click="expanded = !expanded"
+                  ><span>How do your licenses work?</span>
+                  <span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="expanded"
+                    style="display:none"
+                    >−
+                  </span><span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="!expanded">+</span
+                  ></button
+                >
+              </h2><div style="display:none" x-collapse="" x-show="expanded">
+                <div class="text-slate-500 text-sm pt-5 text-base">
+                  Read about the licenses <a
+                    class="hovbase:text-black text-accent-500"
+                    href="https://lexingtonthemes.com/license.html"
+                    >right here.</a
+                  > to se all the demo pages and sections on the live version,
+                </div>
+              </div>
+            </div><div class="text-accent-500 font-semibold pt-12">
+              Support
+            </div><div
+              x-data="{
+        id: 9,
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+    }"
+              role="region">
+              <h2>
+                <button
+                  class="text-slate-500 text-base flex focus:text-accent-500 items-center justify-between py-3 text-left tracking-wide w-full"
+                  :aria-expanded="expanded"
+                  aria-expanded="false"
+                  x-on:click="expanded = !expanded"
+                  ><span>Please email us at</span>
+                  <span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="expanded"
+                    style="display:none"
+                    >−
+                  </span><span
+                    class="ml-4"
+                    aria-hidden="true"
+                    x-show="!expanded">+</span
+                  ></button
+                >
+              </h2><div style="display:none" x-collapse="" x-show="expanded">
+                <div class="text-slate-500 text-sm pt-5 text-base">
+                  <a
+                    class="hovbase:text-black text-accent-500"
+                    href="mailto:michael@andreuzza.com">right here.</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </section>

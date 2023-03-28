@@ -1,15 +1,12 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Navigation from "../components/global/Navigation.astro";
-import Blog from "../components/blog/Blog.astro";
-import CtaTwo from "../components/cta/CtaTwo.astro";import { AstroSeo } from "@astrolib/seo";
+import EntriesOne from "../components/entries/EntriesOne.astro";
+const allPosts = await getCollection("posts");
+import { AstroSeo } from "@astrolib/seo";
 ---
 
-<!---
-Use AstroSeo in all the pages you want different Seo than the index page
--->
 <AstroSeo
-  title="Blog"
   description="Your site description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
@@ -42,9 +39,49 @@ Use AstroSeo in all the pages you want different Seo than the index page
     cardType: "summary_large_image",
   }}
 />
-
 <BaseLayout>
-  <Navigation />
-  <Blog />
-  <CtaTwo />
+  <section aria-labelledby="blogone" id="blogone">
+    <div
+      class="items-center w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
+      <div class="text-center max-w-3xl mx-auto">
+        <div>
+          <span class="bg-accent-500/10 rounded-full py-1 px-4 w-auto">
+            <span class="text-xs text-accent-500 uppercase font-semibold">
+              blog 1</span
+            >
+          </span>
+          <p
+            class="text-4xl mt-8 lg:text-9xl font-extrabold tracking-tight text-black font-display">
+            Welcome to our blog
+          </p>
+          <p class="text-base mt-4 text-slate-500 max-w-xl lg:mx-auto">
+            Sit down and enjoy our blog post. We update the library daily with
+            more and more blog entries that saciate you apetite of information.
+          </p>
+        </div>
+      </div>
+      <div class="mt-24">
+        <ol
+          class="gap-x-8 gap-y-12 grid grid-cols-1 lg:gap-y-24 lg:grid-cols-3 sm:grid-cols-2"
+          role="list">
+          {
+            allPosts
+              .slice()
+              .map((post) => (
+                <EntriesOne
+                  url={"/posts/" + post.slug}
+                  title={post.data.title}
+                  description={post.data.description}
+                  alt={post.data.title}
+                  pubDate={post.data.pubDate.toString().slice(0, 10)}
+                  author={post.data.author}
+                  image={post.data.image.url}
+                 
+                />
+              ))
+          }
+        </ol>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

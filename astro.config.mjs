@@ -1,11 +1,18 @@
-import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "astro/config";
 
-import astro from "astro-compress";
+import tailwind from "@astrojs/tailwind";
+import compress from "astro-compress";
 import sitemap from "@astrojs/sitemap";
-import image from "@astrojs/image";
-// https://astro.build/config
 export default defineConfig({
-   site: 'https://lexingtonthemes.com',
-  integrations: [tailwind(), astro(), sitemap(), image()]
+ markdown: {
+    drafts: true,
+    shikiConfig: { theme: "css-variables" }
+  },
+  shikiConfig: {
+    wrap: true,
+    skipInline: false,
+    drafts: true,
+  },
+  site: 'https://lexingtonthemes.com',
+  integrations: [tailwind(), compress(), sitemap()]
 });

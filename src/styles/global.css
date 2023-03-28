@@ -10,14 +10,14 @@ video {
 
 :root {
   --astro-code-color-text: #000;
-  --astro-code-color-background: #f2f2f2;
+  --astro-code-color-background: #fafafa;
   --astro-code-token-constant: #00000080;
   --astro-code-token-string: #000000;
   --astro-code-token-comment: #00000080;
-  --astro-code-token-keyword: #000000;
+  --astro-code-token-keyword: #0A9F7E;
   --astro-code-token-parameter: #000000;
-  --astro-code-token-function: #00000070;
-  --astro-code-token-string-expression: #7977f2;
+  --astro-code-token-function: #9D07BE;
+  --astro-code-token-string-expression: #2d2efd;
   --astro-code-token-punctuation: #000000;
   --astro-code-token-link: #000000;
 }

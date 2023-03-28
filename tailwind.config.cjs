@@ -156,8 +156,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        display: ["General Sans", ...defaultTheme.fontFamily.sans],
+        sans: ["Switzer", ...defaultTheme.fontFamily.sans],
+
       },
     },
   },

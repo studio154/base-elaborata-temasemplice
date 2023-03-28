@@ -51,7 +51,7 @@ import { AstroSeo } from "@astrolib/seo";
             >
           </span>
           <p
-            class="text-4xl mt-8 lg:text-9xl font-extrabold tracking-tight text-black font-display">
+            class="text-4xl mt-8 lg:text-9xl font-extrabold tracking-tight text-black">
             Welcome to our blog
           </p>
           <p class="text-base mt-4 text-slate-500 max-w-xl lg:mx-auto">
@@ -76,7 +76,6 @@ import { AstroSeo } from "@astrolib/seo";
                   pubDate={post.data.pubDate.toString().slice(0, 10)}
                   author={post.data.author}
                   image={post.data.image.url}
-                 
                 />
               ))
           }

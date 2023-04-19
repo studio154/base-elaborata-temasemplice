@@ -3,6 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 
 import CtaTwo from "../components/cta/CtaTwo.astro";
 const { frontmatter } = Astro.props;
+
 import { AstroSeo } from "@astrolib/seo";
 ---
 
@@ -51,11 +52,11 @@ import { AstroSeo } from "@astrolib/seo";
       />
       <div class="grid grid-cols-1 gap-10 xl:gap-24 mt-12">
         <div
-          class="prose mx-auto prose-blockquote:border-l-black prose-a:text-accent-500 hover:prose-a:text-black prose-headings:font-bold prose-headings:text-black prose-li:marker:text-accent-500 text-slate-500 prose-code:text-black prose-blockquote:text-slate-500">
-          <h1 class="text-center">
+          class="max-w-3xl prose mx-auto prose-blockquote:border-l-black prose-a:text-accent-500 hover:prose-a:text-black prose-headings:font-bold prose-headings:text-black prose-li:marker:text-accent-500 text-slate-500 prose-code:text-black prose-blockquote:text-slate-500">
+          <h1>
             {frontmatter.title}
           </h1>
-          <h2 id="phanatik-includes-a-page-for-your-potential-subscribers">
+          <h2>
             <em>{frontmatter.description}</em>
           </h2>
           <p class="text-xs">
@@ -64,11 +65,14 @@ import { AstroSeo } from "@astrolib/seo";
             }
           </p>
           <div>
-            <span
-              class="items-center gap-3 flex text-sm font-medium underline hover:text-accent-300">
+            <span class="items-center gap-1 flex">
               {
                 frontmatter.tags.map((tag) => (
-                  <a href={`/tags/${tag}`}>{tag}</a>
+                  <a
+                    class="inline-flex no-underline  items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-accent-50 text-accent-800"
+                    href={`/tags/${tag}`}>
+                    {tag}
+                  </a>
                 ))
               }
             </span>
@@ -79,5 +83,7 @@ import { AstroSeo } from "@astrolib/seo";
       </div>
     </div>
   </section>
+
+
   <CtaTwo />
 </BaseLayout>

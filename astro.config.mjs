@@ -7,7 +7,7 @@ export default defineConfig({
  markdown: {
     drafts: true,
     shikiConfig: { theme: "css-variables" }
-  },
+  },  
   shikiConfig: {
     wrap: true,
     skipInline: false,

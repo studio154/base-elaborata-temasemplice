@@ -1,5 +1,22 @@
 ---
+import { AstroSeo } from "@astrolib/seo";
 import "../styles/global.css";
+
+const {
+  title = "Semplice Theme",
+  description = "Your site description goes here",
+  image: _image = "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
+
+  canonical = String(Astro.url.pathname),
+  noindex = false,
+  nofollow = false,
+
+  ogTitle = title,
+  ogDescription = description,
+  ogType = "website",
+
+  dontUseTitleTemplate = false,
+} = Astro.props;
 ---
 
 <meta charset="utf-8" />
@@ -8,10 +25,37 @@ import "../styles/global.css";
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="author" content="Michael Andreuzza" />
-<meta
-  name="your keywords"
-  content="wallpaper,black wallpaper, gradient wallpaper,aesthetic wallpaper,iphone wallpaper,wallpaper iphone,white wallpaper,pink wallpaper"
+<meta name="your keywords" content="wallpaper,black wallpaper" />
+
+<AstroSeo
+  title={title}
+  titleTemplate={dontUseTitleTemplate ? "%s" : `%s — Semplice Theme`}
+  description={description}
+  canonical={String(canonical)}
+  noindex={noindex}
+  nofollow={nofollow}
+  openGraph={{
+    url: String(canonical),
+    title: ogTitle,
+    description: ogDescription,
+    type: ogType,
+    images: [
+      {
+        url: _image,
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+      },
+    ],
+    site_name: "YourSitesName",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@site",
+    cardType: "summary_large_image",
+  }}
 />
+
 <!-- Favicon guidelines generated with https://realfavicongenerator.net/ -->
 <link
   rel="apple-touch-icon"

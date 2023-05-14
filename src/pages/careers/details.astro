@@ -1,0 +1,300 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section>
+    <div
+      class="items-center w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div>
+          <div
+            class="bg-gradient-to-tr p-4 space-y-6 lg:p-8 shadow-normal rounded-3xl from-accent-600 via-accent-500 to-accent-400"
+          >
+            <div class="space-y-3">
+              <div
+                class="relative h-[3.125rem] w-[3.125rem] sm:h-[3.75rem] sm:w-[3.75rem] flex-none"
+              >
+                <img
+                  class="absolute inset-0 ring-4 ring-white h-full w-full rounded-full object-cover"
+                  src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-0 rounded-full ring-1 ring-inset ring-black/[0.08]"
+                >
+                </div>
+              </div>
+              <p class="text-white font-medium lg:text-xl text-lg">Location</p>
+              <span class="text-slate-200 text-base space-x-1"
+                ><time datetime="2023-03-16">Mariehamn / Åland Islands, FI</time
+                ></span
+              >
+            </div>
+            <div class="space-y-3">
+              <p class="text-white font-medium lg:text-xl text-lg">Type</p><span
+                class="text-slate-200 text-base space-x-1"
+                ><time datetime="2023-03-16">Full time</time></span
+              >
+            </div>
+            <div class="space-y-3">
+              <p class="text-white font-medium lg:text-xl text-lg">
+                Department
+              </p><span class="text-slate-200 text-base space-x-1"
+                ><time datetime="2023-03-16">Engineering</time></span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:col-span-2 ´">
+          <div class="w-full mx-auto" x-data="" x-tabs="">
+            <div class="w-full -mb-px flex items-stretch" x-tabs:list="">
+              <button
+                class="inline-flex py-2.5 border-b-2 font-medium px-5 border-b-accent-500 text-black"
+                :class="$tab.isSelected ? 'border-accent-500  text-accent-500' : 'border-transparent text-slate-500'"
+                type="button"
+                x-tabs:tab=""
+                tabindex="0">Overview</button
+              >
+              <button
+                class="inline-flex py-2.5 border-b-2 px-5 font-medium border-accent-500 text-slate-500"
+                :class="$tab.isSelected ? 'border-accent-500  border-b-2 text-accent-500' : 'border-transparent text-slate-500'"
+                type="button"
+                x-tabs:tab=""
+                tabindex="-1">Application form</button
+              >
+            </div><div class="w-full border-t rounded-b-md" x-tabs:panels="">
+              <div class="pt-8 w-full" x-tabs:panel="" tabindex="0">
+                <div
+                  class="text-slate-500 hover:prose-a:text-accent-900 lg:col-span-2 prose prose-a:font-semibold prose-a:text-accent-500 w-full prose-blockquote:text-base prose-blockquote:text-slate-300 prose-h3:text-black prose-base"
+                >
+                  <p>
+                    At Semplice., we are on a mission to create a new standard
+                    for modern software development. We are building the tools
+                    that empower the next generation of high-impact companies to
+                    do their best work. Semplice. is designed based on the
+                    practices and processes that distinguish world-class product
+                    teams from the rest: relentless focus, fast execution, and a
+                    commitment to the quality of craft.
+                  </p><p>
+                    Founded in 2019, Semplice. has become the default tool of
+                    choice for high-performance teams to build their products.
+                    Set up as a fully remote company from the start, our team is
+                    currently distributed across a variety of countries across
+                    the US, Latin America and Europe (we hire within US/EU
+                    timezones). We are a diverse team of individuals, all makers
+                    at heart. We love picking up new challenges and care deeply
+                    about the quality of our work.
+                  </p><p>
+                    As a small team, we’re all generalists and constantly
+                    picking up new challenges. When it comes to code, we’re
+                    looking to work with experienced people who can pick a
+                    problem and solve it. We use TypeScript and build scalable
+                    systems so we can continuously make progress on a solid
+                    foundation. We don’t expect you to have a background in
+                    everything we use, but we do expect strong JavaScript
+                    fundamentals and a background working with React, and
+                    ideally TypeScript.
+                  </p><h3>What you will do</h3><ul>
+                    <li>
+                      Work with engineers and designer to build new user-facing
+                      features which touch everything from database models, to
+                      APIs and React UI
+                    </li><li>
+                      Diagnose and improve application performance
+                    </li><li>
+                      Add real-time collaborative editing to our content editor
+                    </li><li>
+                      Add analytics, monitoring, and alerts to our service so
+                      that we can better respond to operational incidents
+                    </li><li>
+                      Open-source any non-trivial innovations that come out of
+                      our work on the product
+                    </li>
+                  </ul><h3>Tech</h3><ul>
+                    <li>
+                      React frontend with Styled Components, utilizing hooks for
+                      the composability of functionality
+                    </li><li>
+                      Proprietary data synchronization library built for speed
+                      and offline support. Delta-packets are transported using
+                      WebSockets
+                    </li><li>MobX for binding the data model to the UI</li><li>
+                      Prosemirror-based content editor
+                    </li><li>Electron desktop application</li><li>
+                      Public GraphQL API that has access to all of the user's
+                      data
+                    </li><li>Node, Postgres and Redis in the backend</li><li>
+                      Hosted on Google Cloud with k8s
+                    </li><li>GitHub, Slack, Notion</li><li>
+                      Design system with React component library
+                    </li>
+                  </ul><h3>What we offer</h3><ul>
+                    <li>Interesting and challenging work</li><li>
+                      An experienced team to learn from
+                    </li><li>Work life balance</li><li>
+                      Competitive salary and equity
+                    </li><li>
+                      Employee-friendly equity terms (early exercise, extended
+                      exercise)
+                    </li><li>Macbook Pro, 5K display and accessories</li><li>
+                      Stipend to set up your home office
+                    </li><li>Paid lunch and coffee during work days</li><li>
+                      Work remotely, no commuting to the office
+                    </li><li>Paid co-working space/desk at an office</li><li>
+                      Health, dental and vision insurance
+                    </li><li>Regular team events and offsites</li><li>
+                      5 weeks paid vacation
+                    </li><li>4 months paid parental leave</li>
+                  </ul>
+                </div>
+              </div><div
+                class="pt-8"
+                x-tabs:panel=""
+                id="form"
+                tabindex="-1"
+                style="display: none;"
+              >
+                <div class="w-full mx-auto">
+                  <form action="#" class="w-full">
+                    <input
+                      type="text"
+                      autocomplete="false"
+                      name="hidden"
+                      style="display:none"
+                    />
+                    <input type="hidden" name="_redirect" value="#" /><div
+                      class="mt-4 space-y-6"
+                    >
+                      <div class="">
+                        <label
+                          class="text-sm block font-medium mb-3 text-black"
+                          name="name">First name</label
+                        >
+                        <input
+                          type="text"
+                          class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
+                          placeholder="Your name"
+                        />
+                      </div><div class="col-span-full">
+                        <label
+                          class="text-sm block font-medium mb-3 text-black"
+                          name="email">Email</label
+                        >
+                        <input
+                          type="email"
+                          class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
+                          placeholder="email@example.com"
+                          autocomplete="off"
+                        />
+                      </div><div>
+                        <div>
+                          <label
+                            class="text-sm block font-medium mb-3 text-black"
+                            name="message">Cover letter</label
+                          ><div class="mt-1">
+                            <textarea
+                              class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
+                              placeholder="What are you working on?"
+                              rows="4"></textarea>
+                          </div>
+                        </div>
+                      </div><div>
+                        <label
+                          class="text-sm block font-medium mb-3 text-black"
+                          for="cover-photo">Cover photo</label
+                        ><div class="w-full mt-1 sm:col-span-2 sm:mt-0">
+                          <div
+                            class="flex justify-center border border-dashed border-slate-400 pb-6 pt-5 px-6 rounded-md"
+                          >
+                            <div class="space-y-3 py-6 text-center">
+                              <div
+                                class="text-sm text-slate-400 flex items-center gap-3"
+                              >
+                                <label
+                                  class="inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 -ml-px dark rounded-full cursor-pointer"
+                                  for="file-upload"
+                                  ><span>Upload a file</span>
+                                  <input
+                                    type="file"
+                                    class="sr-only"
+                                    id="file-upload"
+                                    name="file-upload"
+                                  /></label
+                                ><p class="pl-1">or drag and drop</p>
+                              </div><p class="text-slate-400 text-xs">
+                                PNG, JPG, GIF up to 10MB
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><div class="col-span-full">
+                        <label
+                          class="text-sm block font-medium mb-3 text-black"
+                          name="email">Portfolio</label
+                        >
+                        <input
+                          type="text"
+                          class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
+                          placeholder="Your site"
+                          autocomplete="off"
+                        />
+                      </div><div class="col-span-full">
+                        <label
+                          class="text-sm block font-medium mb-3 text-black"
+                          name="email">Linkedin</label
+                        >
+                        <input
+                          type="text"
+                          class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
+                          placeholder="your link"
+                          autocomplete="off"
+                        />
+                      </div><div class="col-span-full">
+                        <span class="text-sm block font-medium mb-3 text-black"
+                          >Are you based in a US, EU or equivalent timezone?
+                        </span>
+                        <span class="isolate inline-flex rounded-md shadow-sm">
+                          <button
+                            type="button"
+                            class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                            >Yes</button
+                          >
+
+                          <button
+                            type="button"
+                            class="relative -ml-px inline-flex items-center rounded-r-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                            >No</button
+                          >
+                        </span>
+                      </div><div class="col-span-full">
+                        <label
+                          class="text-sm block font-medium mb-3 text-black"
+                          name="email">What country are you based in?</label
+                        >
+                        <input
+                          type="text"
+                          class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
+                          placeholder="your country"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div class="flex-col flex mt-10 sm:flex-row">
+                        <a
+                          class="items-center text-white focus:outline-none inline-flex justify-center hover:text-accent-500 duration-200 focus-visible:outline-black focus-visible:ring-black font-medium px-6 py-4 rounded-xl text-center w-full bg-accent-500 hover:bg-accent-100"
+                          href="/overview">Submit application</a
+                        >
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

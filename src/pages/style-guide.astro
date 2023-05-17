@@ -1,8 +1,9 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
-import Typography from "../components/styleguide/Typography.astro";
-import Colors from "../components/styleguide/Colors.astro";
+import Typography from "@/components/styleguide/Typography.astro";
+import Colors from "@/components/styleguide/Colors.astro";
+import Buttons from "@/components/styleguide/Buttons.astro";
 
 const meta = {
   title: "Styleguide",
@@ -13,4 +14,5 @@ const meta = {
 <BaseLayout meta={meta}>
   <Typography />
   <Colors />
+  <Buttons />
 </BaseLayout>

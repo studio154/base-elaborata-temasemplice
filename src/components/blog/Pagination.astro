@@ -16,13 +16,12 @@ const {
 
 {
   (prevUrl || nextUrl) && (
-    <div class="flex flex-row mx-auto container justify-between">
+    <div class="flex flex-row mx-auto container justify-between mt-12 lg:mt-24 border-t pt-6">
       <a
         href={prevUrl}
         class={`items-center text-white focus:outline-none inline-flex justify-center hover:text-accent-500 duration-200 focus-visible:outline-black focus-visible:ring-black font-medium lg:w-auto px-6 py-3 rounded-xl text-center w-full bg-accent-500 hover:bg-accent-100 mr-2 ${
           !prevUrl ? "invisible" : ""
-        }`}
-      >
+        }`}>
         <div class="flex flex-row align-middle">
           <p class="ml-2">{prevText}</p>
         </div>
@@ -31,8 +30,7 @@ const {
         href={nextUrl}
         class={`items-center text-white focus:outline-none inline-flex justify-center hover:text-accent-500 duration-200 focus-visible:outline-black focus-visible:ring-black font-medium lg:w-auto px-6 py-3 rounded-xl text-center w-full bg-accent-500 hover:bg-accent-100 ${
           !nextUrl ? "invisible" : ""
-        }`}
-      >
+        }`}>
         <div class="flex flex-row align-middle">
           <span class="mr-2">{nextText}</span>
         </div>

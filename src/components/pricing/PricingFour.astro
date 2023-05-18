@@ -1,11 +1,10 @@
-<section
- 
-  class="relative overflow-hidden">
+<section class="relative overflow-hidden">
   <svg
     class="absolute opacity-5"
     viewBox="0 0 4276 4276"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M2138 4273C3317.13 4273 4273 3317.13 4273 2138C4273 958.872 3317.13 3 2138 3C958.872 3 3 958.872 3 2138C3 3317.13 958.872 4273 2138 4273Z"
       stroke="#4A3AFF"
@@ -86,7 +85,8 @@
     height="100%"
     viewBox="0 0 400 400"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clip-path="url(#clip0_10_20)">
       <g filter="url(#filter0_f_10_20)">
         <path d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z" fill="#5934ed"></path>
@@ -105,7 +105,8 @@
         width="720.666"
         height="720.666"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB">
+        color-interpolation-filters="sRGB"
+      >
         <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
         <feBlend
           mode="normal"
@@ -124,7 +125,8 @@
     height="100%"
     viewBox="0 0 400 400"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clip-path="url(#clip0_10_20)">
       <g filter="url(#filter0_f_10_20)">
         <path d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z" fill="#5934ed"></path>
@@ -143,7 +145,8 @@
         width="720.666"
         height="720.666"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB">
+        color-interpolation-filters="sRGB"
+      >
         <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
         <feBlend
           mode="normal"
@@ -158,11 +161,13 @@
   </svg>
   <div
     class="items-center w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-36 relative"
-    x-data="{annual: false}">
+    x-data="{duration: 'monthly'}"
+  >
     <div class="max-w-3xl lg:mx-auto lg:text-center">
       <div>
         <span
-          class="bg-accent-50/50 border border-white/50 backdrop-blur-2xl rounded-full py-2 px-4 w-auto">
+          class="bg-accent-50/50 border border-white/50 backdrop-blur-2xl rounded-full py-2 px-4 w-auto"
+        >
           <span class="text-sm text-accent-500"> Pricing 4</span>
         </span>
         <p class="text-4xl mt-8 lg:text-6xl font-extrabold text-black">
@@ -173,38 +178,54 @@
         </p>
       </div>
       <div
-        class="bg-gradient-to-tr from-accent-600 via-accent-500 to-accent-400 inline-flex rounded-xl divide-accent-500 divide-x-2 mt-6 overflow-hidden p-0.5 shadow-normal z-0">
+        class="bg-gradient-to-tr from-accent-600 via-accent-500 to-accent-400 inline-flex rounded-xl divide-accent-500 divide-x-2 mt-6 overflow-hidden p-0.5 shadow-normal z-0"
+      >
         <button
+          id="monthly-pricing-button"
           class="text-sm py-2 text-white w-full bg-accent-500 block font-medium px-8 transition rounded-l-xl"
-          @click="annual = false"
-          :class="annual == false ? 'bg-accent-700 text-white ' : ''"
+          @click="duration = 'monthly'"
+          :class="duration == 'monthly' ? 'bg-accent-700 text-white ' : ''"
           type="button">Monthly</button
         >
         <button
+          id="annual-pricing-button"
           class="text-sm text-white py-2 w-full block font-medium px-8 transition rounded-r-xl bg-accent-500"
-          @click="annual = true"
-          :class="annual == true ? 'bg-accent-700 text-white' : ''"
+          @click="duration = 'annual'"
+          :class="duration == 'annual' ? 'bg-accent-700 text-white ' : ''"
           type="button">Annual</button
         >
       </div>
     </div>
     <div
-      class="relative max-w-7xl lg:mx-auto my-12 sm:gap-3 sm:grid sm:grid-cols-2 sm:mt-16 sm:space-y-0 space-y-4 xl:grid-cols-2">
-      <section
-        class="bg-white/30 border-white/40 border backdrop-blur-3xl shadow-normal rounded-3xl">
+      class="relative max-w-7xl lg:mx-auto my-12 sm:gap-3 sm:grid sm:grid-cols-2 sm:mt-16 sm:space-y-0 space-y-4 xl:grid-cols-2"
+    >
+      <div
+        class="bg-white/30 border-white/40 border backdrop-blur-3xl shadow-normal rounded-3xl"
+      >
         <div
-          class="items-center w-full justify-center grid grid-cols-1 lg:p-8 p-6 rounded-t-3xl">
+          class="items-center w-full justify-center grid grid-cols-1 lg:p-8 p-6 rounded-t-3xl"
+        >
           <div class="inline-flex items-center w-full justify-between">
             <div>
               <h2 class="text-black text-2xl">Pro</h2><p
-                class="mt-4 text-slate-700 text-base">
+                class="mt-4 text-slate-700 text-base"
+              >
                 For medium businesses
               </p>
             </div><div class="flex-col">
               <p class="text-black text-5xl tracking-tight">
-                $<span x-text="annual ? '12.00' : '15.00'">12.00</span>
-              </p><p class="text-base text-slate-700">
-                per month <span x-show="annual">(billed annually)</span>
+                <span
+                  data-monthly="$15.00"
+                  data-annual="$12.00"
+                  x-text="$el.dataset[duration]"
+                >
+                  $15.00
+                </span>
+              </p>
+              <p class="text-base text-slate-700">
+                per month <span x-show="duration === 'annual'"
+                  >(billed annually)</span
+                >
               </p>
             </div>
           </div>
@@ -212,7 +233,8 @@
         <div class="px-6 pb-8 rounded-b-3xl border-t border-white/50 pt-10">
           <ul
             class="text-sm flex flex-col gap-y-3 order-last text-slate-700 lg:text-lg"
-            role="list">
+            role="list"
+          >
             <li class="flex items-center">
               <svg
                 class="h-6 w-6 opacity-70"
@@ -319,10 +341,13 @@
             href="#">Get started</a
           >
         </div>
-      </section><section
-        class="lg:order-none order-first bg-gradient-to-tr from-accent-600 via-accent-500 to-accent-400 rounded-[2rem]">
+      </div>
+      <div
+        class="lg:order-none order-first bg-gradient-to-tr from-accent-600 via-accent-500 to-accent-400 rounded-[2rem]"
+      >
         <div
-          class="items-center w-full justify-center grid grid-cols-1 lg:p-8 p-6 rounded-t-3xl">
+          class="items-center w-full justify-center grid grid-cols-1 lg:p-8 p-6 rounded-t-3xl"
+        >
           <div class="inline-flex items-center w-full justify-between">
             <div>
               <h2 class="text-white text-2xl">
@@ -334,9 +359,16 @@
             </div>
             <div class="flex-col">
               <p class="text-white text-5xl tracking-tight">
-                $<span x-text="annual ? '28.00' : '35.00'">28.00</span>
-              </p><p class="text-base text-slate-400">
-                per month <span x-show="annual">(billed annually)</span>
+                <span
+                  data-monthly="$35.00"
+                  data-annual="$28.00"
+                  x-text="$el.dataset[duration]">$35.00</span
+                >
+              </p>
+              <p class="text-base text-slate-400">
+                per month <span x-show="duration === 'annual'"
+                  >(billed annually)
+                </span>
               </p>
             </div>
           </div>
@@ -344,7 +376,8 @@
         <div class="px-6 pb-8 rounded-b-3xl border-t border-white/50 pt-10">
           <ul
             class="text-sm flex flex-col gap-y-3 order-last text-white lg:text-lg"
-            role="list">
+            role="list"
+          >
             <li class="flex items-center">
               <svg
                 class="h-6 w-6 opacity-70"
@@ -450,7 +483,7 @@
             href="#">Get started</a
           >
         </div>
-      </section>
+      </div>
     </div>
   </div>
 </section>

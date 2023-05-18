@@ -143,23 +143,26 @@ module.exports = {
       colors: {
         black:"#1b1d20",
         accent: {
-         50: "#EEE8FD",
-      100: "#E1D5FB",
-      200: "#C3ABF7",
-      300: "#A581F3",
-      400: "#8757EF",
-      500: "#672CEB",
-      600: "#4E13CD",
-      700: "#3B0F9A",
-      800: "#270A66",
-      900: "#140533"
+          50: "#EEE8FD",
+          100: "#E1D5FB",
+          200: "#C3ABF7",
+          300: "#A581F3",
+          400: "#8757EF",
+          500: "#672CEB",
+          600: "#4E13CD",
+          700: "#3B0F9A",
+          800: "#270A66",
+          900: "#140533"
         },
       },
       fontFamily: {
         sans: ["Switzer", ...defaultTheme.fontFamily.sans],
-
       },
     },
   },
-  plugins: [ require('@tailwindcss/typography'),require("@tailwindcss/forms"), require("@tailwindcss/line-clamp")],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/line-clamp")
+  ],
 };

@@ -101,7 +101,95 @@ declare module 'astro:content' {
 	>;
 
 	const entryMap: {
-		"posts": {
+		"integrations": {
+"figma.md": {
+  id: "figma.md",
+  slug: "figma",
+  body: string,
+  collection: "integrations",
+  data: InferEntrySchema<"integrations">
+} & { render(): Render[".md"] },
+"github.md": {
+  id: "github.md",
+  slug: "github",
+  body: string,
+  collection: "integrations",
+  data: InferEntrySchema<"integrations">
+} & { render(): Render[".md"] },
+"gitlab.md": {
+  id: "gitlab.md",
+  slug: "gitlab",
+  body: string,
+  collection: "integrations",
+  data: InferEntrySchema<"integrations">
+} & { render(): Render[".md"] },
+"linear.md": {
+  id: "linear.md",
+  slug: "linear",
+  body: string,
+  collection: "integrations",
+  data: InferEntrySchema<"integrations">
+} & { render(): Render[".md"] },
+"marvel.md": {
+  id: "marvel.md",
+  slug: "marvel",
+  body: string,
+  collection: "integrations",
+  data: InferEntrySchema<"integrations">
+} & { render(): Render[".md"] },
+"procreate.md": {
+  id: "procreate.md",
+  slug: "procreate",
+  body: string,
+  collection: "integrations",
+  data: InferEntrySchema<"integrations">
+} & { render(): Render[".md"] },
+},
+"knowledgeBaseCategories": {
+"getting-started.md": {
+  id: "getting-started.md",
+  slug: "getting-started",
+  body: string,
+  collection: "knowledgeBaseCategories",
+  data: InferEntrySchema<"knowledgeBaseCategories">
+} & { render(): Render[".md"] },
+"integrations.md": {
+  id: "integrations.md",
+  slug: "integrations",
+  body: string,
+  collection: "knowledgeBaseCategories",
+  data: InferEntrySchema<"knowledgeBaseCategories">
+} & { render(): Render[".md"] },
+"settings-preferences.md": {
+  id: "settings-preferences.md",
+  slug: "settings-preferences",
+  body: string,
+  collection: "knowledgeBaseCategories",
+  data: InferEntrySchema<"knowledgeBaseCategories">
+} & { render(): Render[".md"] },
+"teams-billing.md": {
+  id: "teams-billing.md",
+  slug: "teams-billing",
+  body: string,
+  collection: "knowledgeBaseCategories",
+  data: InferEntrySchema<"knowledgeBaseCategories">
+} & { render(): Render[".md"] },
+"troubleshooting.md": {
+  id: "troubleshooting.md",
+  slug: "troubleshooting",
+  body: string,
+  collection: "knowledgeBaseCategories",
+  data: InferEntrySchema<"knowledgeBaseCategories">
+} & { render(): Render[".md"] },
+"using-semplice.md": {
+  id: "using-semplice.md",
+  slug: "using-semplice",
+  body: string,
+  collection: "knowledgeBaseCategories",
+  data: InferEntrySchema<"knowledgeBaseCategories">
+} & { render(): Render[".md"] },
+},
+"posts": {
 "1.md": {
   id: "1.md",
   slug: "1",
@@ -143,6 +231,22 @@ declare module 'astro:content' {
   body: string,
   collection: "posts",
   data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] },
+},
+"updates": {
+"1.md": {
+  id: "1.md",
+  slug: "1",
+  body: string,
+  collection: "updates",
+  data: InferEntrySchema<"updates">
+} & { render(): Render[".md"] },
+"2.md": {
+  id: "2.md",
+  slug: "2",
+  body: string,
+  collection: "updates",
+  data: InferEntrySchema<"updates">
 } & { render(): Render[".md"] },
 },
 

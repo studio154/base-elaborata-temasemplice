@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Pagination from "@/components/blog/Pagination.astro";
-import Card from "@/components/blog/Card.astro";
+import BlogCard from "@/components/blog/BlogCard.astro";
 
 export async function getStaticPaths({ paginate }) {
   return paginate(await getCollection("posts"), {
@@ -35,7 +35,8 @@ const meta = {
             >
           </span>
           <h1
-            class="text-4xl mt-8 lg:text-9xl font-extrabold tracking-tight text-black">
+            class="text-4xl mt-8 lg:text-9xl font-extrabold tracking-tight text-black"
+          >
             Welcome to our blog
           </h1>
           <p class="text-base mt-4 text-slate-500 max-w-xl lg:mx-auto">
@@ -46,8 +47,9 @@ const meta = {
       </div>
       <div
         class="mt-24 gap-x-8 gap-y-12 grid grid-cols-1 lg:gap-y-24 lg:grid-cols-3 sm:grid-cols-2"
-        role="list">
-        {posts.map((post) => <Card post={post} />)}
+        role="list"
+      >
+        {posts.map((post) => <BlogCard post={post} />)}
       </div>
       <Pagination prevUrl={prevUrl} nextUrl={nextUrl} />
     </div>

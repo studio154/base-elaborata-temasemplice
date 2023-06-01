@@ -1,0 +1,44 @@
+---
+import { getFormattedDate } from "@/utils/utils";
+const { post: postProps } = Astro.props;
+
+const post = {
+  ...postProps.data,
+  slug: postProps.slug,
+};
+---
+
+<div class="group">
+  <a href={"/blog/" + post.slug} title={post.name} class="h-full">
+    <div class="flex justify-center">
+      <div class="flex">
+        <img
+          class="aspect-[4/3] duration-300 group-hover:scale-110 object-cover rounded-2xl shadow-2xl"
+          loading="lazy"
+          src={post.image.url}
+          alt={post.image.alt}
+        />
+      </div>
+    </div>
+    <div class="px-2 lg:px-6 flex flex-col items-start">
+      <div>
+        <p class="mt-8">
+          <time class="text-slate-500 text-xs" datetime={post.publishedAt}>
+            {getFormattedDate(post.publishedAt)}
+          </time>
+        </p>
+        <p class="mt-3 text-black font-medium lg:text-xl text-lg">
+          {post.name}
+        </p>
+        <p
+          class="text-slate-500 group-hover:text-black mt-2 line-clamp-2 text-base"
+        >
+          {post.description}
+        </p>
+      </div>
+      <div class="mt-6">
+        <p class="font-medium text-gray-900 text-xs">By {post.author}</p>
+      </div>
+    </div>
+  </a>
+</div>

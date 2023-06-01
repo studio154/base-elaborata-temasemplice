@@ -1,0 +1,27 @@
+---
+const { integration } = Astro.props;
+---
+
+<li>
+  <a href={"/integrations/" + integration.slug}>
+    <div
+      class="bg-white hover:bg-slate-50 hover:border-transparent p-6 rounded-2xl border duration-200 h-full"
+    >
+      <div>
+        <div class="lg:inline-flex lg:items-center">
+          <div class="w-9">
+            <img src={integration.image.url} alt="" />
+          </div>
+          <h3
+            class="mt-6 text-black font-medium lg:text-xl text-lg lg:ml-3 lg:mt-0"
+          >
+            {integration.name}
+          </h3>
+        </div>
+        <p class="text-slate-500 mt-2 text-base">
+          {integration.excerpt}
+        </p>
+      </div>
+    </div>
+  </a>
+</li>

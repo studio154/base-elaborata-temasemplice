@@ -1,6 +1,21 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import CtaTwo from "@/components/cta/CtaTwo.astro";
+import { getFormattedDate } from "@/utils/utils";
+
+export async function getStaticPaths() {
+  const updates = await getCollection("updates");
+  return updates.map((update) => ({
+    params: {
+      slug: update.slug,
+    },
+    props: { update },
+  }));
+}
+
+const { data: update, render } = Astro.props.update;
+const { Content } = await render();
 ---
 
 <BaseLayout>
@@ -10,41 +25,25 @@ import CtaTwo from "@/components/cta/CtaTwo.astro";
         <span
           class="font-semibold text-accent-500 text-sm tracking-widest uppercase"
         >
-          Update - <span class="text-black">Apr 8, 2021</span>
+          {update.category} - <span class="text-black"
+            >{getFormattedDate(update.publishedAt)}</span
+          >
         </span>
         <p class="text-4xl mt-8 font-extrabold tracking-tight text-black">
-          Semplice Analytics support for Interaction to Next Paint
-          (Experimental)
+          {update.name}
         </p>
       </div>
-      <div class="bg-slate-100 p-8 mt-12 rounded-3xl" style="">
+      <div class="bg-slate-100 p-8 mt-12 rounded-3xl">
         <img
-          alt=""
+          alt={update.image.alt}
           class="relative w-full border rounded-2xl object-cover shadow-2xl"
-          src="https://cdn.dribbble.com/userupload/5232948/file/original-db671fd272b38dfec98c3404e4d8db9d.png?compress=1&resize=800x600&vertical=top"
+          src={update.image.url}
         />
       </div>
       <div
         class="prose mt-12 mx-auto prose-blockquote:border-l-black prose-a:text-accent-500 hover:prose-a:text-black prose-headings:font-bold prose-headings:text-black prose-li:marker:text-accent-500 text-slate-500 prose-code:text-black prose-blockquote:text-slate-500 max-w-3xl"
       >
-        <p>
-          Pro users can now configure notification settings by category, set
-          specific preferences, and choose when to be notified in order to help
-          personalize your experience and avoid unexpected high usage bills.
-        </p>
-        <ul>
-          <li>
-            Each category will have associated thresholds and dollar values. You
-            are now able to select multiple thresholds and be notified only when
-            they are reached.
-          </li>
-          <li>
-            You can choose not to receive usage notifications for one of the
-            categories. However, we do not recommend this action because you
-            will be aware when you are approaching additional charges and will
-            not be surprised by a large overage invoice.
-          </li>
-        </ul>
+        <Content />
         <div
           class="flex flex-col gap-3 mt-10 sm:flex-row items-center not-prose"
         >

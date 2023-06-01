@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import MarkdownPostLayout from "@/layouts/MarkdownPostLayout.astro";
+import { getFormattedDate } from "@/utils/utils";
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -13,12 +13,51 @@ export async function getStaticPaths() {
   }));
 }
 
-const { post } = Astro.props;
-const { Content } = await post.render();
+const { data: post, render } = Astro.props.post;
+const { Content } = await render();
 ---
 
 <BaseLayout>
-  <MarkdownPostLayout frontmatter={post.data}>
-    <Content />
-  </MarkdownPostLayout>
+  <section class="relative">
+    <div
+      class="items-center w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-24"
+    >
+      <img
+        class="h-[60vh] w-full object-cover bg-top rounded-3xl shadow-normal"
+        src={post.image.url}
+        alt={post.image.alt}
+      />
+      <div class="grid grid-cols-1 gap-10 xl:gap-24 mt-12">
+        <div
+          class="max-w-3xl prose mx-auto prose-blockquote:border-l-black prose-a:text-accent-500 hover:prose-a:text-black prose-headings:font-bold prose-headings:text-black prose-li:marker:text-accent-500 text-slate-500 prose-code:text-black prose-blockquote:text-slate-500"
+        >
+          <h1>
+            {post.name}
+          </h1>
+          <h2>
+            <em>{post.description}</em>
+          </h2>
+          <p class="text-xs">
+            Written by: {post.author} on {getFormattedDate(post.publishedAt)}
+          </p>
+          <div>
+            <span class="items-center gap-1 flex">
+              {
+                post.tags.map((tag) => (
+                  <a
+                    class="inline-flex no-underline  items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-accent-50 text-accent-800"
+                    href={`/tags/${tag}`}
+                  >
+                    {tag}
+                  </a>
+                ))
+              }
+            </span>
+          </div>
+
+          <Content />
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

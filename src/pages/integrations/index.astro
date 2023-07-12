@@ -1,19 +1,9 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { getCollection } from "astro:content";
 import Card from "@/components/integrations/IntegrationCard.astro";
+import { getItemsFromCollection } from "@/utils/collections";
 
-const allIntegrations = await getCollection("integrations");
-
-const integrations = [];
-for (const integration of allIntegrations) {
-  const { Content } = await integration.render();
-  integrations.push({
-    ...integration.data,
-    slug: integration.slug,
-    Content,
-  });
-}
+const integrations = await getItemsFromCollection("integrations");
 
 const meta = {
   title: `Integrations`,

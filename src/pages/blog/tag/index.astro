@@ -1,8 +1,16 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-const allPosts = await getCollection("posts");
-const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+import { getItemsFromCollection } from "@/utils/collections";
+
+const allPosts = await getItemsFromCollection("posts");
+const tags = [...new Set(allPosts.map((post) => post.tags).flat())].map(
+  (tagName) => {
+    return {
+      name: tagName,
+      slug: tagName,
+    };
+  }
+);
 ---
 
 <BaseLayout>
@@ -35,12 +43,12 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
               <div class="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-4 items-end">
                 <div class="lg:col-span-2">
                   <span class="text-black font-medium lg:text-xl text-lg">
-                    {tag}
+                    {tag.name}
                   </span>
                 </div>
                 <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0 lg:ml-auto col-span-2">
                   <a
-                    href={`/blog/tag/${tag}`}
+                    href={"/blog/tag/" + tag.slug}
                     class="flex items-center justify-center w-12 h-12 text-accent-500 rounded-full bg-slate-50 hover:bg-slate-100 border"
                   >
                     <svg
@@ -61,31 +69,6 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
           }
         </div>
       </div>
-    </div>
-  </section>
-  <section>
-    <div class="px-8 mx-auto max-w-7xl lg:px-24">
-      <ol role="list" class="mt-16 space-y-10 sm:space-y-16">
-        <li>
-          <ol
-            role="list"
-            class="mt-8 divide-y divide-slate-300/30 rounded-2xl bg-slate-50 py-3 px-6 text-base tracking-tight sm:py-7 sm:px-8"
-          >
-            {
-              tags.map((tag) => (
-                <li
-                  class="flex justify-between py-3"
-                  aria-label="Strokes and fills on page 21"
-                >
-                  <span class="font-medium text-slate-900">
-                    <a href={`/blog/tag/${tag}`}>{tag}</a>
-                  </span>
-                </li>
-              ))
-            }
-          </ol>
-        </li>
-      </ol>
     </div>
   </section>
 </BaseLayout>

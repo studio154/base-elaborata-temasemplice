@@ -1,0 +1,25 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CtaTwo from "@/components/cta/CtaTwo.astro";
+import Card from "@/components/updates/UpdateCard.astro";
+import UpdateHeader from "@/components/updates/UpdateHeader.astro";
+import { getItemsFromCollection } from "@/utils/collections";
+
+const updates = await getItemsFromCollection("updates");
+
+const meta = {
+  title: `Changelog`,
+};
+---
+
+<BaseLayout meta={meta}>
+  <UpdateHeader />
+  <section>
+    <div
+      class="relative px-8 py-12 mx-auto sm:px-6 md:max-w-2xl md:px-4 lg:max-w-6xl lg:px-20"
+    >
+      {updates.map((update) => <Card update={update} />)}
+    </div>
+  </section>
+  <CtaTwo />
+</BaseLayout>

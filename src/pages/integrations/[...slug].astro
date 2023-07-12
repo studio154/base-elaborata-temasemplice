@@ -4,16 +4,16 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import CtaTwo from "@/components/cta/CtaTwo.astro";
 
 export async function getStaticPaths() {
-  const integrations = await getCollection("integrations");
-  return integrations.map((integration) => ({
+  const items = await getCollection("integrations");
+  return items.map((item) => ({
     params: {
-      slug: integration.slug,
+      slug: item.slug,
     },
-    props: { integration },
+    props: { item },
   }));
 }
 
-const { data: integration, render } = Astro.props.integration;
+const { data: item, render } = Astro.props.item;
 const { Content } = await render();
 ---
 
@@ -22,13 +22,9 @@ const { Content } = await render();
     <div class="w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
       <div class="max-w-xl">
         <div class="inline-flex items-center gap-3">
-          <img
-            class="w-12 h-12"
-            src={integration.image.url}
-            alt={integration.image.alt}
-          />
+          <img class="w-12 h-12" src={item.image.url} alt={item.image.alt} />
           <h1 class="text-4xl font-extrabold tracking-tight text-black">
-            {integration.name}
+            {item.name}
           </h1>
         </div>
       </div>
@@ -40,9 +36,7 @@ const { Content } = await render();
               <h2 class="text-black font-medium lg:text-xl text-lg">
                 Overview
               </h2>
-              <div class="prose">
-                <Content />
-              </div>
+              <div class="prose"><Content /></div>
             </div>
             <div
               class="text-slate-500 flex flex-col flex-shrink-0 mb-6 md:mb-0"
@@ -57,7 +51,7 @@ const { Content } = await render();
                 <li class="inline-flex items-center justify-between w-full">
                   <span class="text-black text-base font-medium">Category</span>
                   <span class="text-slate-500 text-base">
-                    {integration.category}
+                    {item.category}
                   </span>
                 </li>
                 <li class="inline-flex items-center justify-between w-full">
@@ -65,10 +59,10 @@ const { Content } = await render();
                   <span>
                     <a
                       class="text-base text-accent-500 hover:text-slate-500 first-letter:capitalize"
-                      href={"https://" + integration.companyURL}
+                      href={"https://" + item.companyURL}
                       target="_blank"
                     >
-                      {integration.companyURL}
+                      {item.companyURL}
                     </a>
                   </span>
                 </li>

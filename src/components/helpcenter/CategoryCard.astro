@@ -1,0 +1,19 @@
+---
+const { category } = Astro.props;
+---
+
+<li class="shadow-normal border p-4 lg:p-8 rounded-3xl h-full">
+  <a href={"/" + category.collectionSlug + "/category/" + category.slug}>
+    <div class="flex flex-col">
+      <div class="text-accent-500 w-9">
+        <Fragment set:html={category.icon} />
+      </div>
+      <h3 class="mt-6 text-black font-medium lg:text-xl text-lg">
+        {category.name}
+      </h3>
+    </div>
+    <p class="text-slate-500 mt-2 text-base">
+      {category.excerpt}
+    </p>
+  </a>
+</li>

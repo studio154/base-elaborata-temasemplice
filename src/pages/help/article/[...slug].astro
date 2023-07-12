@@ -1,5 +1,23 @@
 ---
+import Prose from "@/components/common/Prose.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getDataCollection } from "@/utils/collections";
+
+export async function getStaticPaths() {
+  const items = await getDataCollection("knowledgeBaseArticles");
+  return items.map((item) => ({
+    params: {
+      slug: item.slug,
+    },
+    props: { item },
+  }));
+}
+
+let { item } = Astro.props;
+item.categoryItem = {
+  name: "Getting Started",
+  slug: "getting-started",
+};
 ---
 
 <BaseLayout>
@@ -12,8 +30,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
               <span
                 class="font-semibold text-accent-500 text-sm tracking-widest uppercase"
               >
-                Article</span
-              >
+                Article
+              </span>
               <p class="text-4xl mt-8 font-extrabold tracking-tight text-black">
                 Follow the steps
               </p>
@@ -30,7 +48,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
               <div
                 class="px-6 py-1 text-xs rounded-lg bg-black hover:bg-slate-500"
               >
-                <a href="/" class="text-white"> Home</a>
+                <a href={"/" + item.collectionSlug} class="text-white">
+                  Help Center
+                </a>
               </div>
             </li>
             <li>
@@ -48,10 +68,13 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                   class="px-6 py-1 text-xs rounded-lg bg-slate-100 hover:bg-slate-500 ml-3"
                 >
                   <a
-                    href="/help/category/"
+                    href={"/" +
+                      item.collectionSlug +
+                      "/category/" +
+                      item.categoryItem.slug}
                     class="text-xs font-medium text-accent-500 hover:text-slate-700"
                   >
-                    Single Topic
+                    {item.categoryItem.name}
                   </a>
                 </div>
               </div>
@@ -67,69 +90,36 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                 >
                   <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
                 </svg>
-                <a
-                  href="#"
-                  class="ml-3 text-xs font-medium text-slate-500 hover:text-accent-500"
+                <span
+                  class="ml-3 text-xs font-medium text-slate-500"
                   aria-current="page"
-                  >Video Article
-                </a>
+                >
+                  {item.name}
+                </span>
               </div>
             </li>
           </ol>
         </div>
-
-        <div
-          class="prose mt-12 prose-blockquote:border-l-black prose-a:text-accent-500 hover:prose-a:text-black prose-headings:font-bold prose-headings:tracking-tighter prose-headings:text-black prose-li:marker:text-accent-500 text-slate-500 prose-code:text-black prose-blockquote:text-slate-500"
-        >
-          <p class="text-slate-500">
-            Is it worth investing in tech right now? Here’s what on-the-fence
-            investors should know about current tech investment opportunities.
-          </p>
-          <div class="space-y-4">
-            <h3 class="text-xl text-black mt-12">Intro to Semplice</h3>
-            <p class="text-slate-500">
-              Despite the tech industry’s disturbing regression in the stock
-              market, CEOs and market analysts see the trend as a temporary
-              shake-out. The big players in tech are more relevant than ever,
-              but changing investor demographics and behaviors are the main
-              causes of the downturn.
-            </p>
-            <p class="text-slate-500">
-              Many new investors have entered the stock market since 2020, the
-              predominant demographic being inexperienced high school and
-              college students. This generation of investors is far more
-              interested in technology than previous groups of investors. For
-              example, the hype surrounding NFTs and obscure forms of
-              cryptocurrency largely came from the 18-25 age group.
-            </p>
-          </div>
-          <div>
-            <ul class="list-decimal list-inside space-y-3 mt-6" role="list">
-              <li>Sing in to Semplice</li>
-              <li>Click your avatar in the top-right corner.</li>
-              <li>Open settings</li>
-              <li>Enable dark mode</li>
-            </ul>
-          </div>
+        <div class="max-w-xl mt-12">
+          <Prose><Fragment set:html={item.html} /></Prose>
         </div>
       </div>
 
       <div class="max-w-xl mt-12 border-t">
         <div class="py-4 rounded-md inline-flex items-center w-full">
           <p class="text-accent-500">Was this helpful?</p>
-          <p></p>
+
           <span class="isolate inline-flex rounded-md shadow-sm ml-auto">
             <button
-              type="button"
               class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-              >Yes</button
             >
-
+              👎
+            </button>
             <button
-              type="button"
               class="relative -ml-px inline-flex items-center rounded-r-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-              >No</button
             >
+              👍
+            </button>
           </span>
         </div>
       </div>

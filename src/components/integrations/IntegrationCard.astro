@@ -3,7 +3,7 @@ const { integration } = Astro.props;
 ---
 
 <li>
-  <a href={"/integrations/" + integration.slug}>
+  <a href={"/" + integration.collectionSlug + "/" + integration.slug}>
     <div
       class="bg-white hover:bg-slate-50 hover:border-transparent p-6 rounded-2xl border duration-200 h-full"
     >

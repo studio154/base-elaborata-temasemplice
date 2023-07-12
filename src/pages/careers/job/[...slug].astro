@@ -1,66 +1,21 @@
-<section>
-  <div>
-    <div class="w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        <div>
-          <div
-            class="bg-gradient-to-tr p-4 space-y-6 lg:p-8 shadow-normal rounded-3xl from-accent-600 via-accent-500 to-accent-400">
-            <div class="space-y-3">
-              <div
-                class="relative h-[3.125rem] w-[3.125rem] sm:h-[3.75rem] sm:w-[3.75rem] flex-none">
-                <img
-                  class="absolute inset-0 ring-4 ring-white h-full w-full rounded-full object-cover"
-                  src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
-                  alt=""
-                />
-                <div
-                  class="absolute inset-0 rounded-full ring-1 ring-inset ring-black/[0.08]">
-                </div>
-              </div>
-              <p class="text-white font-medium lg:text-xl text-lg">Location</p>
-              <span class="text-slate-200 text-base space-x-1"
-                ><time datetime="2023-03-16">Mariehamn / Åland Islands, FI</time
-                ></span
-              >
-            </div>
-            <div class="space-y-3">
-              <p class="text-white font-medium lg:text-xl text-lg">Type</p><span
-                class="text-slate-200 text-base space-x-1"
-                ><time datetime="2023-03-16">Full time</time></span
-              >
-            </div>
-            <div class="space-y-3">
-              <p class="text-white font-medium lg:text-xl text-lg">
-                Department
-              </p><span class="text-slate-200 text-base space-x-1"
-                ><time datetime="2023-03-16">Engineering</time></span
-              >
-            </div>
-          </div>
-        </div>
+---
+import Prose from "@/components/common/Prose.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getDataCollection } from "@/utils/collections";
 
-        <div class="w-full lg:col-span-2 ´">
-          <div class="w-full mx-auto" x-data="" x-tabs="">
-            <div class="w-full -mb-px flex items-stretch" x-tabs:list="">
-              <button
-                class="inline-flex py-2.5 border-b-2 font-medium px-5 border-b-accent-500 text-black"
-                :class="$tab.isSelected ? 'border-accent-500  text-accent-500' : 'border-transparent text-slate-500'"
-                type="button"
-                x-tabs:tab=""
-                tabindex="0">Overview</button
-              >
-              <button
-                class="inline-flex py-2.5 border-b-2 px-5 font-medium border-accent-500 text-slate-500"
-                :class="$tab.isSelected ? 'border-accent-500  border-b-2 text-accent-500' : 'border-transparent text-slate-500'"
-                type="button"
-                x-tabs:tab=""
-                tabindex="-1">Application form</button
-              >
-            </div><div class="w-full border-t rounded-b-md" x-tabs:panels="">
-              <div class="pt-8 w-full" x-tabs:panel="" tabindex="0">
-                <div
-                  class="text-slate-500 hover:prose-a:text-accent-900 lg:col-span-2 prose prose-a:font-semibold prose-a:text-accent-500 w-full prose-blockquote:text-base prose-blockquote:text-slate-300 prose-h3:text-black prose-base">
-                  <p>
+export async function getStaticPaths() {
+  const careers = await getDataCollection("careers");
+  return careers.map((item) => ({
+    params: {
+      slug: item.slug,
+    },
+    props: { item: { data: item } },
+  }));
+}
+
+let { data: item } = Astro.props.item;
+
+item.html = `<p>
                     At Semplice., we are on a mission to create a new standard
                     for modern software development. We are building the tools
                     that empower the next generation of high-impact companies to
@@ -138,14 +93,89 @@
                     </li><li>Regular team events and offsites</li><li>
                       5 weeks paid vacation
                     </li><li>4 months paid parental leave</li>
-                  </ul>
+                  </ul>`;
+---
+
+<BaseLayout>
+  <section>
+    <div class="w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div>
+          <div
+            class="bg-gradient-to-tr p-4 space-y-6 lg:p-8 shadow-normal rounded-3xl from-accent-600 via-accent-500 to-accent-400"
+          >
+            <div class="space-y-3">
+              <div
+                class="relative h-[3.125rem] w-[3.125rem] sm:h-[3.75rem] sm:w-[3.75rem] flex-none"
+                data-v-template-exclude=""
+              >
+                <img
+                  class="absolute inset-0 ring-4 ring-white h-full w-full rounded-full object-cover"
+                  src={item.image}
+                  alt=""
+                />
+                <div
+                  class="absolute inset-0 rounded-full ring-1 ring-inset ring-black/[0.08]"
+                >
                 </div>
-              </div><div
+              </div>
+              <p class="text-white font-medium lg:text-xl text-lg">Role</p>
+              <span class="text-slate-200 text-base space-x-1">
+                {item.name}
+              </span>
+            </div>
+            <div class="space-y-3">
+              <p class="text-white font-medium lg:text-xl text-lg">Location</p>
+              <span class="text-slate-200 text-base space-x-1">
+                {item.location}
+              </span>
+            </div>
+            <div class="space-y-3">
+              <p class="text-white font-medium lg:text-xl text-lg">Type</p>
+              <span class="text-slate-200 text-base space-x-1">
+                {item.jobType}
+              </span>
+            </div>
+            <div class="space-y-3">
+              <p class="text-white font-medium lg:text-xl text-lg">
+                Department
+              </p>
+              <span class="text-slate-200 text-base space-x-1">
+                {item.category}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:col-span-2">
+          <div class="w-full mx-auto" x-data="" x-tabs="">
+            <div class="w-full -mb-px flex items-stretch" x-tabs:list="">
+              <button
+                class="inline-flex py-2.5 border-b-2 font-medium px-5 text-black"
+                :class="$tab.isSelected ? 'border-b-accent-500 border-accent-500 text-accent-500' : 'border-transparent text-slate-500'"
+                type="button"
+                x-tabs:tab=""
+                tabindex="0">Overview</button
+              >
+              <button
+                class="inline-flex py-2.5 border-b-2 px-5 font-medium border-accent-500 text-slate-500"
+                :class="$tab.isSelected ? 'border-accent-500  border-b-2 text-accent-500' : 'border-transparent text-slate-500'"
+                type="button"
+                x-tabs:tab=""
+                tabindex="-1">Application form</button
+              >
+            </div>
+            <div class="w-full border-t rounded-b-md" x-tabs:panels="">
+              <div class="pt-8 w-full" x-tabs:panel="" tabindex="0">
+                <Prose><Fragment set:html={item.html} /></Prose>
+              </div>
+              <div
                 class="pt-8"
                 x-tabs:panel=""
                 id="form"
                 tabindex="-1"
-                style="display: none;">
+                style="display: none;"
+              >
                 <div class="w-full mx-auto">
                   <form action="#" class="w-full">
                     <input
@@ -155,7 +185,8 @@
                       style="display:none"
                     />
                     <input type="hidden" name="_redirect" value="#" /><div
-                      class="mt-4 space-y-6">
+                      class="mt-4 space-y-6"
+                    >
                       <div class="">
                         <label
                           class="text-sm block font-medium mb-3 text-black"
@@ -195,10 +226,12 @@
                           for="cover-photo">Cover photo</label
                         ><div class="w-full mt-1 sm:col-span-2 sm:mt-0">
                           <div
-                            class="flex justify-center border border-dashed border-slate-400 pb-6 pt-5 px-6 rounded-md">
+                            class="flex justify-center border border-dashed border-slate-400 pb-6 pt-5 px-6 rounded-md"
+                          >
                             <div class="space-y-3 py-6 text-center">
                               <div
-                                class="text-sm text-slate-400 flex items-center gap-3">
+                                class="text-sm text-slate-400 flex items-center gap-3"
+                              >
                                 <label
                                   class="inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 -ml-px dark rounded-full cursor-pointer"
                                   for="file-upload"
@@ -282,5 +315,5 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</BaseLayout>

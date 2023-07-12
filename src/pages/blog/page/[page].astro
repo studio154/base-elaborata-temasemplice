@@ -1,22 +1,19 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Pagination from "@/components/blog/Pagination.astro";
-import BlogCard from "@/components/blog/BlogCard.astro";
+import Card from "@/components/blog/BlogCard.astro";
+import { getItemsFromCollection } from "@/utils/collections";
 
 export async function getStaticPaths({ paginate }) {
-  return paginate(await getCollection("posts"), {
+  return paginate(await getItemsFromCollection("posts"), {
     pageSize: 3,
   });
 }
 
-const { page } = Astro.props;
-const posts = page.data;
-const currentPage = page.currentPage;
+const { data: posts, currentPage, lastPage } = Astro.props.page;
 
 const prevUrl = currentPage > 2 ? `/blog/page/${currentPage - 1}` : "/blog";
-const nextUrl =
-  currentPage < page.totalPages ? `/blog/page/${currentPage + 1}` : "";
+const nextUrl = currentPage < lastPage ? `/blog/page/${currentPage + 1}` : "";
 
 const meta = {
   title: `Blog Home - Page ${currentPage}`,
@@ -24,15 +21,15 @@ const meta = {
 };
 ---
 
-<BaseLayout {meta}>
+<BaseLayout meta={meta}>
   <section>
     <div class="w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
       <div class="text-center max-w-3xl mx-auto">
         <div>
           <span class="bg-accent-500/10 rounded-full py-1 px-4 w-auto">
             <span class="text-xs text-accent-500 uppercase font-semibold">
-              blog</span
-            >
+              blog
+            </span>
           </span>
           <h1
             class="text-4xl mt-8 lg:text-9xl font-extrabold tracking-tight text-black"
@@ -49,7 +46,7 @@ const meta = {
         class="mt-24 gap-x-8 gap-y-12 grid grid-cols-1 lg:gap-y-24 lg:grid-cols-3 sm:grid-cols-2"
         role="list"
       >
-        {posts.map((post) => <BlogCard post={post} />)}
+        {posts.map((post) => <Card post={post} />)}
       </div>
       <Pagination prevUrl={prevUrl} nextUrl={nextUrl} />
     </div>

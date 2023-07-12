@@ -1,19 +1,23 @@
-<section
+---
+import Modal from "@/components/common/Modal.astro";
+---
 
-  
-  class="border-b overflow-hidden">
+<section class="border-b overflow-hidden">
   <div
-    class="mx-auto 2xl:max-w-7xl lg:px-16 md:px-12 px-8 xl:px-36 pt-12 lg:pt-24 items-center">
+    class="mx-auto 2xl:max-w-7xl lg:px-16 md:px-12 px-8 xl:px-36 pt-12 lg:pt-24 items-center"
+  >
     <div class="max-w-3xl lg:mx-auto lg:text-center">
       <div>
         <span
-          class="bg-accent-50/50 border border-white/50 backdrop-blur-2xl rounded-full py-2 px-4 w-auto">
+          class="bg-accent-50/50 border border-white/50 backdrop-blur-2xl rounded-full py-2 px-4 w-auto"
+        >
           <span class="text-sm text-accent-500 uppercase font-semibold">
             Check it out</span
           >
         </span>
         <p
-          class="text-4xl mt-8 lg:text-6xl font-extrabold tracking-tight text-black">
+          class="text-4xl mt-8 lg:text-6xl font-extrabold tracking-tight text-black"
+        >
           Transactions without the need for intermediaries.
         </p>
       </div>
@@ -24,7 +28,8 @@
     </div>
     <div class="mx-auto lg:max-w-7xl mt-12">
       <div
-        class="flex bg-accent-900 flex-wrap overflow-hidden px-10 py-32 relative rounded-t-3xl shadow-2xl w-full">
+        class="flex bg-accent-900 flex-wrap overflow-hidden px-10 py-32 relative rounded-t-3xl shadow-2xl w-full"
+      >
         <img
           alt="gallery"
           src="https://plus.unsplash.com/premium_photo-1663931932618-284a8d80dda5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
@@ -32,61 +37,31 @@
         />
         <div class="w-full text-center relative z-10">
           <div class="flex justify-center" x-data="{ open: false }">
-            <span x-on:click="open = true">
-              <div
-                class="cursor-pointer duration-500 ease-in-out hover:shadow-none p-0.5 rounded-full transform transition bg-gradient-to-r from-accent-600 via-accent-500 to-accent-400">
-                <button
-                  class="text-white hover:text-sky-300 bg-dark border-8 border-white duration-500 ease-in-out focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-4 hover:border-zinc-900 inline-flex items-center lg:w-auto ring-offset-black rounded-full text-center transform transition w-full focus:ring-sky-300 p-6"
-                  type="button"
-                  ><svg
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    height="28"
-                    width="28"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-player-play lg:h-16 lg:w-16"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1">
-                    <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
-                    <path d="M7 4v16l13 -8z"></path>
-                  </svg></button
-                >
-              </div>
-            </span>
             <div
-              class="inset-0 fixed overflow-y-auto z-10"
-              role="dialog"
-              :aria-labelledby="$id('modal-title')"
-              aria-modal="true"
-              x-id="['modal-title']"
-              x-on:keydown.escape.prevent.stop="open = false"
-              x-show="open"
-              aria-labelledby="modal-title-1"
-              style="display: none;">
-              <div
-                class="inset-0 fixed bg-black bg-opacity-50"
-                x-show="open"
-                x-transition.opacity=""
-                style="display: none;">
-              </div>
-              <div
-                class="flex relative items-center justify-center min-h-screen p-4"
-                x-show="open"
-                x-on:click="open = false"
-                x-transition=""
-                style="display: none;">
-                <div
-                  class="w-full bg-dark p-4 rounded-3xl max-w-7xl overflow-y-auto relative shadow-3xl"
-                  x-on:click.stop=""
-                  x-trap.noscroll.inert="open">
-                  <iframe
-                    class="w-full rounded-2xl aspect-video"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-                </div>
-              </div>
+              class="cursor-pointer duration-500 ease-in-out hover:shadow-none p-0.5 rounded-full transform transition bg-gradient-to-r from-accent-600 via-accent-500 to-accent-400"
+            >
+              <button
+                class="text-white hover:text-sky-300 bg-dark border-8 border-white duration-500 ease-in-out focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-4 hover:border-zinc-900 inline-flex items-center lg:w-auto ring-offset-black rounded-full text-center transform transition w-full focus:ring-sky-300 p-6"
+                x-on:click="open = true"
+              >
+                <svg
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  height="28"
+                  width="28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-player-play lg:h-16 lg:w-16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                  <path d="M7 4v16l13 -8z"></path>
+                </svg>
+              </button>
             </div>
+            <Modal iframeSrc={"https://www.youtube.com/embed/dQw4w9WgXcQ"} />
           </div>
         </div>
       </div>

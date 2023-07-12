@@ -1,20 +1,11 @@
 ---
 import Searchbar from "@/components/helpcenter/Searchbar.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { getCollection } from "astro:content";
+import { getItemsFromCollection } from "@/utils/collections";
+import Card from "@/components/helpcenter/CategoryCard.astro";
 
-const allCategories = await getCollection("knowledgeBaseCategories");
-
-let categories = [];
-for (const category of allCategories) {
-  categories.push({
-    ...category.data,
-    slug: category.slug,
-  });
-}
-
-categories = categories.sort((a, b) =>
-  a.publishedAt > b.publishedAt ? 1 : -1
+let knowledgeBaseCategories = await getItemsFromCollection(
+  "knowledgeBaseCategories"
 );
 
 const meta = {
@@ -41,37 +32,23 @@ const meta = {
           <div class="mt-12 flex flex-col sm:flex-row lg:ml-auto">
             <a
               class="items-center text-white focus:outline-none inline-flex justify-center hover:text-accent-500 duration-200 focus-visible:outline-black focus-visible:ring-black font-medium lg:w-auto px-6 py-3 rounded-xl text-center w-full bg-accent-500 hover:bg-accent-100"
-              href="/signup">Subscribe for updates &nbsp;&nbsp; →</a
+              href="/signup"
             >
+              Subscribe for updates &nbsp;&nbsp; →
+            </a>
           </div>
         </div>
       </div>
-      <div class="mt-12">
-        <ol
-          role="list"
-          class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-3"
-        >
-          {
-            categories.map((category) => (
-              <li class="shadow-normal border p-4 lg:p-8 rounded-3xl h-full">
-                <a href={"/help/category/" + category.slug}>
-                  <div class="flex flex-col">
-                    <div class="text-accent-500 w-9">
-                      <Fragment set:html={category.icon} />
-                    </div>
-                    <h3 class="mt-6 text-black font-medium lg:text-xl text-lg">
-                      {category.name}
-                    </h3>
-                  </div>
-                  <p class="text-slate-500 mt-2 text-base">
-                    {category.excerpt}
-                  </p>
-                </a>
-              </li>
-            ))
-          }
-        </ol>
-      </div>
+      <ol
+        role="list"
+        class="relative mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-3"
+      >
+        {
+          knowledgeBaseCategories.map((category) => (
+            <Card category={category} />
+          ))
+        }
+      </ol>
     </div>
   </section>
 </BaseLayout>

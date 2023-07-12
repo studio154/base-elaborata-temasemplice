@@ -1,20 +1,23 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import Prose from "@/components/common/Prose.astro";
 import { getFormattedDate } from "@/utils/utils";
+import { getItemsFromCollection } from "@/utils/collections";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("posts");
-  return posts.map((post) => ({
+  const posts = await getItemsFromCollection("posts");
+  return posts.map((item) => ({
     params: {
-      slug: post.slug,
+      slug: item.slug,
     },
-    props: { post },
+    props: {
+      item,
+    },
   }));
 }
 
-const { data: post, render } = Astro.props.post;
-const { Content } = await render();
+const { item } = Astro.props;
+const { Content } = await item.render();
 ---
 
 <BaseLayout>
@@ -24,39 +27,36 @@ const { Content } = await render();
     >
       <img
         class="h-[60vh] w-full object-cover bg-top rounded-3xl shadow-normal"
-        src={post.image.url}
-        alt={post.image.alt}
+        src={item.image.url}
+        alt={item.image.alt}
       />
-      <div class="grid grid-cols-1 gap-10 xl:gap-24 mt-12">
-        <div
-          class="max-w-3xl prose mx-auto prose-blockquote:border-l-black prose-a:text-accent-500 hover:prose-a:text-black prose-headings:font-bold prose-headings:text-black prose-li:marker:text-accent-500 text-slate-500 prose-code:text-black prose-blockquote:text-slate-500"
-        >
-          <h1>
-            {post.name}
+      <div class="max-w-3xl mx-auto mt-12">
+        <div class="mb-6">
+          <h1 class="text-black font-semibold text-4xl tracking-tight mb-3">
+            {item.name}
           </h1>
-          <h2>
-            <em>{post.description}</em>
+          <h2 class="text-black font-semibold text-2xl tracking-tight mb-3">
+            <em>{item.description}</em>
           </h2>
-          <p class="text-xs">
-            Written by: {post.author} on {getFormattedDate(post.publishedAt)}
+          <p class="text-xs text-slate-500 mb-3">
+            Written by: {item.author} on {getFormattedDate(item.publishedAt)}
           </p>
           <div>
-            <span class="items-center gap-1 flex">
+            <span class="items-center gap-1 flex flex-wrap">
               {
-                post.tags.map((tag) => (
+                item.tagsItems.map((tag) => (
                   <a
-                    class="inline-flex no-underline  items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-accent-50 text-accent-800"
-                    href={`/tags/${tag}`}
+                    class="inline-flex no-underline  items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-accent-50 text-accent-500 hover:text-accent-800"
+                    href={"/" + tag.collectionSlug + "/" + tag.slug}
                   >
-                    {tag}
+                    {tag.name}
                   </a>
                 ))
               }
             </span>
           </div>
-
-          <Content />
         </div>
+        <Prose><Content /></Prose>
       </div>
     </div>
   </section>

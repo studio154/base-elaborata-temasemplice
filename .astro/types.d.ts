@@ -188,7 +188,6 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-<<<<<<< HEAD
 		"integrations": {
 "figma.md": {
 	id: "figma.md";
@@ -278,9 +277,6 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "posts": {
-=======
-		"posts": {
->>>>>>> 72c3d85fb4ca8bf3a2c52fa5e082051565830877
 "1.md": {
 	id: "1.md";
   slug: "1";
@@ -324,7 +320,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 };
-<<<<<<< HEAD
 "updates": {
 "1.md": {
 	id: "1.md";
@@ -341,19 +336,13 @@ declare module 'astro:content' {
   data: InferEntrySchema<"updates">
 } & { render(): Render[".md"] };
 };
-=======
->>>>>>> 72c3d85fb4ca8bf3a2c52fa5e082051565830877
 
 	};
 
 	type DataEntryMap = {
-<<<<<<< HEAD
 		"knowledgeBaseArticles": {
 };
 
-=======
-		
->>>>>>> 72c3d85fb4ca8bf3a2c52fa5e082051565830877
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;

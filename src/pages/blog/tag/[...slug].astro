@@ -26,30 +26,16 @@ const meta = {
 
 <BaseLayout meta={meta}>
   <section>
-    <div class="w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
-      <div class="relative items-center">
-        <div class="w-full lg:inline-flex justify-between lg:items-center">
-          <div class="max-w-xl">
-            <span
-              class="font-semibold text-accent-500 text-sm tracking-widest uppercase"
-            >
-              Tags
-            </span>
-            <p class="text-4xl mt-8 font-extrabold tracking-tight text-black">
-              Posts tagged with {groupBy.name}
-            </p>
-          </div>
-          <div class="mt-12 flex flex-col sm:flex-row lg:ml-auto">
-            <a
-              class="items-center text-white focus:outline-none inline-flex justify-center hover:text-accent-500 duration-200 focus-visible:outline-black focus-visible:ring-black font-medium lg:w-auto px-6 py-3 rounded-xl text-center w-full bg-accent-500 hover:bg-accent-100"
-              href="/blog"
-            >
-              See all posts &nbsp;&nbsp; →
-            </a>
-          </div>
-        </div>
+    <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
+      <div class="max-w-2xl">
+        <span class="text-xs font-bold tracking-wide uppercase text-accent-500">
+          Tags</span
+        ><p class="mt-8 text-4xl font-semibold tracking-tight text-accent-900">
+          Posts tagged with {groupBy.name}
+        </p>
       </div>
-      <div class="mt-24 space-y-12 divide-y-2 divide-slate-100">
+
+      <div class="mt-12 border-gray-300 divide-y divide-gray-300 border-y">
         {posts.map((post) => <BlogPost post={post} />)}
       </div>
     </div>

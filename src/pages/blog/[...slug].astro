@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Prose from "@/components/common/Prose.astro";
+import CtaTwo from "@/components/cta/CtaTwo.astro";
 import { getFormattedDate } from "@/utils/utils";
 import { getItemsFromCollection } from "@/utils/collections";
 
@@ -21,43 +22,35 @@ const { Content } = await item.render();
 ---
 
 <BaseLayout>
-  <section class="relative">
-    <div
-      class="items-center w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-24"
-    >
-      <img
-        class="h-[60vh] w-full object-cover bg-top rounded-3xl shadow-normal"
-        src={item.image.url}
-        alt={item.image.alt}
-      />
+  <section>
+    <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
       <div class="max-w-3xl mx-auto mt-12">
-        <div class="mb-6">
-          <h1 class="text-black font-semibold text-4xl tracking-tight mb-3">
-            {item.name}
-          </h1>
-          <h2 class="text-black font-semibold text-2xl tracking-tight mb-3">
-            <em>{item.description}</em>
-          </h2>
-          <p class="text-xs text-slate-500 mb-3">
-            Written by: {item.author} on {getFormattedDate(item.publishedAt)}
-          </p>
-          <div>
-            <span class="items-center gap-1 flex flex-wrap">
-              {
-                item.tagsItems.map((tag) => (
-                  <a
-                    class="inline-flex no-underline  items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-accent-50 text-accent-500 hover:text-accent-800"
-                    href={"/" + tag.collectionSlug + "/" + tag.slug}
-                  >
-                    {tag.name}
-                  </a>
-                ))
-              }
-            </span>
-          </div>
+        <p class="text-xs font-bold tracking-wide uppercase text-accent-500">
+          Written by: {item.author} on {getFormattedDate(item.publishedAt)}
+        </p>
+        <h1 class="mt-8 text-4xl font-semibold tracking-tight text-accent-900">
+          {item.name}
+        </h1>
+        <h2 class="mt-2 text-sm font-semibold tracking-tight text-accent-900">
+          <em>{item.description}</em>
+        </h2>
+        <div class="mt-6">
+          <span class="flex flex-wrap items-center gap-1">
+            {
+              item.tagsItems.map((tag) => (
+                <a
+                  class="inline-flex no-underline  items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-50 text-accent-900 hover:text-accent-800"
+                  href={"/" + tag.collectionSlug + "/" + tag.slug}>
+                  {tag.name}
+                </a>
+              ))
+            }
+          </span>
         </div>
-        <Prose><Content /></Prose>
+
+        <div class="mt-12"><Prose><Content /></Prose></div>
       </div>
     </div>
   </section>
+  <CtaTwo />
 </BaseLayout>

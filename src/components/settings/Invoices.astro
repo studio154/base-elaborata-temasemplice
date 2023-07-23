@@ -1,75 +1,33 @@
-<section class="bg-white">
-  <div class="w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
-    <div class="relative items-center">
-      <div class="w-full lg:inline-flex justify-between lg:items-center">
-        <div class="max-w-xl">
-          <span
-            class="font-semibold text-accent-500 text-sm tracking-widest uppercase">
-            Invoices</span
-          >
-          <p
-            class="text-2xl max-w-xl mt-8 font-extrabold tracking-tight text-black">
-            Keep track of your invocies right here
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="mt-12">
-      <div class="space-y-12 divide-y-2 divide-slate-100">
-        <div
-          class="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-4 lg:gap-24 items-start">
-          <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0">
-            <div class="flex flex-col flex-shrink-0 md:mb-0">
-              <nav class="space-y-1" aria-label="Sidebar">
-                <a
-                  href="/general"
-                  class="hover:bg-slate-50 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md"
-                  aria-current="page">
-                  <span class="truncate"> General</span>
-                </a>
-                <a
-                  href="/dashboard/connections"
-                  class="hover:bg-slate-50 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
-                  <span class="truncate"> Conexions</span>
-                </a>
-                <a
-                  href="/dashboard-teams"
-                  class="hover:bg-slate-50 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
-                  <span class="truncate"> Teams</span>
-                </a>
-                <a
-                  href="/billing"
-                  class="hover:bg-slate-50 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
-                  <span class="truncate"> Billing</span>
-                </a>
-                <a
-                  href="/invoices"
-                  class="hover:bg-slate-50 bg-slate-100 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
-                  <span class="truncate"> Invoices</span>
-                </a>
+---
+import Sidebar from "./Sidebar.astro";
+---
 
-                <a
-                  href="/tokens"
-                  class="hover:bg-slate-50 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
-                  <span class="truncate"> Tokens</span>
-                </a>
-              </nav>
-            </div>
-          </div>
-          <div class="lg:col-span-3">
-            <div class="lg:col-span-3 space-y-6">
-              <div class="border rounded-md shadow-normal">
-                <div class="p-4 lg:py-20">
-                  <div class="text-center text-accent-500">
-                    <h3 class="mt-2 text-sm font-medium text-gray-900">
-                      No invocies
-                    </h3>
-                    <p class="mt-1 text-sm text-gray-500">
-                      Once you’ve paid for something on Semplice, invoices will
-                      show up here.
-                    </p>
-                  </div>
-                </div>
+<section>
+  <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
+    <div class="max-w-2xl">
+      <span class="text-xs font-bold tracking-wide uppercase text-accent-500">
+        Invoices</span
+      >
+      <p class="mt-8 text-4xl font-semibold tracking-tight text-accent-900">
+        Keep track of your invocies right here
+      </p>
+    </div>
+
+    <div
+      class="grid items-start grid-cols-1 gap-4 mt-12 lg:grid-cols-4 lg:gap-24">
+      <Sidebar />
+      <div class="lg:col-span-3">
+        <div class="space-y-6 lg:col-span-3">
+          <div class="rounded-md bg-white">
+            <div class="p-4 lg:py-20">
+              <div class="text-center text-accent-500">
+                <h3 class="mt-2 text-sm font-medium text-accent-900">
+                  No invocies
+                </h3>
+                <p class="mt-1 text-sm text-gray-500">
+                  Once you’ve paid for something on Semplice, invoices will show
+                  up here.
+                </p>
               </div>
             </div>
           </div>

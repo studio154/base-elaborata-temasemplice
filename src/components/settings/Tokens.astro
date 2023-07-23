@@ -1,159 +1,116 @@
-<section class="bg-white">
-  <div class="w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
-    <div class="relative items-center">
-      <div class="w-full lg:inline-flex justify-between lg:items-center">
-        <div class="max-w-xl">
-          <span
-            class="font-semibold text-accent-500 text-sm tracking-widest uppercase">
-            Tokens</span
-          >
-          <p
-            class="text-2xl max-w-xl mt-8 font-extrabold tracking-tight text-black">
-            Keep track of your tokes right here
-          </p>
-        </div>
-      </div>
+---
+import Sidebar from "./Sidebar.astro";
+---
+
+<section>
+  <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
+    <div class="max-w-2xl">
+      <span class="text-xs font-bold tracking-wide uppercase text-accent-500">
+        Tokens</span
+      >
+      <p class="mt-8 text-4xl font-semibold tracking-tight text-accent-900">
+        Keep track of your tokens right here
+      </p>
     </div>
-    <div class="mt-12">
-      <div class="space-y-12 divide-y-2 divide-slate-100">
-        <div
-          class="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-4 lg:gap-24 items-start">
-          <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0">
-            <div class="flex flex-col flex-shrink-0 md:mb-0">
-              <nav class="space-y-1" aria-label="Sidebar">
-                <a
-                  href="/general"
-                  class="hover:bg-slate-50 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md"
-                  aria-current="page">
-                  <span class="truncate"> General</span>
-                </a>
-                <a
-                  href="/dashboard/connections"
-                  class="hover:bg-slate-50 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
-                  <span class="truncate"> Conexions</span>
-                </a>
-                <a
-                  href="/dashboard-teams"
-                  class="hover:bg-slate-50 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
-                  <span class="truncate"> Teams</span>
-                </a>
-                <a
-                  href="/billing"
-                  class="hover:bg-slate-50 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
-                  <span class="truncate"> Billing</span>
-                </a>
-                <a
-                  href="/invoices"
-                  class="hover:bg-slate-50 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
-                  <span class="truncate"> Invoices</span>
-                </a>
-                <a
-                  href="/tokens"
-                  class="hover:bg-slate-50 bg-slate-100 text-slate-500 hover:text-accent-500 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
-                  <span class="truncate"> Tokens</span>
-                </a>
-              </nav>
-            </div>
-          </div>
-          <div class="lg:col-span-3">
-            <div class="lg:col-span-3 space-y-6">
-              <div class="border rounded-md shadow-normal">
-                <div class="p-4">
-                  <div>
-                    <div
-                      class="lg:inline-flex lg:items-center justify-center gap-3">
-                      <div class="mt-3 sm:mt-0">
-                        <button
-                          href="#"
-                          class="inline-flex border items-center px-2.5 py-0.5 rounded-md text-sm font-medium text-black">
-                          <span>Create</span>
-                        </button>
-                      </div>
-                      <div class="mt-3 sm:mt-0">
-                        <button
-                          href="#"
-                          class="inline-flex border items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-black">
-                          <span>Delete</span>
-                        </button>
-                      </div>
-                    </div>
+
+    <div
+      class="grid items-start grid-cols-1 gap-4 mt-12 lg:grid-cols-4 lg:gap-24">
+      <Sidebar />
+      <div class="lg:col-span-3">
+        <div class="space-y-6 lg:col-span-3">
+          <div class="rounded-md bg-white">
+            <div class="p-4">
+              <div>
+                <div
+                  class="justify-center gap-3 lg:inline-flex lg:items-center">
+                  <div class="mt-3 sm:mt-0">
+                    <button
+                      href="#"
+                      class="flex items-center justify-center h-8 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-accent-600 hover:text-accent-500">
+                      <span>Create</span>
+                    </button>
+                  </div>
+                  <div class="mt-3 sm:mt-0">
+                    <button
+                      href="#"
+                      class="flex items-center justify-center h-8 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-accent-600 hover:text-accent-500">
+                      <span>Delete</span>
+                    </button>
                   </div>
                 </div>
               </div>
-              <div
-                class="flex flex-col overflow-hidden border rounded-md shadow-normal">
-                <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                  <div
-                    class="inline-block min-w-full py-2 align-middle px-6 px-8">
-                    <div
-                      class="relative overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-md">
-                      <table
-                        class="min-w-full table-fixed divide-y divide-gray-300">
-                        <thead class="bg-gray-50">
-                          <tr>
-                            <th
-                              scope="col"
-                              class="relative w-12 px-6 sm:w-16 sm:px-8">
-                              <input
-                                type="checkbox"
-                                class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-accent-600 focus:ring-accent-500 sm:left-6"
-                              />
-                            </th>
-                            <th
-                              scope="col"
-                              class="min-w-[12rem] py-3.5 pr-3 text-left text-sm font-semibold text-gray-900"
-                              >Name
-                            </th>
-                            <th
-                              scope="col"
-                              class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                              >Scope
-                            </th>
-                            <th
-                              scope="col"
-                              class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                              >Email
-                            </th>
-                            <th
-                              scope="col"
-                              class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                              >Last Active
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200 bg-white">
-                          <tr>
-                            <td class="relative w-12 px-6 sm:w-16 sm:px-8">
-                              <div
-                                class="absolute inset-y-0 left-0 w-0.5 bg-accent-600">
-                              </div>
-                              <input
-                                type="checkbox"
-                                class="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-accent-600 focus:ring-accent-500 sm:left-6"
-                              />
-                            </td>
+            </div>
+          </div>
+          <div class="flex flex-col overflow-hidden border rounded-md">
+            <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div class="inline-block min-w-full px-6 px-8 py-2 align-middle">
+                <div
+                  class="relative overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-md">
+                  <table
+                    class="min-w-full divide-y divide-gray-300 table-fixed">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th
+                          scope="col"
+                          class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <input
+                            type="checkbox"
+                            class="absolute w-4 h-4 -mt-2 border-gray-300 rounded left-4 top-1/2 text-accent-600 focus:ring-accent-500 sm:left-6"
+                          />
+                        </th>
+                        <th
+                          scope="col"
+                          class="min-w-[12rem] py-3.5 pr-3 text-left text-sm font-semibold text-accent-900"
+                          >Name
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-3 py-3.5 text-left text-sm font-semibold text-accent-900"
+                          >Scope
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-3 py-3.5 text-left text-sm font-semibold text-accent-900"
+                          >Email
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-3 py-3.5 text-left text-sm font-semibold text-accent-900"
+                          >Last Active
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                      <tr>
+                        <td class="relative w-12 px-6 sm:w-16 sm:px-8">
+                          <div
+                            class="absolute inset-y-0 left-0 w-0.5 bg-accent-600">
+                          </div>
+                          <input
+                            type="checkbox"
+                            class="absolute w-4 h-4 -mt-2 border-gray-300 rounded left-4 top-1/2 text-accent-600 focus:ring-accent-500 sm:left-6"
+                          />
+                        </td>
 
-                            <td
-                              class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900"
-                              >Website, Login with GitHub
-                            </td>
-                            <td
-                              class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                              >All non-SAML Teams
-                            </td>
-                            <td
-                              class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                              >514d ago
-                            </td>
-                            <td
-                              class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                              >Never
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                        <td
+                          class="py-4 pr-3 text-sm font-medium text-accent-900 whitespace-nowrap"
+                          >Website, Login with GitHub
+                        </td>
+                        <td
+                          class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap"
+                          >All non-SAML Teams
+                        </td>
+                        <td
+                          class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap"
+                          >514d ago
+                        </td>
+                        <td
+                          class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap"
+                          >Never
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

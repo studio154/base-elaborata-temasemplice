@@ -7,23 +7,36 @@ companyURL: marvel.app
 image:
   url: /assets/integrations/marvel.svg
   alt: Marvel logo
-
 ---
 
-<p class="text-slate-500 mt-4 text-base">
-                Marvel.app integrates with design tools like Sketch and Figma,
-                allowing users to sync their design files and prototypes
-                directly to Marvel.app for further collaboration and feedback.
-              </p>
-              <p class="text-slate-500 mt-4 text-base">
-                Marvel.app also offers integrations with project management
-                tools like Asana and Trello, enabling teams to keep track of
-                tasks and progress across multiple platforms.
-              </p>
-              <p class="text-slate-500 mt-4 text-base">
-                In addition, Marvel.app integrates with several developer tools,
-                such as GitHub and Jira, to enable smoother handoffs between
-                design and development teams. Overall, Marvel.app's integrations
-                help to streamline workflows and improve collaboration between
-                designers, developers, and project stakeholders.
-              </p>
+# Marvel: Web-based Platform for Design Collaboration and Prototyping
+
+## Overview
+
+Discover Marvel, a powerful web-based platform that redefines design collaboration and prototyping for digital products. With Marvel, design teams can bring their ideas to life, collaborate seamlessly, and create interactive prototypes that wow stakeholders and users alike.
+
+## Key Features
+
+- **Effortless Design Collaboration**: Marvel's web-based interface facilitates real-time collaboration among design teams. Work together, share feedback, and iterate on designs without any hiccups.
+
+- **Interactive Prototyping**: Convert static designs into interactive prototypes that simulate user interactions. Test user flows, animations, and transitions to validate and refine your designs.
+
+- **Version History and Comments**: Keep track of design iterations with version history. Additionally, leverage comments to discuss design decisions and provide feedback within the platform.
+
+- **User Testing and Feedback**: Gather valuable insights from user testing sessions and gather feedback directly from stakeholders or users through Marvel's intuitive feedback tools.
+
+- **Integrations**: Marvel integrates with various design and collaboration tools, enabling teams to seamlessly import designs and synchronize their workflows.
+
+- **Project Sharing and Accessibility**: Share your prototypes with stakeholders and clients, ensuring everyone stays informed and engaged in the design process.
+
+- **Security and Privacy**: Marvel prioritizes data security and privacy, providing a safe environment for your designs and project-related information.
+
+## Why Choose Marvel
+
+Marvel empowers designers to transform their visions into tangible experiences that captivate users. With a focus on ease-of-use, collaboration, and innovation, Marvel sets the stage for design excellence and successful product development.
+
+## Join the Marvel Community
+
+Join a vibrant community of designers, product managers, and developers who have chosen Marvel to streamline their design processes and create exceptional digital experiences. Sign up today and witness the magic of Marvel in action.
+
+**Start designing and prototyping with Marvel and unleash your creativity today!**

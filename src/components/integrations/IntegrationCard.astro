@@ -5,20 +5,18 @@ const { integration } = Astro.props;
 <li>
   <a href={"/" + integration.collectionSlug + "/" + integration.slug}>
     <div
-      class="bg-white hover:bg-slate-50 hover:border-transparent p-6 rounded-2xl border duration-200 h-full"
-    >
+      class="h-full p-6 duration-200 bg-white hover:shadow-none rounded-2xl shadow-subtle">
       <div>
         <div class="lg:inline-flex lg:items-center">
-          <div class="w-9">
-            <img src={integration.image.url} alt="" />
+          <div>
+            <img class="w-5" src={integration.image.url} alt="" />
           </div>
           <h3
-            class="mt-6 text-black font-medium lg:text-xl text-lg lg:ml-3 lg:mt-0"
-          >
+            class="mt-6 text-base font-medium text-accent-900 lg:ml-3 lg:mt-0">
             {integration.name}
           </h3>
         </div>
-        <p class="text-slate-500 mt-2 text-base">
+        <p class="mt-2 text-sm text-gray-500">
           {integration.excerpt}
         </p>
       </div>

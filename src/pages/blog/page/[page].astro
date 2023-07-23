@@ -23,29 +23,23 @@ const meta = {
 
 <BaseLayout meta={meta}>
   <section>
-    <div class="w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
-      <div class="text-center max-w-3xl mx-auto">
-        <div>
-          <span class="bg-accent-500/10 rounded-full py-1 px-4 w-auto">
-            <span class="text-xs text-accent-500 uppercase font-semibold">
-              blog
-            </span>
-          </span>
-          <h1
-            class="text-4xl mt-8 lg:text-9xl font-extrabold tracking-tight text-black"
-          >
-            Welcome to our blog
-          </h1>
-          <p class="text-base mt-4 text-slate-500 max-w-xl lg:mx-auto">
-            Sit down and enjoy our blog post. We update the library daily with
-            more and more blog entries that saciate you apetite of information.
-          </p>
-        </div>
+    <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
+      <div class="max-w-2xl">
+        <span class="text-xs font-bold tracking-wide uppercase text-accent-500"
+          >blog</span
+        >
+        <p class="mt-8 text-4xl font-semibold tracking-tight text-accent-900">
+          Dmystifying the world
+          <span class="lg:block lg:text-gray-500">of cryptocurrency</span>
+        </p>
+        <p class="mt-4 text-base text-gray-500">
+          Unlocking the transformative potential of digital currencies and
+          embracing the revolutionary power of blockchain technology
+        </p>
       </div>
       <div
-        class="mt-24 gap-x-8 gap-y-12 grid grid-cols-1 lg:gap-y-24 lg:grid-cols-3 sm:grid-cols-2"
-        role="list"
-      >
+        class="grid grid-cols-1 mt-24 gap-x-8 gap-y-12 lg:gap-y-24 lg:grid-cols-3 sm:grid-cols-2"
+        role="list">
         {posts.map((post) => <Card post={post} />)}
       </div>
       <Pagination prevUrl={prevUrl} nextUrl={nextUrl} />

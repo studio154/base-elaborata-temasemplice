@@ -15,9 +15,7 @@ const meta = {
 <BaseLayout meta={meta}>
   <UpdateHeader />
   <section>
-    <div
-      class="relative px-8 py-12 mx-auto sm:px-6 md:max-w-2xl md:px-4 lg:max-w-6xl lg:px-20"
-    >
+    <div class="px-8 py-12 mx-auto space-y-12 md:px-12 lg:px-32 max-w-7xl">
       {updates.map((update) => <Card update={update} />)}
     </div>
   </section>

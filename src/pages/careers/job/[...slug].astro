@@ -2,7 +2,6 @@
 import Prose from "@/components/common/Prose.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getDataCollection } from "@/utils/collections";
-
 export async function getStaticPaths() {
   const careers = await getDataCollection("careers");
   return careers.map((item) => ({
@@ -12,9 +11,7 @@ export async function getStaticPaths() {
     props: { item: { data: item } },
   }));
 }
-
 let { data: item } = Astro.props.item;
-
 item.html = `<p>
                     At Semplice., we are on a mission to create a new standard
                     for modern software development. We are building the tools
@@ -97,219 +94,229 @@ item.html = `<p>
 ---
 
 <BaseLayout>
-  <section>
-    <div class="w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        <div>
+  <section class="relative overflow-hidden">
+    <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex flex-col gap-3 md:flex-row lg:items-center">
+          <div>
+            <img
+              class="inset-0 object-cover w-10 h-10 rounded-full"
+              src={item.image}
+              alt=""
+            />
+          </div>
+          <p class="text-4xl font-semibold tracking-tighter text-accent-900">
+            {item.name}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 mt-12 lg:grid-cols-3 lg:divide-x">
+          <div class="lg:pl-4 lg:border-l">
+            <p class="text-base font-medium text-accent-900">Location</p>
+            <span class="mt-2 text-sm text-gray-500">
+              {item.location}
+            </span>
+          </div>
+          <div class="lg:pl-4">
+            <p class="text-base font-medium text-accent-900">Type</p>
+            <span class="mt-2 text-sm text-gray-500">
+              {item.jobType}
+            </span>
+          </div>
+          <div class="lg:pl-4">
+            <p class="text-base font-medium text-accent-900">Department</p>
+            <span class="mt-2 text-sm text-gray-500">
+              {item.category}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative w-full max-w-3xl mx-auto mt-12"
+        x-data="{
+      tabSelected: 1,
+      tabId: $id('tabs'),
+      tabButtonClicked(tabButton){
+          this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
+          this.tabRepositionMarker(tabButton);
+      },
+      tabRepositionMarker(tabButton){
+          this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
+          this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
+          this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
+      },
+      tabContentActive(tabContent){
+          return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
+      }
+  }"
+        x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);">
+        <div
+          class="relative inline-grid items-center justify-center w-full h-8 grid-cols-3 mx-auto mt-6 text-black border-b border-gray-300 select-none"
+          x-ref="tabButtons">
+          <button
+            class="relative z-20 inline-flex items-center w-full h-8 text-sm font-medium cursor-pointer ml-2transition-all whitespace-nowrap"
+            type="button"
+            :class="{ 'border-b-2 border-accent-500' : tabButtonActive($el) }"
+            :id="$id(tabId)"
+            @click="tabButtonClicked($el);"
+            id="tabs-1-1"
+            >Overview
+          </button>
+          <button
+            class="relative z-20 inline-flex w-full h-8 text-sm font-medium transition-all cursor-pointer items-centerml-2 whitespace-nowrap"
+            type="button"
+            :class="{ 'border-b-2 border-accent-500' : tabButtonActive($el) }"
+            :id="$id(tabId)"
+            @click="tabButtonClicked($el);"
+            id="tabs-1-2"
+            >Application form
+          </button>
           <div
-            class="bg-gradient-to-tr p-4 space-y-6 lg:p-8 shadow-normal rounded-3xl from-accent-600 via-accent-500 to-accent-400"
-          >
-            <div class="space-y-3">
-              <div
-                class="relative h-[3.125rem] w-[3.125rem] sm:h-[3.75rem] sm:w-[3.75rem] flex-none"
-                data-v-template-exclude=""
-              >
-                <img
-                  class="absolute inset-0 ring-4 ring-white h-full w-full rounded-full object-cover"
-                  src={item.image}
-                  alt=""
-                />
-                <div
-                  class="absolute inset-0 rounded-full ring-1 ring-inset ring-black/[0.08]"
-                >
-                </div>
-              </div>
-              <p class="text-white font-medium lg:text-xl text-lg">Role</p>
-              <span class="text-slate-200 text-base space-x-1">
-                {item.name}
-              </span>
-            </div>
-            <div class="space-y-3">
-              <p class="text-white font-medium lg:text-xl text-lg">Location</p>
-              <span class="text-slate-200 text-base space-x-1">
-                {item.location}
-              </span>
-            </div>
-            <div class="space-y-3">
-              <p class="text-white font-medium lg:text-xl text-lg">Type</p>
-              <span class="text-slate-200 text-base space-x-1">
-                {item.jobType}
-              </span>
-            </div>
-            <div class="space-y-3">
-              <p class="text-white font-medium lg:text-xl text-lg">
-                Department
-              </p>
-              <span class="text-slate-200 text-base space-x-1">
-                {item.category}
-              </span>
-            </div>
+            class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
+            x-ref="tabMarker"
+            style="width: 192px; height: 32px; left: 384px;">
+            <div class="w-12 h-full border-b-2 border-accent-500"></div>
           </div>
         </div>
 
-        <div class="w-full lg:col-span-2">
-          <div class="w-full mx-auto" x-data="" x-tabs="">
-            <div class="w-full -mb-px flex items-stretch" x-tabs:list="">
-              <button
-                class="inline-flex py-2.5 border-b-2 font-medium px-5 text-black"
-                :class="$tab.isSelected ? 'border-b-accent-500 border-accent-500 text-accent-500' : 'border-transparent text-slate-500'"
-                type="button"
-                x-tabs:tab=""
-                tabindex="0">Overview</button
-              >
-              <button
-                class="inline-flex py-2.5 border-b-2 px-5 font-medium border-accent-500 text-slate-500"
-                :class="$tab.isSelected ? 'border-accent-500  border-b-2 text-accent-500' : 'border-transparent text-slate-500'"
-                type="button"
-                x-tabs:tab=""
-                tabindex="-1">Application form</button
-              >
+        <div class="relative flex items-center w-full mt-12">
+          <div
+            class="relative"
+            :id="$id(tabId + '-content')"
+            x-show="tabContentActive($el)"
+            id="tabs-1-content-1"
+            style="display: none;">
+            <div class="relative items-center w-full" style="">
+              <Prose><Fragment set:html={item.html} /></Prose>
             </div>
-            <div class="w-full border-t rounded-b-md" x-tabs:panels="">
-              <div class="pt-8 w-full" x-tabs:panel="" tabindex="0">
-                <Prose><Fragment set:html={item.html} /></Prose>
-              </div>
-              <div
-                class="pt-8"
-                x-tabs:panel=""
-                id="form"
-                tabindex="-1"
-                style="display: none;"
-              >
-                <div class="w-full mx-auto">
-                  <form action="#" class="w-full">
+          </div>
+          <div
+            class="relative w-full"
+            :id="$id(tabId + '-content')"
+            x-show="tabContentActive($el)"
+            id="tabs-1-content-2"
+            style="display: none;">
+            <div class="relative items-center w-full" style="">
+              <form action="#" class="w-full">
+                <div class="mt-4 space-y-6">
+                  <div>
+                    <label
+                      class="block mb-3 text-sm font-medium text-gray-600"
+                      name="name">First name</label
+                    >
                     <input
                       type="text"
-                      autocomplete="false"
-                      name="hidden"
-                      style="display:none"
+                      class="block w-full h-10 px-3 py-2 placeholder-gray-500 bg-white border border-transparent rounded-md appearance-none text-accent-500 focus:border-accent-500 focus:bg-white focus:outline-none focus:ring-accent-500 sm:text-sm"
+                      placeholder="Your name"
                     />
-                    <input type="hidden" name="_redirect" value="#" /><div
-                      class="mt-4 space-y-6"
+                  </div><div class="col-span-full">
+                    <label
+                      class="block mb-3 text-sm font-medium text-gray-600"
+                      name="email">Email</label
                     >
-                      <div class="">
-                        <label
-                          class="text-sm block font-medium mb-3 text-black"
-                          name="name">First name</label
-                        >
-                        <input
-                          type="text"
-                          class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
-                          placeholder="Your name"
-                        />
-                      </div><div class="col-span-full">
-                        <label
-                          class="text-sm block font-medium mb-3 text-black"
-                          name="email">Email</label
-                        >
-                        <input
-                          type="email"
-                          class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
-                          placeholder="email@example.com"
-                          autocomplete="off"
-                        />
-                      </div><div>
-                        <div>
-                          <label
-                            class="text-sm block font-medium mb-3 text-black"
-                            name="message">Cover letter</label
-                          ><div class="mt-1">
-                            <textarea
-                              class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
-                              placeholder="What are you working on?"
-                              rows="4"></textarea>
-                          </div>
-                        </div>
-                      </div><div>
-                        <label
-                          class="text-sm block font-medium mb-3 text-black"
-                          for="cover-photo">Cover photo</label
-                        ><div class="w-full mt-1 sm:col-span-2 sm:mt-0">
-                          <div
-                            class="flex justify-center border border-dashed border-slate-400 pb-6 pt-5 px-6 rounded-md"
-                          >
-                            <div class="space-y-3 py-6 text-center">
-                              <div
-                                class="text-sm text-slate-400 flex items-center gap-3"
-                              >
-                                <label
-                                  class="inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 -ml-px dark rounded-full cursor-pointer"
-                                  for="file-upload"
-                                  ><span>Upload a file</span>
-                                  <input
-                                    type="file"
-                                    class="sr-only"
-                                    id="file-upload"
-                                    name="file-upload"
-                                  /></label
-                                ><p class="pl-1">or drag and drop</p>
-                              </div><p class="text-slate-400 text-xs">
-                                PNG, JPG, GIF up to 10MB
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div><div class="col-span-full">
-                        <label
-                          class="text-sm block font-medium mb-3 text-black"
-                          name="email">Portfolio</label
-                        >
-                        <input
-                          type="text"
-                          class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
-                          placeholder="Your site"
-                          autocomplete="off"
-                        />
-                      </div><div class="col-span-full">
-                        <label
-                          class="text-sm block font-medium mb-3 text-black"
-                          name="email">Linkedin</label
-                        >
-                        <input
-                          type="text"
-                          class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
-                          placeholder="your link"
-                          autocomplete="off"
-                        />
-                      </div><div class="col-span-full">
-                        <span class="text-sm block font-medium mb-3 text-black"
-                          >Are you based in a US, EU or equivalent timezone?
-                        </span>
-                        <span class="isolate inline-flex rounded-md shadow-sm">
-                          <button
-                            type="button"
-                            class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                            >Yes</button
-                          >
-
-                          <button
-                            type="button"
-                            class="relative -ml-px inline-flex items-center rounded-r-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                            >No</button
-                          >
-                        </span>
-                      </div><div class="col-span-full">
-                        <label
-                          class="text-sm block font-medium mb-3 text-black"
-                          name="email">What country are you based in?</label
-                        >
-                        <input
-                          type="text"
-                          class="w-full focus:outline-none focus:ring-accent-500 appearance-none bg-slate-100 block border border-transparent focus:bg-transparent focus:border-accent-500 placeholder-slate-500 px-3 py-3 rounded-lg sm:text-sm text-accent-500"
-                          placeholder="your country"
-                          autocomplete="off"
-                        />
-                      </div>
-                      <div class="flex-col flex mt-10 sm:flex-row">
-                        <a
-                          class="items-center text-white focus:outline-none inline-flex justify-center hover:text-accent-500 duration-200 focus-visible:outline-black focus-visible:ring-black font-medium px-6 py-4 rounded-xl text-center w-full bg-accent-500 hover:bg-accent-100"
-                          href="/">Submit application</a
-                        >
+                    <input
+                      type="email"
+                      class="block w-full h-10 px-3 py-2 placeholder-gray-500 bg-white border border-transparent rounded-md appearance-none text-accent-500 focus:border-accent-500 focus:bg-white focus:outline-none focus:ring-accent-500 sm:text-sm"
+                      placeholder="email@example.com"
+                      autocomplete="off"
+                    />
+                  </div><div>
+                    <div>
+                      <label
+                        class="block mb-3 text-sm font-medium text-gray-600"
+                        name="message">Cover letter</label
+                      ><div class="mt-1">
+                        <textarea
+                          class="block w-full px-3 py-2 placeholder-gray-500 bg-white border border-transparent rounded-md appearance-none text-accent-500 focus:border-accent-500 focus:bg-white focus:outline-none focus:ring-accent-500 sm:text-sm"
+                          placeholder="What are you working on?"
+                          rows="4"></textarea>
                       </div>
                     </div>
-                  </form>
+                  </div><div>
+                    <label
+                      class="block mb-3 text-sm font-medium text-gray-600"
+                      for="cover-photo">Cover photo</label
+                    ><div class="w-full mt-1 sm:col-span-2 sm:mt-0">
+                      <div
+                        class="flex justify-center px-6 pt-5 pb-6 border border-gray-400 border-dashed rounded-md">
+                        <div class="py-6 space-y-3 text-center">
+                          <div
+                            class="flex items-center gap-3 text-sm text-gray-400">
+                            <label
+                              class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg cursor-pointer text-accent-600 hover:text-accent-500"
+                              for="file-upload"
+                              ><span>Upload a file</span>
+                              <input
+                                type="file"
+                                class="sr-only"
+                                id="file-upload"
+                                name="file-upload"
+                              /></label
+                            ><p class="pl-1">or drag and drop</p>
+                          </div><p class="text-xs text-gray-400">
+                            PNG, JPG, GIF up to 10MB
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><div class="col-span-full">
+                    <label
+                      class="block mb-3 text-sm font-medium text-gray-600"
+                      name="email">Portfolio</label
+                    >
+                    <input
+                      type="text"
+                      class="block w-full h-10 px-3 py-2 placeholder-gray-500 bg-white border border-transparent rounded-md appearance-none text-accent-500 focus:border-accent-500 focus:bg-white focus:outline-none focus:ring-accent-500 sm:text-sm"
+                      placeholder="Your site"
+                      autocomplete="off"
+                    />
+                  </div><div class="col-span-full">
+                    <label
+                      class="block mb-3 text-sm font-medium text-gray-600"
+                      name="email">Linkedin</label
+                    >
+                    <input
+                      type="text"
+                      class="block w-full h-10 px-3 py-2 placeholder-gray-500 bg-white border border-transparent rounded-md appearance-none text-accent-500 focus:border-accent-500 focus:bg-white focus:outline-none focus:ring-accent-500 sm:text-sm"
+                      placeholder="Your link"
+                      autocomplete="off"
+                    />
+                  </div><div class="col-span-full">
+                    <span class="block mb-3 text-sm font-medium text-gray-600"
+                      >Are you based in a US, EU or equivalent timezone?
+                    </span>
+                    <span class="inline-flex rounded-md shadow-sm isolate">
+                      <button
+                        type="button"
+                        class="relative inline-flex items-center h-10 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-l-md hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                        >Yes</button
+                      >
+                      <button
+                        type="button"
+                        class="relative inline-flex items-center h-10 px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-r-md hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                        >No</button
+                      >
+                    </span>
+                  </div><div class="col-span-full">
+                    <label
+                      class="block mb-3 text-sm font-medium text-gray-600"
+                      name="email">What country are you based in?</label
+                    >
+                    <input
+                      type="text"
+                      class="block w-full h-10 px-3 py-2 placeholder-gray-500 bg-white border border-transparent rounded-md appearance-none text-accent-500 focus:border-accent-500 focus:bg-white focus:outline-none focus:ring-accent-500 sm:text-sm"
+                      placeholder="Your country"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="flex flex-col mt-10 sm:flex-row">
+                    <a
+                      class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold text-white transition-all rounded-lg bg-gradient-to-b from-accent-500 hover:to-accent-700 to-accent-600"
+                      href="/">Submit application</a
+                    >
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

@@ -1,54 +1,11 @@
 ---
-import Searchbar from "@/components/helpcenter/Searchbar.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { getItemsFromCollection } from "@/utils/collections";
-import Card from "@/components/helpcenter/CategoryCard.astro";
-
-let knowledgeBaseCategories = await getItemsFromCollection(
-  "knowledgeBaseCategories"
-);
-
+import HelpCenter from "@/components/helpcenter/HelpCenter.astro";
 const meta = {
   title: `Help Center`,
 };
 ---
 
 <BaseLayout meta={meta}>
-  <section>
-    <div class="w-full px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
-      <div class="relative items-center">
-        <div class="w-full lg:inline-flex justify-between lg:items-center">
-          <div class="max-w-xl">
-            <h1
-              class="font-semibold text-accent-500 text-sm tracking-widest uppercase"
-            >
-              Help Center
-            </h1>
-            <p class="text-4xl mt-8 font-extrabold tracking-tight text-black">
-              We are here to help you
-            </p>
-            <Searchbar />
-          </div>
-          <div class="mt-12 flex flex-col sm:flex-row lg:ml-auto">
-            <a
-              class="items-center text-white focus:outline-none inline-flex justify-center hover:text-accent-500 duration-200 focus-visible:outline-black focus-visible:ring-black font-medium lg:w-auto px-6 py-3 rounded-xl text-center w-full bg-accent-500 hover:bg-accent-100"
-              href="/signup"
-            >
-              Subscribe for updates &nbsp;&nbsp; →
-            </a>
-          </div>
-        </div>
-      </div>
-      <ol
-        role="list"
-        class="relative mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-3"
-      >
-        {
-          knowledgeBaseCategories.map((category) => (
-            <Card category={category} />
-          ))
-        }
-      </ol>
-    </div>
-  </section>
+  <HelpCenter />
 </BaseLayout>

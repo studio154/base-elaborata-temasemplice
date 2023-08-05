@@ -25,10 +25,10 @@
   resolved "https://registry.npmjs.org/@astrojs/compiler/-/compiler-0.31.4.tgz"
   integrity sha512-6bBFeDTtPOn4jZaiD3p0f05MEGQL9pw2Zbfj546oFETNmjJFWO3nzHz6/m+P53calknCvyVzZ5YhoBLIvzn5iw==
 
-"@astrojs/compiler@^1.0.1", "@astrojs/compiler@^1.4.2", "@astrojs/compiler@^1.6.0":
-  version "1.6.1"
-  resolved "https://registry.npmjs.org/@astrojs/compiler/-/compiler-1.6.1.tgz"
-  integrity sha512-QZZhV2kOhvyXEfpaGLgHWNPUOlkMVx3Zw+5IlXXU2p448NwtyYt3C6MuS7baVsTlluH3EedAoDBmelt9hPhfiQ==
+"@astrojs/compiler@^1.0.1", "@astrojs/compiler@^1.4.2", "@astrojs/compiler@^1.8.0":
+  version "1.8.1"
+  resolved "https://registry.npmjs.org/@astrojs/compiler/-/compiler-1.8.1.tgz"
+  integrity sha512-C28qplQzgIJ+JU9S+1wNx+ue2KCBUp0TTAd10EWAEkk4RsL3Tzlw0BYvLDDb4KP9jS48lXmR4/1TtZ4aavYJ8Q==
 
 "@astrojs/image@^0.13.0":
   version "0.13.1"
@@ -43,10 +43,10 @@
     mime "^3.0.0"
     slash "^4.0.0"
 
-"@astrojs/internal-helpers@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.npmjs.org/@astrojs/internal-helpers/-/internal-helpers-0.1.1.tgz"
-  integrity sha512-+LySbvFbjv2nO2m/e78suleQOGEru4Cnx73VsZbrQgB2u7A4ddsQg3P2T0zC0e10jgcT+c6nNlKeLpa6nRhQIg==
+"@astrojs/internal-helpers@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/@astrojs/internal-helpers/-/internal-helpers-0.1.2.tgz"
+  integrity sha512-YXLk1CUDdC9P5bjFZcGjz+cE/ZDceXObDTXn/GCID4r8LjThuexxi+dlJqukmUpkSItzQqgzfWnrPLxSFPejdA==
 
 "@astrojs/language-server@^1.0.0":
   version "1.0.8"
@@ -626,7 +626,7 @@
   resolved "https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.14.tgz"
   integrity sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==
 
-"@jridgewell/sourcemap-codec@^1.4.10", "@jridgewell/sourcemap-codec@^1.4.13":
+"@jridgewell/sourcemap-codec@^1.4.10", "@jridgewell/sourcemap-codec@^1.4.13", "@jridgewell/sourcemap-codec@^1.4.15":
   version "1.4.15"
   resolved "https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz"
   integrity sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==
@@ -935,13 +935,13 @@ astro-compress@^1.1.25:
     svgo "3.0.2"
     terser "5.18.2"
 
-astro@^2.9.1:
-  version "2.9.1"
-  resolved "https://registry.npmjs.org/astro/-/astro-2.9.1.tgz"
-  integrity sha512-cY+ilz7zbKx21QA4LRJtE49NakkhUVh6kU9LqNMThz/Fqv1Rkz0uJBWIUJfJqpOmqnpFEW2G245gF4+bUA7aRQ==
+astro@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.npmjs.org/astro/-/astro-2.10.1.tgz"
+  integrity sha512-t3y9laRaOZTAu6omVpI5x/wE80t2yTCWO/UTCPJYAYy2Aoi+snupwk8ZFBLgVd0lwO7KhjRKA0pUScfkn3bnXw==
   dependencies:
-    "@astrojs/compiler" "^1.6.0"
-    "@astrojs/internal-helpers" "^0.1.1"
+    "@astrojs/compiler" "^1.8.0"
+    "@astrojs/internal-helpers" "^0.1.2"
     "@astrojs/language-server" "^1.0.0"
     "@astrojs/markdown-remark" "^2.2.1"
     "@astrojs/telemetry" "^2.1.1"
@@ -975,7 +975,7 @@ astro@^2.9.1:
     html-escaper "^3.0.3"
     js-yaml "^4.1.0"
     kleur "^4.1.4"
-    magic-string "^0.27.0"
+    magic-string "^0.30.2"
     mime "^3.0.0"
     network-information-types "^0.1.1"
     ora "^6.3.1"
@@ -993,7 +993,7 @@ astro@^2.9.1:
     typescript "*"
     unist-util-visit "^4.1.2"
     vfile "^5.3.7"
-    vite "^4.3.9"
+    vite "^4.4.6"
     vitefu "^0.2.4"
     which-pm "^2.0.0"
     yargs-parser "^21.1.1"
@@ -2324,6 +2324,13 @@ magic-string@^0.27.0:
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.4.13"
 
+magic-string@^0.30.2:
+  version "0.30.2"
+  resolved "https://registry.npmjs.org/magic-string/-/magic-string-0.30.2.tgz"
+  integrity sha512-lNZdu7pewtq/ZvWUp9Wpf/x7WzMTsR26TWV03BRZrXFsv+BI6dy8RAiKgm1uM/kyR0rCfUcqvOlXKG66KhIGug==
+  dependencies:
+    "@jridgewell/sourcemap-codec" "^1.4.15"
+
 markdown-table@^3.0.0:
   version "3.0.3"
   resolved "https://registry.npmjs.org/markdown-table/-/markdown-table-3.0.3.tgz"
@@ -3142,10 +3149,10 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
   resolved "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^8.4.23, postcss@^8.4.24, postcss@^8.4.25:
-  version "8.4.25"
-  resolved "https://registry.npmjs.org/postcss/-/postcss-8.4.25.tgz"
-  integrity sha512-7taJ/8t2av0Z+sQEvNzCkpDynl0tX3uJMCODi6nT3PfASC7dYCWV9aQ+uiCf+KBD4SEFcu+GvJdGdwzQ6OSjCw==
+postcss@^8.4.23, postcss@^8.4.24, postcss@^8.4.26:
+  version "8.4.27"
+  resolved "https://registry.npmjs.org/postcss/-/postcss-8.4.27.tgz"
+  integrity sha512-gY/ACJtJPSmUFPDCHtX78+01fHa64FaU4zaaWfuh1MhGJISufJAH4cun6k/8fwsHYeK4UQmENQK+tRLCFJE8JQ==
   dependencies:
     nanoid "^3.3.6"
     picocolors "^1.0.0"
@@ -4031,13 +4038,13 @@ vfile@^5.0.0, vfile@^5.3.2, vfile@^5.3.7:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite@^4.3.9:
-  version "4.4.3"
-  resolved "https://registry.npmjs.org/vite/-/vite-4.4.3.tgz"
-  integrity sha512-IMnXQXXWgLi5brBQx/4WzDxdzW0X3pjO4nqFJAuNvwKtxzAmPzFE1wszW3VDpAGQJm3RZkm/brzRdyGsnwgJIA==
+vite@^4.4.6:
+  version "4.4.8"
+  resolved "https://registry.npmjs.org/vite/-/vite-4.4.8.tgz"
+  integrity sha512-LONawOUUjxQridNWGQlNizfKH89qPigK36XhMI7COMGztz8KNY0JHim7/xDd71CZwGT4HtSRgI7Hy+RlhG0Gvg==
   dependencies:
     esbuild "^0.18.10"
-    postcss "^8.4.25"
+    postcss "^8.4.26"
     rollup "^3.25.2"
   optionalDependencies:
     fsevents "~2.3.2"

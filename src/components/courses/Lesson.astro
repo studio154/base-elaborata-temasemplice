@@ -1,10 +1,10 @@
 <section>
   <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
     <div class="max-w-xl mx-auto">
-      <span class="text-xs font-bold tracking-wide uppercase text-accent-500">
+      <span class="text-xs font-bold tracking-wide uppercase text-purple-500">
         Lesson 1</span
       >
-      <p class="mt-8 text-4xl font-semibold tracking-tight text-accent-900">
+      <p class="mt-8 text-4xl font-semibold tracking-tight text-purple-900">
         Learn about Semplice
       </p>
     </div>
@@ -172,7 +172,7 @@
           @ended="videoEnded"
           preload="metadata"
           :poster="poster"
-          class="relative z-10 object-cover w-full h-full bg-accent-900"
+          class="relative z-10 object-cover w-full h-full bg-purple-900"
           crossorigin="anonymous">
           <source :src="sources.mp4" type="video/mp4" />
           <source :src="sources.webm" type="video/webm" />
@@ -182,13 +182,13 @@
           <div
             x-ref="videoBackground"
             @click="togglePlay()"
-            class="absolute inset-0 z-30 flex items-center justify-center w-full h-full bg-opacity-0 cursor-pointer bg-accent-900 group">
+            class="absolute inset-0 z-30 flex items-center justify-center w-full h-full bg-opacity-0 cursor-pointer bg-purple-900 group">
             <div
               x-show="playing"
               x-transition:enter="transition ease-out duration-1000"
               x-transition:enter-start="scale-50 opacity-100"
               x-transition:enter-end="scale-100 opacity-0"
-              class="absolute z-20 flex items-center justify-center w-24 h-24 rounded-full opacity-0 bg-gradient-to-b from-accent-500 hover:to-accent-700 to-accent-600 bg-opacity-20"
+              class="absolute z-20 flex items-center justify-center w-24 h-24 rounded-full opacity-0 bg-gradient-to-b from-purple-500 hover:to-purple-700 to-purple-600 bg-opacity-20"
               x-cloak>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +213,7 @@
               x-transition:enter="transition ease-out duration-1000"
               x-transition:enter-start="scale-50 opacity-100"
               x-transition:enter-end="scale-100 opacity-0"
-              class="absolute z-20 flex items-center justify-center w-24 h-24 rounded-full opacity-0 bg-gradient-to-b from-accent-500 hover:to-accent-700 to-accent-600 bg-opacity-20"
+              class="absolute z-20 flex items-center justify-center w-24 h-24 rounded-full opacity-0 bg-gradient-to-b from-purple-500 hover:to-purple-700 to-purple-600 bg-opacity-20"
               x-cloak>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -243,7 +243,7 @@
                 x-transition:leave="transition ease-out duration-300"
                 x-transition:leave-start="opacity-100"
                 x-transition:leave-end="opacity-0"
-                class="flex items-center justify-center w-12 h-12 text-white duration-150 ease-out rounded-full cursor-pointer bg-gradient-to-b from-accent-500 hover:to-accent-700 to-accent-600 bg-opacity-80"
+                class="flex items-center justify-center w-12 h-12 text-white duration-150 ease-out rounded-full cursor-pointer bg-gradient-to-b from-purple-500 hover:to-purple-700 to-purple-600 bg-opacity-80"
                 type="button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +273,7 @@
             x-transition:leave="transition ease-in duration-300"
             x-transition:leave-start="translate-y-0"
             x-transition:leave-end="-translate-y-full"
-            class="absolute top-0 left-0 z-20 w-full h-1/4 opacity-20 bg-gradient-to-b from-accent-900 to-transparent"
+            class="absolute top-0 left-0 z-20 w-full h-1/4 opacity-20 bg-gradient-to-b from-purple-900 to-transparent"
             x-cloak>
           </div>
           <div
@@ -384,7 +384,7 @@
                   max="100"
                   value="0"
                   step="any"
-                  class="w-full h-full appearance-none flex items-center cursor-pointer bg-transparent z-30 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-0 [&::-webkit-slider-thumb]:w-1.5 [&::-webkit-slider-thumb]:h-1.5 [&::-webkit-slider-thumb]:appearance-none [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:w-1.5 [&::-moz-range-thumb]:h-1.5 [&::-moz-range-thumb]:appearance-none [&::-ms-thumb]:bg-white [&::-ms-thumb]:rounded-full [&::-ms-thumb]:border-0 [&::-ms-thumb]:w-1.5 [&::-ms-thumb]:h-1.5 [&::-ms-thumb]:appearance-none [&::-webkit-slider-runnable-track]:bg-white [&::-webkit-slider-runnable-track]:bg-opacity-30 [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:overflow-hidden [&::-moz-range-track]:bg-neutral-200 [&::-moz-range-track]:rounded-full [&::-ms-track]:bg-neutral-200 [&::-ms-track]:rounded-full [&::-moz-range-progress]:bg-accent-600 [&::-moz-range-progress]:rounded-full [&::-ms-fill-lower]:bg-accent-600 [&::-ms-fill-lower]:rounded-full [&::-webkit-slider-thumb]:shadow-[-995px_0px_0px_990px_#2463eb]"
+                  class="w-full h-full appearance-none flex items-center cursor-pointer bg-transparent z-30 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-0 [&::-webkit-slider-thumb]:w-1.5 [&::-webkit-slider-thumb]:h-1.5 [&::-webkit-slider-thumb]:appearance-none [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:w-1.5 [&::-moz-range-thumb]:h-1.5 [&::-moz-range-thumb]:appearance-none [&::-ms-thumb]:bg-white [&::-ms-thumb]:rounded-full [&::-ms-thumb]:border-0 [&::-ms-thumb]:w-1.5 [&::-ms-thumb]:h-1.5 [&::-ms-thumb]:appearance-none [&::-webkit-slider-runnable-track]:bg-white [&::-webkit-slider-runnable-track]:bg-opacity-30 [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:overflow-hidden [&::-moz-range-track]:bg-neutral-200 [&::-moz-range-track]:rounded-full [&::-ms-track]:bg-neutral-200 [&::-ms-track]:rounded-full [&::-moz-range-progress]:bg-purple-600 [&::-moz-range-progress]:rounded-full [&::-ms-fill-lower]:bg-purple-600 [&::-ms-fill-lower]:rounded-full [&::-webkit-slider-thumb]:shadow-[-995px_0px_0px_990px_#2463eb]"
                 />
               </div>
             </div>
@@ -407,13 +407,13 @@
     </div>
 
     <div
-      class="mx-auto mt-12 prose text-gray-500 prose-blockquote:border-l-black prose-a:text-accent-500 hover:prose-a:text-accent-900 prose-headings:font-bold prose-headings:tracking-tighter prose-headings:text-accent-900 prose-li:marker:text-accent-500 prose-code:text-accent-900 prose-blockquote:text-gray-500">
+      class="mx-auto mt-12 prose text-gray-500 prose-blockquote:border-l-black prose-a:text-purple-500 hover:prose-a:text-purple-900 prose-headings:font-bold prose-headings:tracking-tighter prose-headings:text-purple-900 prose-li:marker:text-purple-500 prose-code:text-purple-900 prose-blockquote:text-gray-500">
       <h2>Getting Started</h2>
       <p>
         Is it worth investing in tech right now? Here’s what on-the-fence
         investors should know about current tech investment opportunities.
       </p>
-      <h3 class="mt-12 text-xl text-accent-900">Intro to Semplice</h3>
+      <h3 class="mt-12 text-xl text-purple-900">Intro to Semplice</h3>
       <p>
         Despite the tech industry’s disturbing regression in the stock market,
         CEOs and market analysts see the trend as a temporary shake-out. The big

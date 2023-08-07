@@ -6,7 +6,7 @@ const { post } = Astro.props;
 <div class="group">
   <a href={"/" + post.collectionSlug + "/" + post.slug} class="h-full">
     <img
-      class="aspect-[3/2] object-cover rounded-2xl hover:shadow-none shadow-medium duration-200"
+      class="aspect-[3/2] object-cover rounded-2xl hover:shadow-none shadow-md duration-200"
       loading="lazy"
       src={post.image.url}
       alt={post.image.alt}
@@ -16,7 +16,7 @@ const { post } = Astro.props;
         <p class="text-xs text-gray-500">
           {getFormattedDate(post.publishedAt)}
         </p>
-        <p class="mt-3 text-base font-medium text-accent-900">
+        <p class="mt-3 text-base font-medium text-purple-900">
           {post.name}
         </p>
         <p class="mt-2 text-sm text-gray-500 line-clamp-2">
@@ -24,7 +24,7 @@ const { post } = Astro.props;
         </p>
       </div>
       <div class="mt-6">
-        <p class="text-xs font-medium text-accent-900">By {post.author}</p>
+        <p class="text-xs font-medium text-purple-900">By {post.author}</p>
       </div>
     </div>
   </a>

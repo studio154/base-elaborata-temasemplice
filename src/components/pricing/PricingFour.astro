@@ -3,11 +3,11 @@
     class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24"
     x-data="{duration: 'monthly'}">
     <div class="max-w-2xl mx-auto text-center">
-      <span class="text-xs font-bold tracking-wide uppercase text-accent-500"
+      <span class="text-xs font-bold tracking-wide uppercase text-purple-500"
         >Pricing</span
       >
       <p
-        class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-accent-900">
+        class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900">
         Equip your business
         <span class="md:block md:text-gray-500">
           with world class software</span
@@ -18,19 +18,19 @@
       </p>
 
       <div
-        class="w-full border bg-white overflow-hidden inline-flex mt-6 p-0.5 rounded-lg max-w-xs shadow-subtle z-0">
+        class="w-full border bg-white overflow-hidden inline-flex mt-6 p-0.5 rounded-lg max-w-xs shadow-sm z-0">
         <button
           id="monthly-pricing-button"
-          class="block w-full px-8 py-2 text-xs font-medium transition border border-transparent rounded-md text-accent-900"
+          class="block w-full px-8 py-2 text-xs font-medium transition border border-transparent rounded-md text-purple-900"
           @click="duration = 'monthly'"
-          :class="duration == 'monthly' ? 'bg-gray-100 border text-accent-900 ' : ''"
+          :class="duration == 'monthly' ? 'bg-gray-100 border text-purple-900 ' : ''"
           type="button">Monthly</button
         >
         <button
           id="annual-pricing-button"
-          class="block w-full px-8 py-2 text-xs font-medium transition border border-transparent rounded-md text-accent-900"
+          class="block w-full px-8 py-2 text-xs font-medium transition border border-transparent rounded-md text-purple-900"
           @click="duration = 'annual'"
-          :class="duration == 'annual' ? 'bg-gray-100 border text-accent-900 ' : ''"
+          :class="duration == 'annual' ? 'bg-gray-100 border text-purple-900 ' : ''"
           type="button">Annual</button
         >
       </div>
@@ -51,7 +51,7 @@
               </div>
               <div class="ml-3">
                 <p class="text-xs font-medium text-gray-500">For individuals</p>
-                <p class="text-base font-medium text-accent-900">Hobby</p>
+                <p class="text-base font-medium text-purple-900">Hobby</p>
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@
               looking for essential functionalities to support projects.
             </p>
             <p
-              class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-accent-900">
+              class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900">
               <span
                 data-monthly="$99.00"
                 data-annual="$49.00"
@@ -76,7 +76,7 @@
             </p>
           </div>
         </div>
-        <div class="p-8 overflow-hidden bg-white rounded-3xl shadow-subtle">
+        <div class="p-8 overflow-hidden bg-white rounded-3xl shadow-sm">
           <ul
             class="flex flex-col order-last text-sm text-gray-500 gap-y-3"
             role="list">
@@ -203,7 +203,7 @@
           </ul>
           <div class="w-full mt-8">
             <a
-              class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-accent-600 hover:text-accent-500"
+              class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-purple-600 hover:text-purple-500"
               href="#">Get started</a
             >
           </div>
@@ -223,7 +223,7 @@
               </div>
               <div class="ml-3">
                 <p class="text-xs font-medium text-gray-500">For startups</p>
-                <p class="text-base font-medium text-accent-900">Pro</p>
+                <p class="text-base font-medium text-purple-900">Pro</p>
               </div>
             </div>
           </div>
@@ -234,7 +234,7 @@
               cater to your needs. It offers a balance of essential features.
             </p>
             <p
-              class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-accent-900">
+              class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900">
               <span
                 data-monthly="$199.00"
                 data-annual="$99.00"
@@ -249,7 +249,7 @@
           </div>
         </div>
         <div
-          class="p-8 bg-gradient-to-t shadow-subtle from-accent-800 via-accent-700 to-accent-500 rounded-3xl">
+          class="p-8 bg-gradient-to-t shadow-sm from-purple-800 via-purple-700 to-purple-500 rounded-3xl">
           <ul
             class="flex flex-col order-last text-sm text-white gap-y-3"
             role="list">

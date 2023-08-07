@@ -4,19 +4,14 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-
     extend: {
 
-      backgroundImage: (theme) => ({
-        desktopGradient: "url('./images/desktopGradient.mp4')",
-      }),
 boxShadow: {
-        subtle: "0px 2px 5px rgba(13,34,71,0.08),inset 0px -1px 1px rgba(13,34,71,0.1)",
-        medium: "rgba(13, 34, 71, 0.12) 0px 1px 8px, rgba(13, 34, 71, 0.12) 0px -1px 1px inset;",
+        sm: "0px 2px 5px rgba(13,34,71,0.08),inset 0px -1px 1px rgba(13,34,71,0.1)",
+        md: "rgba(13, 34, 71, 0.12) 0px 1px 8px, rgba(13, 34, 71, 0.12) 0px -1px 1px inset;",
       },
       colors: {
-
-        accent: {
+        purple: {
           50: "#EEE8FD",
           100: "#E1D5FB",
           200: "#C3ABF7",
@@ -31,8 +26,6 @@ boxShadow: {
         },
       },
       fontFamily: {
-
-        display: ["Inter", ...defaultTheme.fontFamily.sans],
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
     },

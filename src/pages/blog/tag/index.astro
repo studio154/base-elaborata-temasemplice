@@ -20,17 +20,17 @@ const tags = [...new Set(allPosts.map((post) => post.tags).flat())].map(
         <div class="w-full lg:inline-flex justify-between lg:items-center">
           <div class="max-w-xl">
             <span
-              class="text-xs font-bold tracking-wide uppercase text-accent-500">
+              class="text-xs font-bold tracking-wide uppercase text-purple-500">
               Tags</span
             >
             <p
-              class="text-4xl mt-8 font-extrabold tracking-tight text-accent-900">
+              class="text-4xl mt-8 font-extrabold tracking-tight text-purple-900">
               All tags
             </p>
           </div>
           <div class="mt-12 flex flex-col sm:flex-row lg:ml-auto">
             <a
-              class="text-sm flex font-semibold items-center justify-center px-4 py-2 rounded-lg transition-all h-10 text-white bg-gradient-to-b from-accent-500 hover:to-accent-700 to-accent-600"
+              class="text-sm flex font-semibold items-center justify-center px-4 py-2 rounded-lg transition-all h-10 text-white bg-gradient-to-b from-purple-500 hover:to-purple-700 to-purple-600"
               href="/blog">See all posts &nbsp;&nbsp; →</a
             >
           </div>
@@ -42,14 +42,14 @@ const tags = [...new Set(allPosts.map((post) => post.tags).flat())].map(
             tags.map((tag) => (
               <div class="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-4 items-end">
                 <div class="lg:col-span-2">
-                  <span class="text-accent-900 font-medium lg:text-xl text-lg">
+                  <span class="text-purple-900 font-medium lg:text-xl text-lg">
                     {tag.name}
                   </span>
                 </div>
                 <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0 lg:ml-auto col-span-2">
                   <a
                     href={"/blog/tag/" + tag.slug}
-                    class="flex items-center justify-center w-12 h-12 text-accent-500 rounded-full bg-gray-50 hover:bg-gray-100 border">
+                    class="flex items-center justify-center w-12 h-12 text-purple-500 rounded-full bg-gray-50 hover:bg-gray-100 border">
                     <svg
                       fill="none"
                       stroke="currentColor"

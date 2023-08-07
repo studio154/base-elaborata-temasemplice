@@ -25,13 +25,13 @@ const { Content } = await item.render();
   <section>
     <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
       <div class="max-w-3xl mx-auto mt-12">
-        <p class="text-xs font-bold tracking-wide uppercase text-accent-500">
+        <p class="text-xs font-bold tracking-wide uppercase text-purple-500">
           Written by: {item.author} on {getFormattedDate(item.publishedAt)}
         </p>
-        <h1 class="mt-8 text-4xl font-semibold tracking-tight text-accent-900">
+        <h1 class="mt-8 text-4xl font-semibold tracking-tight text-purple-900">
           {item.name}
         </h1>
-        <h2 class="mt-2 text-sm font-semibold tracking-tight text-accent-900">
+        <h2 class="mt-2 text-sm font-semibold tracking-tight text-purple-900">
           <em>{item.description}</em>
         </h2>
         <div class="mt-6">
@@ -39,7 +39,7 @@ const { Content } = await item.render();
             {
               item.tagsItems.map((tag) => (
                 <a
-                  class="inline-flex no-underline  items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-50 text-accent-900 hover:text-accent-800"
+                  class="inline-flex no-underline  items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-50 text-purple-900 hover:text-purple-800"
                   href={"/" + tag.collectionSlug + "/" + tag.slug}>
                   {tag.name}
                 </a>

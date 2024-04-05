@@ -4,18 +4,21 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
 
 <section>
   <div class="relative px-8 py-12 mx-auto max-w-7xl md:px-12 lg:px-32 lg:py-24">
-    <div class="max-w-2xl">
-      <span class="text-xs font-bold tracking-wide uppercase text-purple-500"
-        >Pricing</span
-      >
-      <p
-        class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900">
-        Equip your business
-        <span class="md:block md:text-gray-500">
-          with world class software</span
+    <div
+      class="grid items-end grid-cols-1 border-gray-300 lg:grid-cols-3 lg:pb-12 lg:border-b">
+      <div class="lg:col-span-2">
+        <span class="text-xs font-bold tracking-wide uppercase text-purple-500"
+          >Pricing</span
         >
-      </p>
-      <p class="max-w-xl mt-4 text-base text-gray-500">
+        <p
+          class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900">
+          Equip your business
+          <span class="md:block md:text-gray-500">
+            with world class software</span
+          >
+        </p>
+      </div>
+      <p class="text-base text-gray-500">
         Every plan includes every feature, and can scale as your team does.
       </p>
     </div>
@@ -56,7 +59,7 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                   class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900">
                   $9<span
                     class="text-xs font-normal tracking-normal text-gray-500"
-                    >/monthly</span
+                    >/once</span
                   >
                 </p>
               </div>
@@ -90,7 +93,7 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                   class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900">
                   $29<span
                     class="text-xs font-normal tracking-normal text-gray-500"
-                    >/monthly</span
+                    >/once</span
                   >
                 </p>
               </div>
@@ -125,7 +128,7 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                   class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900">
                   $299<span
                     class="text-xs font-normal tracking-normal text-gray-500"
-                    >/monthly</span
+                    >/once</span
                   >
                 </p>
               </div>
@@ -137,6 +140,8 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
             <th class="w-1/4 px-2">
               <div class="w-full py-2 mb-4 mt-4">
                 <a
+                  title="link to your page"
+                  aria-label="your label"
                   href=""
                   class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-purple-600 hover:text-purple-500"
                   >Get started for free</a
@@ -146,6 +151,8 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
             <th class="w-1/4 px-2">
               <div class="w-full py-2 mb-4 mt-4">
                 <a
+                  title="link to your page"
+                  aria-label="your label"
                   href=""
                   class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold text-white transition-all rounded-lg bg-gradient-to-b hover:to-purple-700 from-purple-600 to-purple-500"
                   >Get in touch</a
@@ -155,6 +162,8 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
             <th class="w-1/4 px-2">
               <div class="w-full py-2 mb-4 mt-4">
                 <a
+                  title="link to your page"
+                  aria-label="your label"
                   href=""
                   class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-purple-600 hover:text-purple-500"
                   >Get in touch</a
@@ -168,7 +177,8 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
             <th
               class="py-3 text-base font-medium text-left text-black"
               scope="colgroup"
-              colspan="4">Product features</th
+              colspan="4"
+              >Product features</th
             >
           </tr>
           <tr>
@@ -211,7 +221,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -234,7 +248,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -248,11 +266,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -265,11 +288,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -289,7 +317,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -303,11 +335,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -320,11 +357,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -344,7 +386,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -358,11 +404,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -375,11 +426,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -387,7 +443,8 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
             <th
               class="py-3 text-base font-medium text-left text-black"
               scope="colgroup"
-              colspan="4">Support and performance</th
+              colspan="4"
+              >Support and performance</th
             >
           </tr>
           <tr>
@@ -421,7 +478,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -437,7 +498,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -451,11 +516,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -475,7 +545,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -489,11 +563,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -506,11 +585,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -530,7 +614,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -544,11 +632,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -561,11 +654,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -585,7 +683,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -601,7 +703,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -615,11 +721,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -639,7 +750,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -655,7 +770,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -669,11 +788,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -693,7 +817,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -710,7 +838,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                   stroke-width="2"
                   height="20"
                   width="20">
-                  <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                    stroke="none"
+                  ></path>
                   <path d="M5 12l14 0"></path>
                 </svg>
               </div>
@@ -725,11 +857,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -737,7 +874,8 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
             <th
               class="py-3 text-base font-medium text-left text-black"
               scope="colgroup"
-              colspan="4">Payment</th
+              colspan="4"
+              >Payment</th
             >
           </tr>
           <tr>
@@ -756,7 +894,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -787,7 +929,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -810,7 +956,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -824,11 +974,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -841,11 +996,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -859,7 +1019,7 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
           </tr>
           <tr>
             <th class="py-3 text-sm font-normal text-left text-gray-500"
-              >Pay monthly</th
+              >Pay once</th
             >
             <td class="px-2 text-sm font-normal"
               ><svg
@@ -871,11 +1031,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -888,11 +1053,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -907,7 +1077,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -926,11 +1100,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -943,11 +1122,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -960,11 +1144,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -982,11 +1171,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -999,11 +1193,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -1018,7 +1217,11 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-width="2"
                 height="20"
                 width="20">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path d="M5 12l14 0"></path>
               </svg></td
             >
@@ -1037,11 +1240,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -1054,11 +1262,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
             <td class="px-2 text-sm font-normal"
@@ -1071,11 +1284,16 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1">
-                <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                ></path>
                 <path
                   d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
                   fill="currentColor"
-                  stroke-width="0"></path>
+                  stroke-width="0"
+                ></path>
               </svg></td
             >
           </tr>
@@ -1084,6 +1302,8 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
             <th class="w-1/4 px-2">
               <div class="w-full py-2 mb-4 mt-4">
                 <a
+                  title="link to your page"
+                  aria-label="your label"
                   href=""
                   class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-purple-600 hover:text-purple-500"
                   >Get started for free</a
@@ -1093,6 +1313,8 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
             <th class="w-1/4 px-2">
               <div class="w-full py-2 mb-4 mt-4">
                 <a
+                  title="link to your page"
+                  aria-label="your label"
                   href=""
                   class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold text-white transition-all rounded-lg bg-gradient-to-b hover:to-purple-700 from-purple-600 to-purple-500"
                   >Get in touch</a
@@ -1102,6 +1324,8 @@ import PricingFiveMobile from "./PricingFiveMobile.astro";
             <th class="w-1/4 px-2">
               <div class="w-full py-2 mb-4 mt-4">
                 <a
+                  title="link to your page"
+                  aria-label="your label"
                   href=""
                   class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-purple-600 hover:text-purple-500"
                   >Get in touch</a

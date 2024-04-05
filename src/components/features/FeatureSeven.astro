@@ -1,3 +1,19 @@
+---
+const features = [
+  {
+    title: "Interoperability",
+    description:
+      "Emphasizing interoperability, our platform facilitates seamless communication between different blockchain networks.",
+  },
+  {
+    title: "Automation",
+    description:
+      "Our blockchain incorporates a governance and voting system that allows community members to actively participate.",
+  },
+  // Add more features as needed
+];
+---
+
 <section>
   <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
     <div class="max-w-2xl">
@@ -16,24 +32,22 @@
       </p>
     </div>
 
-    <ol
-      role="list"
+    <dl
       class="grid grid-cols-1 gap-6 mt-12 list-none sm:grid-cols-2 lg:gap-12 lg:grid-cols-2">
-      <li>
-        <h3 class="text-base font-medium text-purple-900">Interoperability</h3>
-        <p class="mt-2 text-sm text-gray-500">
-          Emphasizing interoperability, our platform facilitates seamless
-          communication between different blockchain networks.
-        </p>
-      </li>
-      <li>
-        <h3 class="text-base font-medium text-purple-900">Automation</h3>
-        <p class="mt-2 text-sm text-gray-500">
-          Our blockchain incorporates a governance and voting system that allows
-          community members to actively participate.
-        </p>
-      </li>
-    </ol>
+      {
+        features.map((feature) => (
+          <>
+            <div>
+              <dt class="text-base font-medium text-purple-900">
+                {feature.title}
+              </dt>
+              <dd class="mt-2 text-sm text-gray-500">{feature.description}</dd>
+            </div>
+          </>
+        ))
+      }
+    </dl>
+
     <div
       class="list-none grid grid-cols-1 shadow-md items-center lg:grid-cols-2 gap-4 mt-12 lg:gap-24 bg-white rounded-2xl lg:rounded-3xl p-8 lg:p-10 relative overflow-clip">
       <div class="pt-8 text-center lg:text-left">
@@ -50,7 +64,10 @@
         <div class="flex justify-center mt-10 lg:justify-start">
           <a
             class="text-purple-600 text-sm bg-white border border-gray-300 flex font-semibold hover:text-purple-500 items-center justify-center px-4 py-2 rounded-lg transition-all h-10"
-            href="/">See all pages &nbsp; &rarr;</a
+            title="link to your page"
+            aria-label="your label"
+            href="/"
+            >See all pages &nbsp; &rarr;</a
           >
         </div>
       </div>

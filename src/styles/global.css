@@ -23,6 +23,22 @@ video {
     "cv09", /* Flat-top three */
     "cv02" 1; /* Open 4 */
 }
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings:
+  "liga" 1,
+  "calt" 1, /* Contextual Alternates */
+  "dlig" 1, /* Discretionary Ligatures */
+  "ss07" 1, /* fSquare punctuation */
+  "ss08" 1, /* Square quotes */
+  "zero" 1, /* Slashed zero */
+  "tnum" 1, /* Tabular numbers */
+    "cv03" 1, /* Open six */
+    "cv04" 1, /* Open nine */
+    "cv01" 1, /* Alternate one */
+    "cv09", /* Flat-top three */
+    "cv02" 1; /* Open 4 */
+}
 @supports (font-variation-settings: normal) {
   /* Use variable font if supported */
   :root {
@@ -31,6 +47,9 @@ video {
 }
 
 
+.prose-styles {
+  @apply prose max-w-3xl prose-blockquote:border-l-black prose-a:text-purple-500 hover:prose-a:text-purple-900 prose-headings:font-bold prose-headings:text-purple-900  prose-li:marker:text-purple-500 text-gray-500 prose-code:text-purple-900 prose-blockquote:text-gray-500
+}
 :root {
   --astro-code-color-text: #000;
   --astro-code-color-background: #fafafa;

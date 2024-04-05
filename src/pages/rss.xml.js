@@ -1,19 +1,11 @@
-
-import rss from "@astrojs/rss";
-import { getCollection } from "astro:content";
-
-export async function get() {
-  const posts = await getCollection('posts');
+import rss, { pagesGlobToRssItems } from '@astrojs/rss';
+export async function GET(context) {
   return rss({
-    title: 'Astro Learner | Blog',
-    description: 'My journey learning Astro',
-    site: 'https://my-blog-site.netlify.app',
-    items: posts.map((post) => ({
-      title: post.data.name,
-      pubDate: post.data.publishedAt,
-      description: post.data.excerpt,
-      link: `/blog/${post.slug}/`,
-    })),
-    customData: `<language>en-us</language>`,
+     title: 'Lexington Themes',
+    description: 'Free and premium multipage themes and UI Kits For freelancers, developers, businesses, and personal use.Beautifully crafted with Astro.js, and Tailwind CSS — Simple & easy to customise.',
+    site: context.site,
+    items: await pagesGlobToRssItems(
+      import.meta.glob('./blog/*.{md,mdx}'),
+    ),
   });
 }

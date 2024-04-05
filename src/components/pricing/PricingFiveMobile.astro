@@ -1,1025 +1,147 @@
+---
+const plansData = [
+  {
+    title: "Hobby",
+    description:
+      "This plan is ideal for individual users and hobbyists who are looking for essential functionalities to support their personal projects and interests.",
+    price: "$9",
+    pricePeriod: "/monthly",
+    features: ["Limited number of users", "Limited storage", "Basic support"],
+    buttonLabel: "Get started",
+    imgSrc: "/assets/hobby.svg",
+    category: "For individuals",
+    textClass: "text-gray-500",
+    accentTextClass: "text-purple-900",
+    cardClass: "bg-white",
+    buttonClass:
+      "flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-purple-600 hover:text-purple-500",
+  },
+
+  {
+    title: "Pro",
+    description:
+      "If you're a small business or a startup, this plan is designed to cater to your needs. It offers a balance of essential features and scalability.",
+    price: "$49",
+    pricePeriod: "/monthly",
+    features: [
+      "Unlimited number of users",
+      "Unlimited storage",
+      "Advanced support",
+      "Advanced analytics",
+      "Multiple integrations",
+    ],
+    buttonLabel: "Get started",
+    imgSrc: "/assets/pro.svg",
+    category: "For startups",
+    textClass: "text-white",
+    accentTextClass: "text-white",
+    cardClass: "bg-gradient-to-t from-purple-800 via-purple-700 to-purple-500 ",
+    buttonClass:
+      "text-sm flex font-semibold items-center justify-center px-4 py-2 rounded-lg transition-all h-10 text-white bg-gradient-to-b from-white/[.105] hover:to-white/[.25] ring-1 ring-inset ring-white/20 to-white/[.15]",
+  },
+  {
+    title: "Top notch",
+    description:
+      "This top-tier plan caters to large enterprises and corporations, offering enterprise-level needs with dedicated support.",
+    price: "$99",
+    pricePeriod: "/monthly",
+    features: [
+      "Unlimited number of users",
+      "Unlimited storage",
+      "Advanced support",
+      "Advanced analytics",
+      "Multiple integrations",
+      "Advanced customization",
+      "99.9% SLA",
+    ],
+    buttonLabel: "Get started",
+    imgSrc: "/assets/topnotch.svg",
+    category: "For tailored occasions",
+    textClass: "text-gray-500",
+    accentTextClass: "text-purple-900",
+    cardClass: "bg-white",
+    buttonClass:
+      "flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-purple-600 hover:text-purple-500",
+  },
+];
+---
+
 <div class="w-full px-8 lg:hidden md:px-12">
-  <div
-    class="flex flex-col p-8 mx-auto mb-8 text-purple-900 bg-white border-0 rounded-3xl">
-    <div class="flex-shrink-0 block">
-      <div class="flex items-center">
-        <div>
-          <img
-            class="inline-block w-12 h-12 rounded-full"
-            src="/assets/hobby.svg"
-            alt=""
-          />
+  <div class="grid gap-4 mt-12 md:grid-cols-2 lg:grid-cols-3 lg:mt-24">
+    {
+      plansData.map((plan) => (
+        <div class={`p-8 rounded-3xl shadow-sm ${plan.cardClass}`}>
+          <div class="flex flex-col">
+            <div class="flex-shrink-0 block">
+              <div class="flex items-center">
+                <div>
+                  <img
+                    class="inline-block w-12 h-12 rounded-full"
+                    src={plan.imgSrc}
+                    alt={plan.title}
+                  />
+                </div>
+                <div class="ml-3">
+                  <p class={`text-xs font-medium  ${plan.textClass}`}>
+                    {plan.category}
+                  </p>
+                  <p class={`text-base font-medium ${plan.accentTextClass}`}>
+                    {plan.title}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 ">
+              <p class={`text-sm ${plan.textClass}`}>{plan.description}</p>
+              <p
+                class={`mt-8 text-4xl font-semibold tracking-tight lg:text-5xl ${plan.accentTextClass}`}>
+                {plan.price}
+                <span
+                  class={`text-xs font-normal tracking-normal ${plan.textClass}`}>
+                  {plan.pricePeriod}
+                </span>
+              </p>
+            </div>
+            <div class="w-full mt-8">
+              <button
+                class={`w-full ${plan.buttonClass}`}
+                type="submit">
+                {plan.buttonLabel}
+              </button>
+            </div>
+            <ul
+              class={`flex flex-col order-last mt-10 text-sm  gap-y-3 ${plan.textClass}`}
+              role="list">
+              {plan.features.map((feature) => (
+                <li class="flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-4 icon icon-tabler icon-tabler-circle-check-filled"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      stroke="none"
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                      stroke-width="0"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div class="ml-3">
-          <p class="text-xs font-medium text-gray-500">For individuals</p>
-          <p class="text-base font-medium text-purple-900">Hobby</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="my-6">
-      <p class="text-sm text-gray-500">
-        This plan is ideal for individual users and hobbyists who are looking
-        for essential functionalities to support their personal projects and
-        interests.
-      </p>
-      <p
-        class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900">
-        $9<span class="text-xs font-normal tracking-normal text-gray-500"
-          >/monthly</span
-        >
-      </p>
-    </div>
-    <ul class="list-none order-last" role="list">
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">3 <a href="#">Analytics</a></span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">5 <a href="#">Accounts</a></span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">2 <a href="#">Integrations</a></span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal"
-          ><svg
-            class="mx-auto text-gray-500 icon icon-tabler icon-tabler-minus"
-            fill="none"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            height="20"
-            width="20">
-            <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
-            <path d="M5 12l14 0"></path>
-          </svg>
-          <a href="#">Programs</a></span
-        >
-      </li>
-      <table class="w-full">
-        <caption class="py-3 text-sm font-normal text-left text-purple-900"
-          >Product features</caption
-        >
-        <thead>
-          <tr>
-            <th class="sr-only" scope="col">Feature</th>
-            <th class="sr-only" scope="col">Included</th>
-          </tr>
-        </thead>
-      </table>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Slack community</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Response SLA: 3 days</span>
-      </li>
-      <table class="w-full">
-        <caption class="py-3 text-sm font-normal text-left text-purple-900"
-          >Support and implementation</caption
-        >
-        <thead>
-          <tr>
-            <th class="sr-only" scope="col">Feature</th>
-            <th class="sr-only" scope="col">Included</th>
-          </tr>
-        </thead>
-      </table>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Unlimited viewers</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Minimum term: Month-to-month</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Pay monthly</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Pay yearly</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Pay by credit card</span>
-      </li>
-    </ul>
-    <table class="w-full">
-      <caption class="py-3 text-sm font-normal text-left text-purple-900"
-        >Payment and terms</caption
-      >
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">Feature</th>
-          <th class="sr-only" scope="col">Included</th>
-        </tr>
-      </thead>
-    </table>
-    <div class="w-full py-2 mb-4">
-      <button
-        class="flex items-center justify-center w-full h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-purple-600 hover:text-purple-500"
-        >Get started for free</button
-      >
-    </div>
-  </div>
-  <div
-    class="flex flex-col p-8 mx-auto mb-8 text-purple-900 bg-white border-0 rounded-3xl">
-    <div class="flex-shrink-0 block">
-      <div class="flex items-center">
-        <div>
-          <img
-            class="inline-block w-12 h-12 rounded-full"
-            src="/assets/pro.svg"
-            alt=""
-          />
-        </div>
-        <div class="ml-3">
-          <p class="text-xs font-medium text-gray-500">For startups</p>
-          <p class="text-base font-medium text-purple-900">Pro</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="my-6">
-      <p class="text-xs font-normal text-gray-500">
-        If you're a small business or a startup, this plan is designed to cater
-        to your needs. It offers a balance of essential features.
-      </p>
-      <p
-        class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900">
-        $29<span class="text-xs font-normal tracking-normal text-gray-500"
-          >/monthly</span
-        >
-      </p>
-    </div>
-    <ul class="list-none order-last" role="list">
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">10 <a href="#">Analytics</a></span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">10 <a href="#">Accounts</a></span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal"
-          >Unlimited <a href="#">Integrations</a></span
-        >
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">1 <a href="#">Programs</a></span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal"><a href="#">Deployments</a></span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal"
-          ><a href="#">Advanced Checkpoints</a></span
-        >
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal"
-          ><a href="#">Private Deploymentss</a></span
-        >
-      </li>
-      <table class="w-full">
-        <caption class="py-3 text-sm font-normal text-left text-purple-900"
-          >Product features</caption
-        >
-        <thead>
-          <tr>
-            <th class="sr-only" scope="col">Feature</th>
-            <th class="sr-only" scope="col">Included</th>
-          </tr>
-        </thead>
-      </table>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Live chat</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Response SLA: 1 day</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Dedicated Customer Success Manager</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Training calls</span>
-      </li>
-      <table class="w-full">
-        <caption class="py-3 text-sm font-normal text-left text-purple-900"
-          >Support and implementation</caption
-        >
-        <thead>
-          <tr>
-            <th class="sr-only" scope="col">Feature</th>
-            <th class="sr-only" scope="col">Included</th>
-          </tr>
-        </thead>
-      </table>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">30 Included users</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Unlimited <a href="#">Viewers</a></span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Additional users: $23 per month</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Volume discounts</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Minimum term: 1 year</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Pay yearly</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Pay by credit card</span>
-      </li>
-      <li class="flex py-2 text-sm text-gray-500">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-purple-500"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Pay by bank transfer</span>
-      </li>
-    </ul>
-    <table class="w-full">
-      <caption class="py-3 text-sm font-normal text-left text-purple-900"
-        >Payment and terms</caption
-      >
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">Feature</th>
-          <th class="sr-only" scope="col">Included</th>
-        </tr>
-      </thead>
-    </table>
-    <div class="w-full py-2 mb-4">
-      <button
-        class="flex items-center justify-center w-full h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-purple-600 hover:text-purple-500"
-        >Get started for free</button
-      >
-    </div>
-  </div>
-  <div
-    class="flex flex-col p-8 mx-auto mb-8 text-purple-900 border-0 rounded-3xl bg-gradient-to-b from-purple-600 to-purple-500">
-    <div class="flex-shrink-0 block">
-      <div class="flex items-center">
-        <div>
-          <img
-            class="inline-block w-12 h-12 rounded-full"
-            src="/assets/pro.svg"
-            alt=""
-          />
-        </div>
-        <div class="ml-3">
-          <p class="text-xs font-medium text-white">For startups</p>
-          <p class="text-base font-medium text-white">Pro</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="my-6">
-      <p class="text-sm text-white">
-        If you're a small business or a startup, this plan is designed to cater
-        to your needs. It offers a balance of essential features and scalability
-      </p>
-      <p
-        class="mt-8 text-4xl font-semibold tracking-tighter text-white lg:text-5xl">
-        $49<span class="text-xs font-normal tracking-normal text-white"
-          >/monthly</span
-        >
-      </p>
-    </div>
-    <ul class="text-white list-none order-last" role="list">
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Unlimited <a href="#">Analytics</a></span
-        >
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Unlimited <a href="#">Accounts</a></span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal"
-          >Unlimited <a href="#">Integrations</a></span
-        >
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Unlimited <a href="#">Programs</a></span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal"><a href="#">Deployments</a></span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal"
-          ><a href="#">Advanced Checkpoints</a></span
-        >
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal"
-          ><a href="#">Private Deploymentss</a></span
-        >
-      </li>
-
-      <table class="w-full">
-        <caption class="py-3 text-sm font-normal text-left text-white"
-          >Product features</caption
-        >
-        <thead>
-          <tr>
-            <th class="sr-only" scope="col">Feature</th>
-            <th class="sr-only" scope="col">Included</th>
-          </tr>
-        </thead>
-      </table>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal"
-          >Dedicated Discord and Premium support</span
-        >
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Response SLA: 3 hours</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Service Level Agreement</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Dedicated Customer Success Manager</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Training calls</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Custom implementation sessions</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Dedicated Slack support channel</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal"
-          ><a
-            href="https://help.Deployments.io/en/articles/5948396-our-pricing-plans#h_4a76f246cc"
-            >Sandbox Environments</a
-          ></span
-        >
-      </li>
-
-      <table class="w-full">
-        <caption class="py-3 text-sm font-normal text-left text-white"
-          >Support and implementation</caption
-        >
-        <thead>
-          <tr>
-            <th class="sr-only" scope="col">Feature</th>
-            <th class="sr-only" scope="col">Included</th>
-          </tr>
-        </thead>
-      </table>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Master Services Agreement</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">SOC2 Report</span>
-      </li>
-
-      <table class="w-full">
-        <caption class="py-3 text-sm font-normal text-left text-white"
-          >Procurement process</caption
-        >
-        <thead>
-          <tr>
-            <th class="sr-only" scope="col">Feature</th>
-            <th class="sr-only" scope="col">Included</th>
-          </tr>
-        </thead>
-      </table>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">100 Included users</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Unlimited viewers</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Additional users: $40 per month</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Volume discounts</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Minimum term: 1 year</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Pay yearly</span>
-      </li>
-      <li class="flex py-2 text-sm">
-        <svg
-          class="flex-shrink-0 w-5 h-5 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-          <path
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-            fill-rule="evenodd"></path>
-        </svg>
-        <span class="ml-3 font-normal">Pay by bank transfer</span>
-      </li>
-
-      <table class="w-full">
-        <caption class="py-3 text-sm font-normal text-left text-white"
-          >Payment and terms</caption
-        >
-        <thead>
-          <tr>
-            <th class="sr-only" scope="col">Feature</th>
-            <th class="sr-only" scope="col">Included</th>
-          </tr>
-        </thead>
-      </table>
-    </ul>
-    <div class="w-full py-2 mb-4">
-      <button
-        class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-purple-600 hover:text-purple-500 w-full"
-        >Get in touch</button
-      >
-    </div>
+      ))
+    }
   </div>
 </div>

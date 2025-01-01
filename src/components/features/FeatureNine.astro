@@ -1,4 +1,4 @@
-<section class="overflow-hidden border-b">
+<section class="overflow-hidden border-b border-gray-200">
   <div class="w-full px-8 pt-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
     <div class="max-w-2xl mx-auto text-center">
       <span class="text-xs font-bold tracking-wide uppercase text-purple-500"
@@ -13,7 +13,7 @@
         Malicious attacks. security for all user data
       </p>
     </div>
-    <div class="p-2 mt-12 overflow-hidden bg-white border rounded-3xl">
+    <div class="p-2 mt-12 overflow-hidden bg-white border border-gray-200 rounded-3xl">
       <div
         x-data="{
           sources: {
@@ -158,7 +158,8 @@
         x-ref="videoContainer"
         @mouseleave="mouseleave=true"
         @mousemove="mousemoveVideo"
-        class="relative mx-auto overflow-hidden shadow-2xl rounded-3xl aspect-video">
+        class="relative mx-auto overflow-hidden shadow-2xl rounded-3xl aspect-video"
+      >
         <video
           x-ref="player"
           @loadedmetadata="metaDataLoaded"
@@ -167,7 +168,8 @@
           preload="metadata"
           :poster="poster"
           class="relative z-10 object-cover w-full h-full bg-purple-900"
-          crossorigin="anonymous">
+          crossorigin="anonymous"
+        >
           <source :src="sources.mp4" type="video/mp4" />
           <source :src="sources.webm" type="video/webm" />
           <source :src="sources.ogg" type="video/ogg" />
@@ -176,14 +178,16 @@
           <div
             x-ref="videoBackground"
             @click="togglePlay()"
-            class="absolute inset-0 z-30 flex items-center justify-center w-full h-full bg-opacity-0 cursor-pointer bg-purple-900 group">
+            class="absolute inset-0 z-30 flex items-center justify-center w-full h-full bg-opacity-0 cursor-pointer bg-purple-900 group"
+          >
             <div
               x-show="playing"
               x-transition:enter="transition ease-out duration-1000"
               x-transition:enter-start="scale-50 opacity-100"
               x-transition:enter-end="scale-100 opacity-0"
               class="absolute z-20 flex items-center justify-center w-24 h-24 rounded-full opacity-0 bg-gradient-to-b from-purple-500 hover:to-purple-700 to-purple-600 bg-opacity-20"
-              x-cloak>
+              x-cloak
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="text-white icon icon-tabler icon-tabler-player-play-filled"
@@ -194,7 +198,8 @@
                 stroke="currentColor"
                 fill="none"
                 stroke-linecap="round"
-                stroke-linejoin="round">
+                stroke-linejoin="round"
+              >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path
                   d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"
@@ -208,7 +213,8 @@
               x-transition:enter-start="scale-50 opacity-100"
               x-transition:enter-end="scale-100 opacity-0"
               class="absolute z-20 flex items-center justify-center w-24 h-24 rounded-full opacity-0 bg-gradient-to-b from-purple-500 hover:to-purple-700 to-purple-600 bg-opacity-20"
-              x-cloak>
+              x-cloak
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="text-white icon icon-tabler icon-tabler-player-play-filled"
@@ -219,7 +225,8 @@
                 stroke="currentColor"
                 fill="none"
                 stroke-linecap="round"
-                stroke-linejoin="round">
+                stroke-linejoin="round"
+              >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path
                   d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"
@@ -228,7 +235,8 @@
               </svg>
             </div>
             <div
-              class="absolute z-10 duration-300 ease-out group-hover:scale-110">
+              class="absolute z-10 duration-300 ease-out group-hover:scale-110"
+            >
               <button
                 x-show="!playing"
                 x-transition:enter="transition ease-in delay-200 duration-300"
@@ -238,7 +246,8 @@
                 x-transition:leave-start="opacity-100"
                 x-transition:leave-end="opacity-0"
                 class="flex items-center justify-center w-12 h-12 text-white duration-150 ease-out rounded-full cursor-pointer bg-gradient-to-b from-purple-500 hover:to-purple-700 to-purple-600 bg-opacity-80"
-                type="button">
+                type="button"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-player-play-filled"
@@ -249,7 +258,8 @@
                   stroke="currentColor"
                   fill="none"
                   stroke-linecap="round"
-                  stroke-linejoin="round">
+                  stroke-linejoin="round"
+                >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path
                     d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"
@@ -268,7 +278,8 @@
             x-transition:leave-start="translate-y-0"
             x-transition:leave-end="-translate-y-full"
             class="absolute top-0 left-0 z-20 w-full h-1/4 opacity-20 bg-gradient-to-b from-purple-900 to-transparent"
-            x-cloak>
+            x-cloak
+          >
           </div>
           <div
             x-show="controls"
@@ -279,7 +290,8 @@
             x-transition:leave-start="translate-y-0"
             x-transition:leave-end="translate-y-full"
             class="absolute bottom-0 left-0 z-20 w-full h-1/4 opacity-20 bg-gradient-to-b from-transparent to-black"
-            x-cloak>
+            x-cloak
+          >
           </div>
           <div
             x-show="controls"
@@ -291,13 +303,15 @@
             x-transition:leave-start="translate-y-0"
             x-transition:leave-end="-translate-y-full"
             class="absolute top-0 left-0 z-40 flex items-center w-full h-12 text-white"
-            x-cloak>
+            x-cloak
+          >
             <div class="absolute right-0 top-0 mr-0.5 mt-0.5 flex items-center">
               <div class="flex items-center h-auto group">
                 <button
                   @click="toggleMute()"
                   type="button"
-                  class="flex items-center justify-center w-6 h-auto duration-150 ease-out opacity-80 hover:opacity-100">
+                  class="flex items-center justify-center w-6 h-auto duration-150 ease-out opacity-80 hover:opacity-100"
+                >
                   <svg
                     x-show="!muted"
                     class="w-[18px] h-[18px]"
@@ -324,7 +338,8 @@
                   >
                 </button>
                 <div
-                  class="relative h-1.5 w-0 mx-0 group-hover:mx-1 rounded-full group-hover:w-12 invisible group-hover:visible w-0 ease-out duration-300">
+                  class="relative h-1.5 w-0 mx-0 group-hover:mx-1 rounded-full group-hover:w-12 invisible group-hover:visible w-0 ease-out duration-300"
+                >
                   <input
                     x-ref="volume"
                     @input="updateVolume(event)"
@@ -341,7 +356,8 @@
                 x-ref="fullscreenButton"
                 @click="handleFullscreen"
                 class="flex items-center justify-center w-10 h-10 duration-150 ease-out scale-90 opacity-80 hover:opacity-100 hover:scale-100"
-                type="button">
+                type="button"
+              >
                 <svg
                   class="w-5 h-5"
                   viewBox="0 0 24 24"
@@ -366,7 +382,8 @@
             x-transition:leave-start="translate-y-0"
             x-transition:leave-end="translate-y-full"
             class="absolute bottom-0 left-0 z-40 w-full h-12"
-            x-cloak>
+            x-cloak
+          >
             <div class="absolute bottom-0 z-30 w-full px-2.5 -translate-y-8">
               <div class="relative w-full h-1 rounded-full">
                 <input
@@ -383,11 +400,13 @@
               </div>
             </div>
             <div
-              class="absolute bottom-0 left-0 z-20 flex items-center w-full h-8 text-white">
+              class="absolute bottom-0 left-0 z-20 flex items-center w-full h-8 text-white"
+            >
               <div
                 x-show="showTime"
                 class="flex items-center justify-between w-full mx-3 text-xs opacity-80 hover:opacity-100"
-                x-cloak>
+                x-cloak
+              >
                 <time x-ref="timeElapsed" x-text="timeElapsedString">00:00</time
                 >
                 <time x-ref="timeDuration" x-text="timeDurationString"

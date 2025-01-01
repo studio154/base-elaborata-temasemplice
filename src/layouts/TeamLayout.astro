@@ -6,7 +6,8 @@ const { frontmatter } = Astro.props;
 <BaseLayout>
   <section class="lg:p-8 bg-white">
     <div
-      class="px-8 py-12 lg:py-32 mx-auto md:px-12 lg:px-16 xl:px-36 2xl:max-w-7xl">
+      class="px-8 py-12 lg:py-32 mx-auto md:px-12 lg:px-16 xl:px-36 2xl:max-w-7xl"
+    >
       <div class="prose-styles">
         <div class="flex items-center gap-x-6 not-prose">
           <img
@@ -16,7 +17,8 @@ const { frontmatter } = Astro.props;
           />
           <div>
             <h3
-              class="text-base font-semibold leading-7 tracking-tight text-zinc-900">
+              class="text-base font-semibold leading-7 tracking-tight text-zinc-900"
+            >
               {frontmatter.name}
             </h3>
             <p class="text-sm font-semibold leading-6 text-accent-500">
@@ -27,7 +29,7 @@ const { frontmatter } = Astro.props;
         <h3>
           {frontmatter.intro}
         </h3>
-        <dl class="border-b">
+        <dl class="border-b border-gray-200">
           <div>
             <dt>Education</dt>
             <dd>

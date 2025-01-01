@@ -32,16 +32,19 @@
         }
     }"
       x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
-      class="relative w-full">
+      class="relative w-full"
+    >
       <div
         x-ref="tabButtons"
-        class="relative flex flex-col justify-center w-full gap-6 mt-12 lg:bg-white border-gray-300 select-none sm:inline-grid rounded-t-3xl lg:flex-none lg:items-center sm:grid-cols-3">
+        class="relative flex flex-col justify-center w-full gap-6 mt-12 lg:bg-white border-gray-300 select-none sm:inline-grid rounded-t-3xl lg:flex-none lg:items-center sm:grid-cols-3"
+      >
         <button
           :id="$id(tabId)"
           @click="tabButtonClicked($el);"
           type="button"
           :class="{ 'bg-gray-100 text-gray-700' : tabButtonActive($el) }"
-          class="relative flex flex-col justify-center w-full pb-8 text-left transition-all cursor-pointer lg:z-20 lg:p-8">
+          class="relative flex flex-col justify-center w-full pb-8 text-left transition-all cursor-pointer lg:z-20 lg:p-8"
+        >
           <div class="flex flex-col gap-3 md:flex-row md:items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +54,8 @@
               stroke="currentColor"
               fill="none"
               stroke-linecap="round"
-              stroke-linejoin="round">
+              stroke-linejoin="round"
+            >
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path
                 d="M7 7h-3a1 1 0 0 1 -1 -1v-2c0 -.275 .11 -.523 .29 -.704m3.71 -.296h13a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-9"
@@ -75,7 +79,8 @@
           @click="tabButtonClicked($el);"
           type="button"
           :class="{ 'bg-gray-100 text-gray-700' : tabButtonActive($el) }"
-          class="relative flex flex-col justify-center w-full pb-8 text-left transition-all cursor-pointer lg:z-20 lg:p-8">
+          class="relative flex flex-col justify-center w-full pb-8 text-left transition-all cursor-pointer lg:z-20 lg:p-8"
+        >
           <div class="flex flex-col gap-3 md:flex-row md:items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +90,8 @@
               stroke="currentColor"
               fill="none"
               stroke-linecap="round"
-              stroke-linejoin="round">
+              stroke-linejoin="round"
+            >
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path
                 opacity="0.5"
@@ -107,7 +113,8 @@
           @click="tabButtonClicked($el);"
           type="button"
           :class="{ 'bg-gray-100 text-gray-700' : tabButtonActive($el) }"
-          class="relative flex flex-col justify-center w-full pb-8 text-left transition-all cursor-pointer lg:z-20 lg:p-8">
+          class="relative flex flex-col justify-center w-full pb-8 text-left transition-all cursor-pointer lg:z-20 lg:p-8"
+        >
           <div class="flex flex-col gap-3 md:flex-row md:items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +124,8 @@
               stroke="currentColor"
               fill="none"
               stroke-linecap="round"
-              stroke-linejoin="round">
+              stroke-linejoin="round"
+            >
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path
                 d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
@@ -133,16 +141,19 @@
         >
         <div
           class="absolute left-0 z-10 hidden w-1/2 h-full duration-300 ease-out md:block"
-          x-ref="tabMarker">
+          x-ref="tabMarker"
+        >
           <div class="w-12 ml-8 h-full border-b-2 border-purple-500"></div>
         </div>
       </div>
       <div
-        class="relative items-center justify-center hidden w-full border-t -mt-1 shadow-sm overflow-hidden content md:rounded-b-3xl md:block">
+        class="relative items-center justify-center hidden w-full border-t border-gray-200 -mt-1 shadow-sm overflow-hidden content md:rounded-b-3xl md:block"
+      >
         <div
           :id="$id(tabId + '-content')"
           x-show="tabContentActive($el)"
-          class="relative">
+          class="relative"
+        >
           <div class="w-full overflow-hidden">
             <img alt="" src="/assets/chart1.svg" class="w-full" />
           </div>
@@ -152,7 +163,8 @@
           :id="$id(tabId + '-content')"
           x-show="tabContentActive($el)"
           class="relative"
-          x-cloak>
+          x-cloak
+        >
           <div class="w-full overflow-hidden">
             <img alt="" src="/assets/chart2.svg" class="w-full" />
           </div>
@@ -162,7 +174,8 @@
           :id="$id(tabId + '-content')"
           x-show="tabContentActive($el)"
           class="relative"
-          x-cloak>
+          x-cloak
+        >
           <div class="w-full overflow-hidden">
             <img alt="" src="/assets/chart3.svg" class="w-full" />
           </div>

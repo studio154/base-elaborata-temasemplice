@@ -3,14 +3,14 @@ import { getCollection } from "astro:content";
 const allPosts = await getCollection("jobs");
 import Entries from "@/components/jobs/Entries.astro";
 
-
 import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
   <section class="relative overflow-hidden">
     <div
-      class="relative items-center w-full px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
+      class="relative items-center w-full px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24"
+    >
       <div class="max-w-2xl">
         <span class="text-xs font-bold tracking-wide uppercase text-purple-500"
           >Join</span
@@ -26,7 +26,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       </div>
     </div>
     <div
-      class="relative items-center w-full px-8 py-12 mx-auto max-w-7xl md:px-12 lg:px-24">
+      class="relative items-center w-full px-8 py-12 mx-auto max-w-7xl md:px-12 lg:px-24"
+    >
       <img
         class="object-cover w-full rounded drop-shadow"
         src="/assets/map.svg"
@@ -36,9 +37,11 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   </section>
   <section>
     <div
-      class="items-center w-full px-8 py-12 mx-auto space-y-24 md:px-12 lg:px-32 max-w-7xl lg:py-12">
+      class="items-center w-full px-8 py-12 mx-auto space-y-24 md:px-12 lg:px-32 max-w-7xl lg:py-12"
+    >
       <div
-        class="grid items-end grid-cols-1 gap-4 mt-6 list-none lg:grid-cols-2 lg:gap-24">
+        class="grid items-end grid-cols-1 gap-4 mt-6 list-none lg:grid-cols-2 lg:gap-24"
+      >
         <div>
           <div>
             <span
@@ -46,7 +49,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
               >our culture</span
             >
             <p
-              class="mt-8 text-4xl font-semibold tracking-tight text-purple-900">
+              class="mt-8 text-4xl font-semibold tracking-tight text-purple-900"
+            >
               Our ethos:
               <span class="lg:block lg:text-gray-500">
                 Learn, collaborate, be transparent, experiment, and stay
@@ -81,7 +85,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       </div>
       <ol
         role="list"
-        class="grid grid-cols-1 gap-8 mt-12 list-none sm:grid-cols-2 lg:grid-cols-3">
+        class="grid grid-cols-1 gap-8 mt-12 list-none sm:grid-cols-2 lg:grid-cols-3"
+      >
         <li>
           <h3 class="text-base font-medium text-purple-900">
             Inclusive Health Package
@@ -136,7 +141,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
           </p>
         </li>
       </ol>
-      <div class="pt-4 mx-auto border-t">
+      <div class="pt-4 mx-auto border-t border-gray-200">
         <small class="text-xs text-gray-500">
           *Benefits may vary by country. Benefits listed above currently apply
           to our US based employees. For non-US staff, equivalent benefits can
@@ -147,7 +152,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   </section>
   <section>
     <div
-      class="items-center px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
+      class="items-center px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24"
+    >
       <div class="mx-auto max-w-2xl text-center">
         <div>
           <span
@@ -165,22 +171,22 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       <div class="mx-auto mt-12 lg:mt-24">
         <ul class="divide-y divide-gray-100">
           {
-            allPosts.slice().map((post) => (
-              <Entries
-                url={"/jobs/" + post.slug}
-                company={post.data.company}
-                location={post.data.location}
-                position={post.data.position}
-                type={post.data.type}
-                alt={post.data.company}
-                image={post.data.image.url}
-              />
-            ))
+            allPosts
+              .slice()
+              .map((post) => (
+                <Entries
+                  url={"/jobs/" + post.slug}
+                  company={post.data.company}
+                  location={post.data.location}
+                  position={post.data.position}
+                  type={post.data.type}
+                  alt={post.data.company}
+                  image={post.data.image.url}
+                />
+              ))
           }
         </ul>
       </div>
     </div>
   </section>
-
-
 </BaseLayout>

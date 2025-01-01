@@ -21,18 +21,20 @@ const imageFeatures = [
 const steps = [
   {
     title: "Automation",
-    description: "Our smart contracts allow for seamless, automated transactions without the need for intermediaries."
+    description:
+      "Our smart contracts allow for seamless, automated transactions without the need for intermediaries.",
   },
   {
     title: "Exchange",
-    description: "Trade cryptocurrencies and tokens on a decentralized exchange for added security and anonymity."
+    description:
+      "Trade cryptocurrencies and tokens on a decentralized exchange for added security and anonymity.",
   },
   {
     title: "Governance",
-    description: "Use blockchain technology to create decentralized autonomous organizations and manage them with ease."
-  }
+    description:
+      "Use blockchain technology to create decentralized autonomous organizations and manage them with ease.",
+  },
 ];
-
 ---
 
 <section>
@@ -52,13 +54,15 @@ const steps = [
     </div>
 
     <dl
-      class="grid grid-cols-1 gap-2 mt-12 md:grid-cols-2 lg:grid-cols-2 lg:mt-24">
+      class="grid grid-cols-1 gap-2 mt-12 md:grid-cols-2 lg:grid-cols-2 lg:mt-24"
+    >
       {
         imageFeatures.map((item) => (
           <a
             title="link to your page"
             aria-label={item.ariaLabel}
-            href={item.link}>
+            href={item.link}
+          >
             <div class="h-full bg-white rounded-3xl shadow-sm">
               <div class="p-8 pb-0 md:text-center">
                 <p class="text-base font-medium text-purple-900">
@@ -67,29 +71,30 @@ const steps = [
                 <p class="mt-2 text-sm text-gray-500">{item.description}</p>
               </div>
               <div class="mt-4">
-                <img
-                  src={item.imgSrc}
-                  alt=""
-                />
+                <img src={item.imgSrc} alt="" />
               </div>
             </div>
           </a>
         ))
       }
     </dl>
-   <ol role="list" class="grid grid-cols-1 gap-12 mt-12 text-center list-none sm:grid-cols-2 md:grid-cols-3">
-  {steps.map((step, index) => (
-    <li>
-      <div
-        class="flex items-center justify-center w-10 h-10 text-sm font-semibold transition-all bg-white shadow-sm hover:shadow-none duration-200 border rounded-lg text-purple-600 hover:text-purple-500 mx-auto">
-        {index + 1}
-      </div>
-      <h3 class="mt-4 text-base font-medium text-purple-900">{step.title}</h3>
-      <p class="mt-2 text-sm text-gray-500">
-        {step.description}
-      </p>
-    </li>
-  ))}
-</ol>
+    <ol
+      role="list"
+      class="grid grid-cols-1 gap-12 mt-12 text-center list-none sm:grid-cols-2 md:grid-cols-3"
+    >
+      {
+        steps.map((step, index) => (
+          <li>
+            <div class="flex items-center justify-center w-10 h-10 text-sm font-semibold transition-all bg-white shadow-sm hover:shadow-none duration-200 border rounded-lg border-gray-200 text-purple-600 hover:text-purple-500 mx-auto">
+              {index + 1}
+            </div>
+            <h3 class="mt-4 text-base font-medium text-purple-900">
+              {step.title}
+            </h3>
+            <p class="mt-2 text-sm text-gray-500">{step.description}</p>
+          </li>
+        ))
+      }
+    </ol>
   </div>
 </section>

@@ -29,7 +29,8 @@ const services = [
             >Status</span
           >
           <p
-            class="text-4xl mt-8 font-semibold tracking-tighter text-purple-900">
+            class="text-4xl mt-8 font-semibold tracking-tighter text-purple-900"
+          >
             All systems Operational
           </p>
         </div><div class="mt-12 flex flex-col sm:flex-row lg:ml-auto">
@@ -37,16 +38,13 @@ const services = [
             class="text-purple-600 text-sm bg-white border border-gray-300 flex font-semibold hover:text-purple-500 items-center justify-center px-4 py-2 rounded-lg transition-all h-10"
             title="link to your page"
             aria-label="your label"
-            href="/signup"
-            >Subscribe for updates &nbsp;&nbsp; →</a
+            href="/signup">Subscribe for updates &nbsp;&nbsp; →</a
           >
         </div>
       </div>
     </div>
 
-    <ol
-      role="list"
-      class="relative gap-y-10 divide-y mt-12">
+    <ol role="list" class="relative gap-y-10 divide-y divide-gray-200 mt-12">
       {
         services.map((service) => (
           <li class="py-4 inline-flex items-center justify-between w-full">
@@ -58,6 +56,5 @@ const services = [
         ))
       }
     </ol>
-
   </div>
 </section>

@@ -1,10 +1,11 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from '@tailwindcss/vite';
 import sitemap from "@astrojs/sitemap";
-import devtoolBreakpoints from "astro-devtool-breakpoints";
-
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    plugins: [tailwindcss()],
+  },
   markdown: {
     drafts: true,
     shikiConfig: {
@@ -16,6 +17,6 @@ export default defineConfig({
     skipInline: false,
     drafts: true
   },
-  site: 'https://lexingtonthemes.com',
-  integrations: [tailwind(), sitemap(), devtoolBreakpoints()]
+  site: 'https://yourdomain.com',
+  integrations: [ sitemap()]
 });

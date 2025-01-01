@@ -9,7 +9,7 @@ import CtaTwo from "@/components/cta/CtaTwo.astro";
 <BaseLayout>
   <section>
     <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
-      <div class="pb-5 border-b">
+      <div class="pb-5 border-b border-gray-200">
         <span class="text-xs font-bold tracking-wide uppercase text-purple-500">
           Changelog
         </span>
@@ -21,16 +21,18 @@ import CtaTwo from "@/components/cta/CtaTwo.astro";
       </div>
       <div class="mt-24 space-y-24">
         {
-          allPosts.slice().map((post) => (
-            <Entries
-              url={"/changelog/" + post.slug}
-              page={post.data.page}
-              description={post.data.description}
-              alt={post.data.page}
-              image={post.data.image.url}
-              pubDate={post.data.pubDate.toString().slice(4, 15)}
-            />
-          ))
+          allPosts
+            .slice()
+            .map((post) => (
+              <Entries
+                url={"/changelog/" + post.slug}
+                page={post.data.page}
+                description={post.data.description}
+                alt={post.data.page}
+                image={post.data.image.url}
+                pubDate={post.data.pubDate.toString().slice(4, 15)}
+              />
+            ))
         }
       </div>
     </div>

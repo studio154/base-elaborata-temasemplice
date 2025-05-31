@@ -1,98 +1,102 @@
 import { defineCollection, z } from "astro:content";
- const team = defineCollection({
-  schema: z.object({
-    name: z.string(),
-    role: z.string(),
-    intro: z.string(),
-    education: z.array(z.string()),
-    experience: z.array(z.string()),
-    avatar: z.object({
-      url: z.string(),
-      alt: z.string(),
+const team = defineCollection({
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      role: z.string().optional(),
+      bio: z.string().optional(),
+      image: z.object({
+        url: image(),
+        alt: z.string(),
+      }),
+      socials: z
+        .object({
+          twitter: z.string().optional(),
+          website: z.string().optional(),
+          linkedin: z.string().optional(),
+          email: z.string().optional(),
+        })
+        .optional(),
     }),
-  }),
 });
-const jobs = defineCollection({
-  schema: z.object({
-    salary: z.string(),
-    company: z.string(),
-    type: z.string(),
-    location: z.string(),
-    position: z.string(),
-    image: z.object({
-      url: z.string(),
-      alt: z.string(),
+const store = defineCollection({
+  schema: ({ image }) =>
+    z.object({
+      price: z.string(),
+      title: z.string(),
+      checkout: z.string(),
+      license: z.string(),
+      highlights: z.array(z.string()),
+      specifications: z
+        .array(
+          z.object({
+            name: z.string(),
+            value: z.string(),
+          })
+        )
+        .optional(),
+      description: z.string(),
+      image: z.object({
+        url: image(),
+        alt: z.string(),
+      }),
+      images: z.array(
+        z.object({
+          url: image(),
+          alt: z.string(),
+        })
+      ),
+      faq: z
+        .array(
+          z.object({
+            question: z.string(),
+            answer: z.string(),
+          })
+        )
+        .optional(),
     }),
-  }),
 });
-const integrations = defineCollection({
-  schema: z.object({
-    integration: z.string(),
-    description: z.string(),
-    email: z.string(),
-    permissions: z.array(z.string()),
-    details: z.array(
-      z.object({
-        title: z.string(),
-        value: z.string(),
-        url: z.optional(z.string()),
-      })
-    ),
-    logo: z.object({
-      url: z.string(),
-      alt: z.string(),
+
+const gallery = defineCollection({
+  schema: ({ image }) =>
+    z.object({
+      category: z.string(),
+      bgColor: z.string().optional(),
+      textColor: z.string().optional(),
+      title: z.string(),
+      description: z.string(),
+      thumbnail: z.object({
+        url: image(),
+        alt: z.string(),
+      }),
+      thumbnailClass: z.string().optional(),
+      imageGrid: z.string().optional(),
+      images: z
+        .array(
+          z.object({
+            url: image(),
+            alt: z.string(),
+            class: z.string().optional(), // Add this line
+          })
+        )
+        .optional(),
     }),
-  }),
 });
-const customers = defineCollection({
-  schema: z.object({
-    customer: z.string(),
-    feedback: z.string(),
-    about: z.string(),
-    details: z.record(z.string()),
-    logo: z.object({
-      url: z.string(),
-      alt: z.string(),
-    }),
-  }),
-});
-const helpcenter = defineCollection({
-  schema: z.object({
-    page: z.string(),
-    description: z.string(),
-    icon: z.object({
-      url: z.string(),
-      alt: z.string(),
-    }),
-  }),
-});
-const changelog = defineCollection({
-  schema: z.object({
-    page: z.string(),
-    description: z.string(),
-    pubDate: z.date(),
-    image: z.object({
-      url: z.string(),
-      alt: z.string(),
-    }),
-  }),
-});
+
+
 const postsCollection = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    pubDate: z.date(),
-    description: z.string(),
-    author: z.string(),
-    avatar: z.object({
-      url: z.string(),
-      alt: z.string(),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      pubDate: z.date(),
+      description: z.string(),
+      team: z.string(),
+      image: z.object({
+        url: image(),
+        alt: z.string(),
+      }),
+      tags: z.array(z.string()),
     }),
-    image: z.object({
-      url: z.string(),
-      alt: z.string(),
-    }),
-    tags: z.array(z.string()),
-  }),
 });
 const infopages = defineCollection({
   schema: z.object({
@@ -102,11 +106,8 @@ const infopages = defineCollection({
 });
 export const collections = {
   team: team,
-  jobs: jobs,
-  integrations: integrations,
-  customers: customers,
-  helpcenter: helpcenter,
-  changelog: changelog,
+  store: store,
+  gallery: gallery,
   infopages: infopages,
   posts: postsCollection,
 };

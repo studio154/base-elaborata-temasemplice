@@ -26,24 +26,8 @@
         "description": {
           "type": "string"
         },
-        "author": {
+        "team": {
           "type": "string"
-        },
-        "avatar": {
-          "type": "object",
-          "properties": {
-            "url": {
-              "type": "string"
-            },
-            "alt": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "url",
-            "alt"
-          ],
-          "additionalProperties": false
         },
         "image": {
           "type": "object",
@@ -75,8 +59,7 @@
         "title",
         "pubDate",
         "description",
-        "author",
-        "avatar",
+        "team",
         "image",
         "tags"
       ],

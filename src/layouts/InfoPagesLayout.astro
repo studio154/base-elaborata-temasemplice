@@ -1,18 +1,51 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 const { frontmatter } = Astro.props;
+// Fundations
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+// Breadcrumbs Data
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: frontmatter.page, href: "#" },
+];
 ---
 
-<BaseLayout>
-  <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
-    <p class="text-4xl font-semibold tracking-tighter text-purple-900">
-      {frontmatter.page}
-    </p>
-    <p class="text-base text-gray-500 mt-2">
-      Updated on {frontmatter.pubDate.toString().slice(0, 10)}
-    </p>
-    <div class="prose-styles mt-12">
-      <slot />
-    </div>
-  </div>
+<BaseLayout hideBigLogo={true}>
+  <section>
+    <Wrapper variant="standard" class="py-24 lg:pt-48">
+      <div class="max-w-xl mx-auto">
+        <Text tag="h1" variant="textBase" class="font-medium text-base-900">
+          {frontmatter.page}
+        </Text>
+        <Text
+          tag="p"
+          variant="textSM"
+          class="mt-4 text-base-600 lg:text-balance lg:ml-auto"
+        >
+          Last updated on <span>
+            <time
+              datetime={new Date(frontmatter.pubDate).toLocaleDateString(
+                "en-US",
+                {
+                  year: "numeric",
+                  month: "long",
+                }
+              )}
+            >
+              {
+                new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                })
+              }</time
+            ></span
+          >
+        </Text>
+        <Wrapper variant="prose" class="mt-12">
+          <slot />
+        </Wrapper>
+      </div>
+    </Wrapper>
+  </section>
 </BaseLayout>

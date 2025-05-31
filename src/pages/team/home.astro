@@ -1,41 +1,36 @@
 ---
-import { getCollection } from "astro:content";
-const allPosts = await getCollection("team");
+// Fundations
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+// Components
 import TeamEntries from "@/components/team/TeamEntries.astro";
-import CtaThree from "@/components/cta/CtaThree.astro";
+// Content
+import { getCollection } from "astro:content";
+const allAuthors = await getCollection("team");
 ---
 
-<BaseLayout>
+<BaseLayout hideBigLogo={true}>
   <section>
-    <div
-      class="relative px-8 py-12 mx-auto max-w-7xl md:px-12 lg:px-32 lg:py-24">
-      <div class="max-w-2xl">
-        <span class="text-xs font-bold tracking-wide uppercase text-purple-500"
-          >team</span
-        >
+    <Wrapper variant="standard" class="py-2">
+      <Text tag="h1" variant="textBase" class="font-medium text-base-900">
+        Our photographers
+      </Text>
 
-        <p class="mt-8 text-4xl font-semibold tracking-tight text-purple-900">
-          Our powerfull team
-          <span class="lg:block lg:text-gray-500">Always ready to rock</span>
-        </p>
-      </div>
-
-      <ul
-        class="grid grid-cols-2 gap-8 mt-12 list-none lg:mt-24 lg:grid-cols-3"
-        role="list">
+      <div
+        class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-y-24 gap-8"
+      >
         {
-          allPosts.map((post) => (
-            <TeamEntries
-              url={"/team/" + post.slug}
-              name={post.data.name}
-              role={post.data.role}
-              avatar={post.data.avatar.url}
-            />
-          ))
+          // Sorting authors alphabetically inline
+          allAuthors
+            .sort((a, b) => {
+              const nameA = a.data.name.toLowerCase();
+              const nameB = b.data.name.toLowerCase();
+              return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
+            })
+            .map((post) => <TeamEntries post={post} />)
         }
-      </ul>
-    </div>
+      </div>
+    </Wrapper>
   </section>
-  <CtaThree/>
 </BaseLayout>

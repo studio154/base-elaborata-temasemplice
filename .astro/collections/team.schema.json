@@ -10,22 +10,10 @@
         "role": {
           "type": "string"
         },
-        "intro": {
+        "bio": {
           "type": "string"
         },
-        "education": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "experience": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "avatar": {
+        "image": {
           "type": "object",
           "properties": {
             "url": {
@@ -41,17 +29,31 @@
           ],
           "additionalProperties": false
         },
+        "socials": {
+          "type": "object",
+          "properties": {
+            "twitter": {
+              "type": "string"
+            },
+            "website": {
+              "type": "string"
+            },
+            "linkedin": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
         "$schema": {
           "type": "string"
         }
       },
       "required": [
         "name",
-        "role",
-        "intro",
-        "education",
-        "experience",
-        "avatar"
+        "image"
       ],
       "additionalProperties": false
     }

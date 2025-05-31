@@ -1,60 +1,46 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
-@layer components {
-  .prose-styles {
-    @apply prose max-w-3xl prose-blockquote:border-l-black prose-a:text-purple-500 hover:prose-a:text-purple-900 prose-headings:font-bold prose-headings:text-purple-900  prose-li:marker:text-purple-500 text-gray-500 prose-code:text-purple-900 prose-blockquote:text-gray-500;
-  }
-}
+@plugin "@tailwindcss/forms";
+@plugin "tailwind-scrollbar-hide";
 @theme {
-  /* Typography*/
+  /* Typography */
+  --font-serif: "Newsreader", serif;
   --font-sans: "Inter", sans-serif;
+
   /* Colors */
-  --color-purple-50: #EEE8FD;
-  --color-purple-100: #E1D5FB;
-  --color-purple-200: #C3ABF7;
-  --color-purple-300: #A581F3;
-  --color-purple-400: #8757EF;
-  --color-purple-500: #672CEB;
-  --color-purple-600: #4E13CD;
-  --color-purple-700: #3B0F9A;
-  --color-purple-800: #270A66;
-  --color-purple-900: #140533;
-  --color-purple-950: #090217;
-  /* Shadows */
-  --shadow-sm: 0px 2px 5px rgba(13,34,71,0.08),inset 0px -1px 1px rgba(13,34,71,0.1);
-  --shadow-md: rgba(13, 34, 71, 0.12) 0px 1px 8px, rgba(13, 34, 71, 0.12) 0px -1px 1px inset;
-}
-
-@supports (font-variation-settings: normal) {
-  /* Use variable font if supported */
-  :root {
-    font-family: InterVariable, sans-serif;
-  }
-}
-:root {
-   /* Typography*/
-  font-feature-settings: "liga" 1, "calt" 1,
-  /* Contextual Alternates */ "dlig" 1, /* Discretionary Ligatures */ "ss07" 1,
-  /* fSquare punctuation */ "ss08" 1, /* Square quotes */ "zero" 1,
-  /* Slashed zero */ "tnum" 1, /* Tabular numbers */ "cv03" 1,
-  /* Open six */ "cv04" 1, /* Open nine */ "cv01" 1,
-  /* Alternate one */ "cv09", /* Flat-top three */ "cv02" 1; /* Open 4 */
-   /* style code blocks */
-  --astro-code-color-text: #000;
-  --astro-code-color-background: #fafafa;
-  --astro-code-token-constant: #00000080;
-  --astro-code-token-string: #000000;
-  --astro-code-token-comment: #00000080;
-  --astro-code-token-keyword: #0a9f7e;
-  --astro-code-token-parameter: #000000;
-  --astro-code-token-function: #9d07be;
-  --astro-code-token-string-expression: #2d2efd;
-  --astro-code-token-punctuation: #000000;
-  --astro-code-token-link: #000000;
+  /* Page Accents */
+  --color-gallery-1: #dedad0;
+  --color-gallery-2:#3f7996;
+  --color-gallery-3:#dcc679;
+  --color-gallery-4:#d2cdc7;
+  --color-gallery-5:#b0875d;
+  /* Accent */
+  --color-accent-50: oklch(92.98% 0.035 285.7);
+  --color-accent-100: oklch(86.22% 0.07 284.83);
+  --color-accent-200: oklch(72.58% 0.146 282.13);
+  --color-accent-300: oklch(59.81% 0.221 277.36);
+  --color-accent-400: oklch(49.73% 0.283 269.85);
+  --color-accent-500: oklch(45.2% 0.313 264.05);
+  --color-accent-600: oklch(38.21% 0.265 264.05);
+  --color-accent-700: oklch(30.87% 0.214 264.05);
+  --color-accent-800: oklch(23.07% 0.16 264.05);
+  --color-accent-900: oklch(14.51% 0.101 264.05);
+  --color-accent-950: oklch(9.65% 0.067 264.05);
+  /* Base */
+  --color-white: oklch(0.9581 0 0);
+  --color-base-50: oklch(0.985 0 0);
+  --color-base-100: oklch(0.97 0 0);
+  --color-base-200: oklch(0.922 0 0);
+  --color-base-300: oklch(0.87 0 0);
+  --color-base-400: oklch(0.708 0 0);
+  --color-base-500: oklch(0.556 0 0);
+  --color-base-600: oklch(0.439 0 0);
+  --color-base-700: oklch(0.371 0 0);
+  --color-base-800: oklch(0.269 0 0);
+  --color-base-900: oklch(0.205 0 0);
+  --color-base-950: oklch(0.145 0 0);
 }
 
 
-video {
-  clip-path: inset(1px 1px);
-}
+
+

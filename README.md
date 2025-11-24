@@ -1,5 +1,34 @@
 # Semplice
 
+TEMA SEMPLICE LEXINGTON
+
+https://gist.github.com/michael-andreuzza/c256df652c449a8204a419ea6495573d
+
+- src>content>gallery
+CONTIENE I FILE .md per gestire le gallerie.
+Ogni .md diventa una galleria e la sua thumbnail.jpeg è visibile nella home.
+Questi file possono essere nominati a piacere.
+
+- src>images>gallery
+CONTIENE le immagini delle gallerie divise per cartelle
+Ogni file .md deve puntare alla cartella specifica per mostrare le foto.
+
+- src>pages
+CONTIENE alla radice pagine .astro raggiungibili con sito/pagina
+Oppure contiene cartelle dove inserire pagine quindi il percorso diventa sito/cartella/pagina
+
+- src>components
+CONTIENE componenti globali o specifici per esempio
+
+- src>layouts
+CONTIENE modelli di pagina che possono essere incorporati
+
+- src>styles
+CONTIENE gli stili che possono essere globali.
+
+- src>components>gallery
+CONTIENE componenti per le gallerie (per esempio GalleryEntry
+
 ## Template Integrations
 
 - Tailwind CSS v4

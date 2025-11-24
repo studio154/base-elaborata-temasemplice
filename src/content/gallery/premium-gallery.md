@@ -1,8 +1,8 @@
 ---
 bgColor: bg-gallery-2
 textColor: text-white
-category: "Futuristic Portraits"
-title: "Soft Tech and Human Glow"
+category: "premium-gallery"
+title: "Premium Gallery"
 description: "A visual study in minimal futurism — merging soft light, clean design, and calm expressions to explore the intersection of human emotion and synthetic style."
 # - Use `imageGrid` to control the grid container (e.g. columns, gaps, etc.)
 # - Use `class` on each image to control its span and position in the grid

@@ -3,7 +3,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 // Components
-import GalleryEntry1 from "@/components/gallery/GalleryEntry1.astro";
+import GalleryEntry2 from "@/components/gallery/GalleryEntry2.astro";
 // Content
 import { getCollection } from "astro:content";
 const allGallery = await getCollection("gallery");
@@ -12,7 +12,9 @@ const allGallery = await getCollection("gallery");
 <BaseLayout>
   <section>
     <Wrapper variant="standard" class="py-2">
-      {allGallery.slice(0, 1).map((post) => <GalleryEntry1 post={post} />)}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {allGallery.map((post) => <GalleryEntry2 post={post} />)}
+      </div>
     </Wrapper>
   </section>
 </BaseLayout>
